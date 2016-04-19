@@ -527,4 +527,48 @@ Using log instead of the raw X produces better results.
 
 Y = &alpha;i + &beta;ix + E
 
+###Tutorial 6, 20 April
+
+####1)
+
+a) No, can produce more than two options
+
+b) Yes, two possible outputs (at least, according to them)
+
+c) No, continous Y
+
+####2)
+
+a) 11 possible values; 0 through 10.
+
+b) Use calculator
+
+c) E[Y] = np; Var(Y) = np(1-p)
+
+d) see answers
+
+####3)
+
+X follows a normal distribution follwoing a normal distribution with a mean of 6 and a variance of 4. The standard deviation for X = 2 = sqqrt(4). Z follows a normal distribution with mean 0 and variance 1. The standard deviation of Z = 1 = sqrt(1).
+
+a) P(-2 &lt; Z &lt; .4) = 0.63267
+
+b) P(X &le; 5) = 0.30853
+
+c) P(7 &le; X &le; 7.5) = 0.0819
+
+####4)
+
+a) 40
+
+b) 8; sqrt(8)
+
+c) P(Y = 40) = 0.1398
+
+####5)
+
+a) We reject the null hypothesis. We have not found enough evidence to say that p is equal to 0.2
+
+b) We do not reject the null hypothesis. p is not significantly different from 0.2.
+
 ##Footnotes
