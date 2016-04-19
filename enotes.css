@@ -1,0 +1,42 @@
+h3, h4, h5, h6 {
+	text-align: left;
+	text-justify: none;
+}
+
+h3 {
+	border-bottom: solid .1em black;
+}
+
+h1, h2 {
+	text-align: center;
+	text-justify: none;
+}
+
+blockquote {
+	border-left: solid .5em #808080;
+	padding-left: .5em;
+	font-size: .9em;
+}
+
+p > img {
+	border: solid .1em black;
+	padding: .2em;
+	margin: .1em;
+}
+
+img + em {
+	padding: .2em;
+	text-align: left;
+	text-justify: none;
+	font-size: .9em;
+}
+
+div.footnote hr {
+	height: 0em;
+	color: black;
+	border: dotted .05em;
+}
+
+dt {
+	font-weight: bold;
+}
