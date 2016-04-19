@@ -77,3 +77,6 @@ stats2a:
 	--no-chapters-in-toc \
 	--mobi-toc-at-start \
 	--start-reading-at="//h:h1"
+
+clean:
+	rm *.azw3
