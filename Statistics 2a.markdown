@@ -335,6 +335,17 @@ The final section of the part 1 notes pdf. A short cheat sheat, and some further
 
 In categorical data the response variable (dependent variable) is a set of categories. For example: favourite movies, preferred political party.
 
+###Binomial variable
+
+A Bernoulli trial has exactly two outcomes, 1 and 0 (or true and false etc; gender/sex is generally counted as one too). The probability p is the probability of getting a 1. The expected value is _p_, the variance is p(1 - p).
+
+A binomial distribution is created by repeating an identical and independent Bernoulli trial _n_ times. You write Y ~ B(n, p) for Y follows a normal distribution with n trials and a probability of p.
+
+The mean E[Y] = &mu; = np. The variance Var(Y) = &sigma;<sup>2</sup> = np(1 - p).
+
+When _n_ is suffiently large, the binomial distribution can be approximated by normal distributions. The larger _n_ gets, the better the approximation becomes, but it also depends on p. As a general rule, the normal approximation is adequate when both np &ge; 5 and n(1 - p) &ge; 5.
+
+
 ##Tutorials
 
 Tutorials are in MY 632 on Wednesdays between Computability and the Stats class itself (11am to 12pm). The tutor is Lindsay(sp?).
