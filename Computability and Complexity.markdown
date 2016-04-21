@@ -1074,42 +1074,84 @@ Theorem: A is computable from K if and only if there is a computable function &f
 
 Proof (&lArr;):
 
-Assume there is an approximating function &fnof;. We want to compute A using K. Algorithm:
+Assume there is an approximating function &fnof;. We want to compute _A_ using _K_. Algorithm:
 
-1. On input _n_, set s = 0;
-2. Compute &fnof;(n, s)
-3. Ask will &fnof;(n, s) ever give a different value on some larger value of _s_?[^WhyKcananswer]
-4. If not, output &fnof;(n, s)
-5. If yes, increase s by one and go back to 2
+1. On input _n_, set _s = 0_;
+2. Compute _&fnof;(n, s)_
+3. Ask will _&fnof;(n, s)_ ever give a different value on some larger value of _s_?[^WhyKcananswer]
+4. If not, output _&fnof;(n, s)_
+5. If yes, increase _s_ by one and go back to 2
 
 [^WhyKcananswer]: We can do this because we can design an algorithm that would run through larger values of _s_ (regardless of what it was acutually given), halting when it finds a different value for &fnof;(n, s). Having access to the halting set means we can know if this algorithm would ever halt (because we can find its index, in theory) by asking if it is an element of K, so we can know if &fnof;(n, s) ever give another answer.
 
 Proof (&rArr;):
 
-Assume A &le;T K. &phi;<sub>e</sub><sup>K</sup> is a computation of A.
+Assume _A &le;<sub>T</sub> K_. _&phi;<sub>e</sub><sup>K</sup>_ is a computation of _A_.
 
-For each s, let K<sub>s</sub> be the "stage s approximation to K." That is to say, the set {e : &phi;<sub>e</sub>(e) halts in &le;s steps}. It's kind of the lazy man's halting problem. K<sub>s</sub> is computable for all _s_.
+For each _s_, let _K<sub>s</sub>_ be the "stage _s_ approximation to _K_." That is to say, the set _{e : &phi;<sub>e</sub>(e) halts in &le;s steps}_. It's kind of the lazy man's halting problem. _K<sub>s</sub>_ is computable for all _s_.
 
-To compute &fnof;(n, s), run &phi;<sub>e</sub><sup>K<sub>s</sub></sup>(n) for s many steps. If it halts, let &fnof;(n, s) = &phi;<sub>e</sub><sup>K<sub>s</sub></sup>(n); otherwise &fnof;(n, s) = 0. This is definitely computable.
+To compute <em>&fnof;(n, s)</em>, run <em>&phi;<sub>e</sub><sup>K<sub>s</sub></sup>(n)</em> for _s_ many steps. If it halts, let <em>&fnof;(n, s) = &phi;<sub>e</sub><sup>K<sub>s</sub></sup>(n)</em>; otherwise <em>&fnof;(n, s) = 0</em>. This is definitely computable.
 
-To show that the limit as s goes to infinity of &fnof;(n, s) = &Chi;A:
+To show that the limit as s goes to infinity of <em>&fnof;(n, s) = &Chi;<sub>A</sub></em>:
 
-Consider the actual computation &phi;eK(n). This computation would, after a finite number of steps, and after asking a finite number of questions, halts and gives the right answer. So all we have to do is make _s_ big enough to make Ks accurate for all of the questions asked, and large enough for all the steps in the algorithm to run.
+Consider the actual computation <em>&phi;<sub>e</sub><sup>K</sup>(n)</em>. This computation would, after a finite number of steps, and after asking a finite number of questions, halts and gives the right answer. So all we have to do is make _s_ big enough to make Ks accurate for all of the questions asked, and large enough for all the steps in the algorithm to run.
 
 Let m be the largest question asked in this computation. Let s<sub>0</sub> be large enough that for every i &le; m, if &phi;i(i)&darr; then &phi;i(i)&darr; in &le; s0 steps.
 
 Let s<sub>1</sub> be the number of steps taken in the computation of &phi;<sub>e</sub><sup>K</sup>(n).
 
-Claim: if s &ge; max(s<sub>0</sub>, s<sub>1</sub>) then &fnof;(n, s) = &phi;<sub>e</sub><sup>K</sup>(n) = &Chi;<sub>A</sub>(n). This is true because &phi;eK(n) and &phi;eKs(n) run exactly the same computation, because K and Ks agree on all values of K that are queried before &phi;<sub>e</sub>K(n)&darr;.
+Claim: if _s &ge; max(s<sub>0</sub>, s<sub>1</sub>)_ then _&fnof;(n, s) = &phi;<sub>e</sub><sup>k</sup>(n) = &chi;<sub>a</sub>(n)_. this is true because <em>&phi;<sub>e</sub><sup>k</sup>(n)</em> and _&phi;<sub>e</sub><sup>K<sub>s</sub></sup>(n)_ run exactly the same computation, because _K_ and _K<sub>s</sub>_ agree on all values of _k_ that are queried before _&phi;<sub>e</sub><sup>K</sup>(n)&darr;_.
 
 ####Post's problem
 
-* **O** is the Turing degree of computable sets
-* **O**&prime; ("Zero-jump") is the Turing degree of K
+* **0** is the Turing degree of computable sets
+* **0**&prime; ("Zero-jump") is the Turing degree of _K_
 
-If A is c.e., then A &le;<sub>T</sub> K &mdash; in fact, A &le;<sub>1</sub> K.
+If _A_ is c.e., then _A &le;<sub>T</sub> K_ &mdash; in fact, _A &le;<sub>1</sub> K_.
 
-The question is: is it possible for the Turing degree of A to be strictly between **O** and **O**&prime;. That is to say, a c.e. set that is not computable but does not compute the halting set. (The answer to this question is yes, there is a whole mess going on between those two degrees.)
+The question is: is it possible for the Turing degree of _A_ to be strictly between **O** and **O**&prime;. That is to say, a _c.e._ set that is not computable but does not compute the halting set. (The answer to this question is yes, there is a whole mess going on between those two degrees.)
+
+**Easy version:** _There is a Turing degree strictly between **0** and **0**&prime;_
+
+Use K as an oracle. Construct A, B. Make sure that A is not &le;<sub>T</sub> B[^Anotcomputable] and B is not &le;<sub>T</sub> A[^AnotturingequivK].
+
+[^Anotcomputable]: So A can't be computable.
+
+[^AnotturingequivK]: So A can't be &equiv;<sub>T</sub> to K.
+
+How to do this: Must make sure that for every _e_, &phi;<sub>e</sub><sup>A</sup> does not compute B, and &phi;<sub>e</sub><sup>B</sup> does not compute A.
+
+How to make &phi;<sub>e</sub><sup>A</sup> not compute B: either find an _n_ so that &phi;<sub>e</sub><sup>A</sup>(n)&uarr;, or find an _n_ so that &phi;<sub>e</sub><sup>A</sup>(n) &ne; &Chi;<sub>B</sub>(n). In other words, it either fails to give an answer, or fails to give the correct answer, either of which means it does not compute B.
+
+Construction: Build A and B by finite approximation, in stages.
+
+Our initial segments of A and B respectively might be:
+
+* &sigma;: `01110110`
+* &tau;: `0000010111111111110`
+
+At the beginning of the construction both &sigma; and &tau; are empty.
+
+At step 2e: we make sure that &phi;<sub>e</sub><sup>A</sup> does not compute B as follows:
+
+* Let n be the first bit that we have not decided whether or not it's in B.
+* Ask: is there any possible way to extend &sigma; to make &phi;eA(n) converge.[^WhywecanaskKthisqueston] If yes, then we extend &sigma; to something that makes &phi;<sub>e</sub><sup>A</sup>(n) converge. If &phi;eA(n) = 0, put n in B, otherwise put n &nin; B (i.e. make sure that &phi;<sub>e</sub><sup>A</sup>(n) does the wrong thing). If no, we have already won victory number 1: don't extend &sigma;, maybe declare n &nin;B.
+* In the odd stages we do the same thing where A and B are reversed.
+
+[^WhywecanaskKthisqueston]: Define an algorithm that (one any input) emulates &phi;<sub>e</sub><sup>-</sup>(n) on every oracle that agrees with &sigma;. Every time &phi;e(n) asks a question, if that question is something that &sigma; has decided, we use that answer, otherwise we try both, running both computations in paralell, waiting for either to converge. If any of these algorithms converge, then our search halts. This is a computable search, conducted by some &phi;i, so we can ask is "i &isin; K."
+
+Post's problem for realsies: There is a c.e. set A whose Turing degree is strictly between **0** and **0**&prime;
+
+Plan is to _enumerate_ A, B, making sure that A &le;<sub>T</sub> B and B &le;<sub>T</sub> A. We can't use K as an oracle.
+
+Again: How to make &phi;<sub>e</sub><sup>A</sup> not compute B: either find an _n_ so that &phi;<sub>e</sub><sup>A</sup>(n)&uarr;, or find an _n_ so that &phi;<sub>e</sub><sup>A</sup>(n) &ne; &Chi;<sub>B</sub>(n). In other words, it either fails to give an answer, or fails to give the correct answer, either of which means it does not compute B.
+
+Construction:
+
+* A: _ _ _ _ _ _ _
+* B: _ _ _ _ _ _ _ &hellip;
+
+Pick an n. Hold _n_ out of _B_. Wait for &phi;<sub>e</sub><sup>A</sup>(N) to converge. If it finally converges, we 
 
 ##Complexity
 
