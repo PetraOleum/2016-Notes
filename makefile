@@ -25,6 +25,7 @@ genetics:
 	--no-chapters-in-toc \
 	--mobi-toc-at-start \
 	--start-reading-at="//h:h1"
+	python -m markdown -x extra -x toc "Advanced Genetics.markdown" -f "Advanced Genetics.html"
 
 computability:
 	ebook-convert "Computability and Complexity.markdown" \
@@ -51,6 +52,7 @@ computability:
 	--no-chapters-in-toc \
 	--mobi-toc-at-start \
 	--start-reading-at="//h:h1"
+	python -m markdown -x extra -x toc "Computability and Complexity.markdown" -f "Computability and Complexity.html"
 
 stats2a:
 	ebook-convert "Statistics 2a.markdown" \
@@ -77,6 +79,8 @@ stats2a:
 	--no-chapters-in-toc \
 	--mobi-toc-at-start \
 	--start-reading-at="//h:h1"
+	python -m markdown -x extra -x toc "Statistics 2a.markdown" -f "Statistics 2a.html"
 
 clean:
 	rm *.azw3
+	rm *.html

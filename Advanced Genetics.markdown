@@ -1180,9 +1180,32 @@ Instability can be random or non random. It gets caused by defects in caretaker 
 
 Lab partners: Britt and Pania
 
-Growth curve:
+###Part 6:
 
-![GAT1 Growth Curve](GAT1.png)
+1. Our gene is GAT1
+2. Our analysis from practical 1 showed that GAT1 deletion leads to an _increase_ in longevity.
+
+    Growth curve:
+
+    ![GAT1 Growth Curve](GAT1.png)
+
+    Day 13 growth curves highlighting GAT1:
+
+    ![Day 13 growth curve highlighting GAT1](Day_13_growth_highlighting_GAT1.png)
+
+    By later days GAT1 has one of the highest growth curves and lowest time shifts of all strains. It's survival integral is second-highest after BRO1 and statisically different from its mother strain at _p &lt; 0.01_.
+
+3. Systematic name: YFL021W (do not confuse with GPT2 / YKR067W.)
+
+    [Yeastgenome.org link](http://www.yeastgenome.org/locus/S000001873/overview); [Yeastgenome.org interactions link](http://www.yeastgenome.org/locus/S000001873/interaction); [Human analogue&mdash;SLC6A1 gene](http://www.ncbi.nlm.nih.gov/gene/6529)
+
+    Interesting papers:
+
+    * [Development of Highly Potent GAT1 Inhibitors: Synthesis of Nipecotic Acid Derivatives by Suzuki-Miyaura Cross-Coupling Reactions](http://dx.doi.org/10.1002/cmdc.201500490)
+    * [Different Binding Modes of Small and Large Binders of GAT1](http://dx.doi.org/10.1002/cmdc.201500534)
+    * [The transporter GAT1 plays an important role in GABA-mediated carbon-nitrogen interactions in Arabidopsis](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4586413/)
+    * [Loss of the TOR Kinase Tor2 Mimics Nitrogen Starvation and Activates the Sexual Development Pathway in Fission Yeast](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1899950/) (does not mention GAT1)
+    * [Tripartite regulation of Gln3p by TOR, Ure2p, and phosphatases.](http://www.jbc.org/content/275/46/35727.long)
 
 ##Past Exams
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
