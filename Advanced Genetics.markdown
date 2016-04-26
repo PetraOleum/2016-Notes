@@ -1193,7 +1193,7 @@ Lab partners: Britt and Pania
 
     ![Day 13 growth curve highlighting GAT1](Day_13_growth_highlighting_GAT1.png)
 
-    By later days GAT1 has one of the highest growth curves and lowest time shifts of all strains. It's survival integral is second-highest after BRO1 and statisically different from its mother strain at _p &lt; 0.01_.
+    By later days GAT1 has one of the highest growth curves and lowest time shifts of all strains. It's survival integral is second-highest after BRO1 and statistically different from its mother strain at _p &lt; 0.01_.
 
 3. Systematic name: YFL021W (do not confuse with GPT2 / YKR067W.)
 
@@ -1206,6 +1206,25 @@ Lab partners: Britt and Pania
     * [The transporter GAT1 plays an important role in GABA-mediated carbon-nitrogen interactions in Arabidopsis](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4586413/)
     * [Loss of the TOR Kinase Tor2 Mimics Nitrogen Starvation and Activates the Sexual Development Pathway in Fission Yeast](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1899950/) (does not mention GAT1)
     * [Tripartite regulation of Gln3p by TOR, Ure2p, and phosphatases.](http://www.jbc.org/content/275/46/35727.long)
+    * [Nitrogen Catabolite Repression-Sensitive Transcription as a Readout of Tor Pathway Regulation: The Genetic Background, Reporter Gene and GATA Factor Assayed Determine the Outcomes](http://www.genetics.org/content/181/3/861)
+
+4. The gene activates nitrogen catabolite repressor genes. That is to say, when the gene is on nitrogen catabolism is off, so there is more nitrogen around. Further, a lack of nitrogen turns the gene on. The gene being removed causes nitrogen to be catabolised even when it should not, leading to a lack of nitrogen. This causes nitrogen starvation even in situations where it should not occur, leading to an increase in autophagy and associated longevity.
+
+5. The human ortholog is encoded by the SLC6A1 gene.
+
+6. [DGAT1](http://genomics.senescence.info/genes/details.php?gene=Dgat1&organism=musculus) in mice is an anti-longevity gene in mice, with a homolog in humans, but is it related to GAT1 in yeast?
+
+    GAT1 has a physical interaction with TOR1. (See [_Tripartite regulation of Gln3p by TOR&hellip;_](http://www.yeastgenome.org/reference/S000051382/overview))
+
+7. GAT1 is associated with the nitrogen starvation pathway, which increases longevity by increasing autophagy and cleaning up cellular detritus.
+
+8. ?
+
+###Part 7
+
+1. Most likely TOR/nitrogen starvation. [Picture](http://www.genetics.org/content/genetics/181/3/861/F1.large.jpg).
+
+2. &hellip;?
 
 ##Past Exams
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
