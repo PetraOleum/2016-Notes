@@ -582,4 +582,14 @@ a) We reject the null hypothesis. We have not found enough evidence to say that 
 
 b) We do not reject the null hypothesis. p is not significantly different from 0.2.
 
+###Tutorial 8
+
+####1)
+
+Finding the exact prob is a matter of the BpD command on the calculator as normal. Finding the approximate probability:
+
+P(30 &le; Y &le; 35) for binomial translates to P(29.5 &le; Y &le; 3.5.) for normal.
+
+Definition of a p-value: The probability of getting a test statistic as, or more, extreme as the one we've got.
+
 ##Footnotes
