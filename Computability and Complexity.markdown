@@ -1151,7 +1151,49 @@ Construction:
 * A: _ _ _ _ _ _ _
 * B: _ _ _ _ _ _ _ &hellip;
 
-Pick an n. Hold _n_ out of _B_. Wait for &phi;<sub>e</sub><sup>A</sup>(N) to converge. If it finally converges, we 
+Pick an n. Hold _n_ out of _B_. Wait for &phi;<sub>e</sub><sup>A</sup>(N) to converge. If it finally converges, we&hellip; (see notes.)
+
+####Finite injury in general
+
+Ingredients of a finite injury priority argument:
+
+* There are countably many strategies, each trying to do something.
+* Each strategy, if never injured, will only act a finite number of times (e.g. once).
+* Each strategy can only be injured by the actions of higher priority strategies.
+* Each strategy, if it is injured only a finite number of times, will accomplish its goal.
+
+Solvable by such a strategy:
+
+Theorem: there is a minimal pair of c.e. sets: a pair of non-computable c.e. sets A and B such that for every C if C &le;T A and C &le;T then C is computable.
+
+Theorem: there is a low c.e. set: a non-computable set A so that A&prime; = 0&prime;
+
+Infinite injury priority arguments also exist. The highest priority can act both finite and infinite amounts of time. The lower priority ones have two versions: the first version restarts every time the highest priority one acts; the second "secret" version works using "scraps" that the highest priority allows it to have. The third has even more versions to run depending on what the ones above it.
+
+"Monstrous" injury arguments also exist, but nobody understands them.
+
+###The arithmetic hierarchy
+
+Consider the set P, the prime numbers. P = {n : n &ne; 0 &and; n &ne; 1 &and; &forall;x&forall;y ((xy = n) &rarr; (x = n &or; y = n))}, but this requires checking infinitely many numbers. Alternately, P = {n : n &ne; 0 &and; n &ne; 1 &and; &forall;x&lt;n &forall;y&lt;n (xy &ne; n)}; The moral is that unbounded quantifiers are bad, and bounded quantifiers are good.
+
+A formula of arithmetic is &Delta;<sub>0</sub> if it can be written using only bounded quantifiers: 0, 1, +, &times;, &lt; =, &not;, &and;, &or;, and bounded quantifiers.
+
+A formula is &Sigma;<sub>1</sub> if it is written (&exists;x)(something &Delta;<sub>0</sub>).
+
+A set is &Sigma;<sup>0</sup><sub>1</sub> if it is defined by a &Sigma;<sub>1</sub> formula.
+
+Using &forall;, sub &Pi; for &Sigma;.
+
+A set is &Delta;<sup>0</sup><sub>1</sub> if it is both &Sigma;<sup>0</sup><sub>1</sub> and &Pi;<sup>0</sup><sub>1</sub>.
+
+A set is &Sigma;<sup>0</sup><sub>1</sub> if and only if it is c.e.; a set is &Delta;<sup>0</sup><sub>1</sub> if and only if it is computable.
+
+Proof sketch:
+
+&Delta;<sub>0</sub> formulas you can just check by looking at it. So if A is definited by A = {n : &exists;x &phi;(n, x)}, we can enumerate A by: for each n, search for an x that makes &phi;(n, x).
+
+If A is &Delta;<sup>0</sup><sub>1</sub> then both A and A-bar are &Sigma;<sup>0</sup><sub>1</sub>.
+
 
 ##Complexity
 
