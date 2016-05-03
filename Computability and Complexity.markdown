@@ -933,7 +933,7 @@ Observation: Every tile set has only finitely many n&times;n tilings. In fact, i
 
 Definition: A tile set _tiles the plane_ if there is a tiling of the plane using only tiles from the tile set. Each tile from the tile set can be used as many or as few times as you like (including all of the time or none of them). An anchored tile set tiles the plane if there is a tiling of the plane using only tiles from the set, using each time as many or as few times as you like _except the anchor tile_ which _must be used at least once_.
 
-Definition: A tiling of the plane is _periodic_ if there is some n such that the tiling consists of a single repeating n&times;n pattern. Formally, this means there is an _n_ such that the tiling is invariant under vertical and horizontal translations by _n_. Or, &exists;n such that &forall;p, q&isin;**Z**, &fnof;(p, q) = &fnof;(p + n, q) = &fnof;(p, q + n).
+Definition: A tiling of the plane is _periodic_ if there is some n such that the tiling consists of a single repeating n&times;n pattern. Formally, this means there is an _n_ such that the tiling is invariant under vertical and horizontal translations by _n_. Or, &exist;n such that &forall;p, q&isin;**Z**, &fnof;(p, q) = &fnof;(p + n, q) = &fnof;(p, q + n).
 
 Conjecture: A tile set can tile the plane if and only if it can do so with a periodic tiling
 
@@ -1178,7 +1178,7 @@ Consider the set P, the prime numbers. P = {n : n &ne; 0 &and; n &ne; 1 &and; &f
 
 A formula of arithmetic is &Delta;<sub>0</sub> if it can be written using only bounded quantifiers: 0, 1, +, &times;, &lt; =, &not;, &and;, &or;, and bounded quantifiers.
 
-A formula is &Sigma;<sub>1</sub> if it is written (&exists;x)(something &Delta;<sub>0</sub>).
+A formula is &Sigma;<sub>1</sub> if it is written (&exist;x)(something &Delta;<sub>0</sub>).
 
 A set is &Sigma;<sup>0</sup><sub>1</sub> if it is defined by a &Sigma;<sub>1</sub> formula.
 
@@ -1190,7 +1190,7 @@ A set is &Sigma;<sup>0</sup><sub>1</sub> if and only if it is c.e.; a set is &De
 
 Proof sketch:
 
-&Delta;<sub>0</sub> formulas you can just check by looking at it. So if A is definited by A = {n : &exists;x &phi;(n, x)}, we can enumerate A by: for each n, search for an x that makes &phi;(n, x).
+&Delta;<sub>0</sub> formulas you can just check by looking at it. So if A is definited by A = {n : &exist;x &phi;(n, x)}, we can enumerate A by: for each n, search for an x that makes &phi;(n, x).
 
 If A is &Delta;<sup>0</sup><sub>1</sub> then both A and A-bar are &Sigma;<sup>0</sup><sub>1</sub>.
 
