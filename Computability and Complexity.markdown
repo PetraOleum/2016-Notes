@@ -1190,10 +1190,44 @@ A set is &Sigma;<sup>0</sup><sub>1</sub> if and only if it is c.e.; a set is &De
 
 Proof sketch:
 
-&Delta;<sub>0</sub> formulas you can just check by looking at it. So if A is definited by A = {n : &exist;x &phi;(n, x)}, we can enumerate A by: for each n, search for an x that makes &phi;(n, x).
+&Delta;<sub>0</sub> formulas you can just check by looking at it. So if A is definited by A = {n : &exist;x &Phi;(n, x)}, we can enumerate A by: for each n, search for an x that makes &Phi;(n, x).
 
 If A is &Delta;<sup>0</sup><sub>1</sub> then both A and A-bar are &Sigma;<sup>0</sup><sub>1</sub>.
 
+Side note: with every model of computation there are sets that are computable, but you can't prove it.
+
+Proof: Take any model of computation, and any sound proof system. List the provable computable sets S<sub>0</sub>, S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub>, etc.[^Listorder]
+
+[^Listorder]: In the order that you find a proof that they are computable.
+
+Define S = {n : n &ne; S<sub>n</sub>}. This is a computable set, however it itself can't be in S. No sufficiently complex proof system can prove its own consistency.
+
+If a set is c.e. then it is &Sigma;<sup>0</sup><sub>1</sub>:
+
+Idea: code the worksing of a Turing machine into a &Delta;0 formula, then write:
+
+A = {n : &exist;x(The Turing machine halts on input _n_ in x steps or less) }
+
+####The point of this
+
+We can write things like: "A forumla is &Sigma;<sub>n + 1</sub> if it is written &exist;(a &Pi;<sub>n</sub> formula)"
+
+* A formula is &Pi;<sub>n + 1</sub> if it is written &forall;(a &Sigma;<sub>n</sub> formula)
+* A set is &Sigma;<sup>0</sup><sub>n</sub> if it is defined by a &Sigma;<sub>n</sub> formula
+* A set is &Pi;<sup>0</sup><sub>n</sub> if it is defined by a &Pi;<sub>n</sub> formula
+* A set is &Delta;<sup>0</sup><sub>n</sub> if it is both &Sigma;<sup>0</sup><sub>n</sub> and &Pi;<sup>0</sup><sub>n</sub>.
+
+Theorem: A set is &Sigma;<sup>0</sup><sub>2</sub> if and only if it is c.e. relative to K; A set is &Delta;<sup>0</sup><sub>2</sub> if and only if it is computable relative to K.
+
+Proof (if a set is E<sup>0</sup><sub>2</sub> then it is c.e. relative to K)
+
+A = {n : &exist;x&forall;y&Phi;(n, x, y)}
+
+Idea: K can be used as an oracle to answer any one-quantifier question. To ask "does there exist an x such that [blah]" we ask "If we were to initiate a computable search such that [blah], would that search ever halt?" To ask &forall; you ask "if a search for an x such that [blah] is false, would it ever halt?"
+
+To decide whether to enumerate n into A, search for an x that makes &forall;y&Phi;(n, x, y) true.
+
+In general, a set is &Sigma;<sup>0</sup><sub>n+1</sub> if and only if it is c.e. relative to 0<sup>(n)</sup> (the nth jump of 0), and &delta;<sub>0</sub><sup>n+1</sup> if and only if it is computable relative to 0<sup>(n)</sup>.
 
 ##Complexity
 
