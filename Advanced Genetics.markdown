@@ -1243,11 +1243,53 @@ Lab partners: Britt and Pania
 
 8. ?
 
-###Part 7
+###My script
 
-1. Most likely TOR/nitrogen starvation. [Picture](http://www.genetics.org/content/genetics/181/3/861/F1.large.jpg).
+(Experimental designs.)
 
-2. &hellip;?
+We designed several experiments with which to test our model.
+
+####Yeast 2-Hybrid
+
+One of the key elements of our model is that TOR1 physically interacts with GAT1 to phosphorylate it and prevent it from entering the nucleus. Using Yeast 2-Hybrid (Y2H) we can test whether TOR1 and GAT1 physically interact at all.
+
+We would attach a GAL4 binding domain to GAT1, and a GAL4 activation domain to TOR1. An Upstream Activation Sequence (UAS) that GAL4 binds to would be placed upstream of a reporter gene such as Green Fluorescence Protein (GFP). If the two proteins of interest physically interact we would expect to see transcription of GFP and the associated fluorescence. If we do not, our model is unlikely to be correct.
+
+####Nitrogen sources
+
+GAT1 is involved in nitrogen sensing, and so its behaviour in the wildtype ought to differ depending on the quality of nitrogen present. We would effectively run the experiment again while controlling nitrogen conditions and measuring nitrogen metabolism.
+
+If our model is true we should expect that there is a difference between wildtype and &Delta;GAT1 nitrogen metabolism when good nitrogen is present, but not when only poor nitrogen is present. This is because &Delta;GAT1 cannot sense nitrogen levels properly, and is effectively locked into the response that it would have under poor nitrogen conditions.
+
+Our model also says that this change in nitrogen metabolism under good nitrogen conditions translates to the increased longevity seen in the original experiment, and assumes that there were good nitrogen sources in the origin experimental medium.
+
+Carefully controlling the nitrogen sources used in the media is important in subsequent experiments.
+
+####Deletions
+
+We have already compared &Delta;GAT1 with the wildtype BY4743, but there are other deletion options to investigate:
+
+We would expect that &Delta;GAT1 + &Delta;GLN3 should produce a similar but more substantial phenotype than &Delta;GAT1 alone, in a "the whole is less than the sum of the parts" fashion.
+
+We would expect that &Delta;TOR1 would act in the opposite direction relative to the previous deletions, locking in the response to good nitrogen even where the nitrogen sources are all bad. However, complicating this, &Delta;TOR1 is known to _increase_ both chronological and replicative lifespan&mdash;presumably due to its effects on other pathways e.g. Caloric Restriction.
+
+####Chemical genetics
+
+To do chemical genetics experiments we would first need to find a drug that interacts with GAT1 in the first place. To do this we would throw a bunch of drugs at a heterozygous &Delta;GAT1 mutant and select all those with a significant fitness difference from the wildtype. Controlling nitrogen levels is important in this experiment, and it may need to be run under both conditions.
+
+####HIP-HOP
+
+We would then use a full HIP assay to screen the drugs we selected for those that respond best&mdash;and only&mdash;to GAT1, aiming for a graph where GAT1 is significantly higher than all others.
+
+Having found this drug we would use HOP to search for genes that act downstream of GAT1. If our model is true we would expect to pull genes like GLN3, DAL60, and NCR genes themselves, but not TOR1 as it is upstream of GAT1.
+
+####Conclusion
+
+If all of these experiments produce the expected result we would have verified a number of key aspects of our model, including:
+
+* The physical interaction between TOR1 and GAT1
+* The response of the system to nitrogen source quality
+* The order of several components of the system
 
 ##Past Exams
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
