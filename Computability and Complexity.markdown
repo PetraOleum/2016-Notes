@@ -734,7 +734,7 @@ Alternate proof: Suppose K were computable. Notice K = {x : &Rho;x(x)&darr;}.[^t
 
 So x &isin; dom(d) is equivalent to x &nis; K.
 
-There is some i with d = &Rho;<sub>i</sub>. Is i &isin; K? If so, i &nisn; dom(d) so d(i)&uarr;. So &Rho;i(i)&uarr;. So i &nisn; K. If not, i & isin; dom(d) so d(i)&darr;. So &Rho;i(i)&darr;. So i &isin; K. These are contradictions, so K is not computable.
+There is some i with d = &Rho;<sub>i</sub>. Is i &isin; K? If so, i &notin; dom(d) so d(i)&uarr;. So &Rho;i(i)&uarr;. So i &nisn; K. If not, i &isin; dom(d) so d(i)&darr;. So &Rho;i(i)&darr;. So i &isin; K. These are contradictions, so K is not computable.
 
 Example: A = {p<sub>i</sub> | i &isin; K}
 
@@ -749,7 +749,7 @@ x &isin; dom(h) if and only if x = p<sub>i</sub> and i &isin; dom(f) = K. A = do
 
 Suppose A were computalbe:
 
-Consider this alogarythm for &Chi;K(x):
+Consider this alogarythm for &Chi;<sub>K</sub>(x):
 
 1. Compute p<sub>x</sub>
 2. Check if px &isin; A
@@ -952,7 +952,7 @@ Lemma (Compactness): A tile set tiles the plane if and only if it has n&times;n 
 Proof: 
 
 * (&rArr;) If the set tiles the plane, take a tiling of the plane. Cut out an n&times;n square from this tiling. This gives an n&times;n tiling.
-* (&lArr;) Suppose the tile set has n&times;n tilings for all n. Then it has n&times;n tilings for all _odd_ n. Because the tile set is finite there is a tile _t_ which is the centre tile of an n&mdash;n pattern for infinitely many odd n. <br/>**Notice:** if _t_ is the centre of some n&times;n pattern, it is also the centre of some k&times;k pattern for all odd k&lt;n. <br/>Let T<sub>0</sub> be the finite tiling that places t at the origin and places no other tiles. Consider all n&times;n tilings with T<sub>0</sub> at the centre, for odd n &ge; 3. For each, consider the 3&times;3 centre. There are only finitely many 3&times;3 patterns, but infinitely many n&times;n tilings containing T<sub>0</sub>. So at least one 3&times;3 tiling containing T<sub>0</sub> occurs as the centre of infinitely many larger tilings. Call this T<sub>1</sub>. <br/>Consider all n&times;n tilings with T<sub>1</sub> as the centre for odd n&ge;5. There are infinitely many, but only finitely many 5&times;5 tilings, so some 5&times;5 tiling is the centre of infinitely many. Choose one and call it T<sub>2</sub>. <br/>_Etcetera_&hellip; <br/>Let <em>T = &cup;T<sub>i</sub></em> for all _i_. <br/>**Claim:** _T_ is a tiling of the plane. <br/>Suppose _p_ and _q_ are adjacent points. Choose an _i_ large enough that T<sup>i</sub>(p) and T<sub>i</sub>(q) are defined. Then T(p) = T<sub>i</sub>(p) and T(q) = T<sub>i</sub>(q) by definition. But T<sub>i<sub> is a tiling, so T<sub>i</sub>(p) and T<sub>i</sub>(q) agree on their common edge. So T(p) and T(q) do. <br/>Also, for p = (xp, yp) &isin;**Z**<sup>2</sup> (need to prove that p is defined, which is trivial). <br/>So T is a tiling. The result is proved.
+* (&lArr;) Suppose the tile set has n&times;n tilings for all n. Then it has n&times;n tilings for all _odd_ n. Because the tile set is finite there is a tile _t_ which is the centre tile of an n&mdash;n pattern for infinitely many odd n. <br/>**Notice:** if _t_ is the centre of some n&times;n pattern, it is also the centre of some k&times;k pattern for all odd k&lt;n. <br/>Let T<sub>0</sub> be the finite tiling that places t at the origin and places no other tiles. Consider all n&times;n tilings with T<sub>0</sub> at the centre, for odd n &ge; 3. For each, consider the 3&times;3 centre. There are only finitely many 3&times;3 patterns, but infinitely many n&times;n tilings containing T<sub>0</sub>. So at least one 3&times;3 tiling containing T<sub>0</sub> occurs as the centre of infinitely many larger tilings. Call this T<sub>1</sub>. <br/>Consider all n&times;n tilings with T<sub>1</sub> as the centre for odd n&ge;5. There are infinitely many, but only finitely many 5&times;5 tilings, so some 5&times;5 tiling is the centre of infinitely many. Choose one and call it T<sub>2</sub>. <br/>_Etcetera_&hellip; <br/>Let <em>T = &cup;T<sub>i</sub></em> for all _i_. <br/>**Claim:** _T_ is a tiling of the plane. <br/>Suppose _p_ and _q_ are adjacent points. Choose an _i_ large enough that T<sup>i</sup>(p) and T<sub>i</sub>(q) are defined. Then T(p) = T<sub>i</sub>(p) and T(q) = T<sub>i</sub>(q) by definition. But T<sub>i</sub> is a tiling, so T<sub>i</sub>(p) and T<sub>i</sub>(q) agree on their common edge. So T(p) and T(q) do. <br/>Also, for p = (xp, yp) &isin;**Z**<sup>2</sup> (need to prove that p is defined, which is trivial). <br/>So T is a tiling. The result is proved.
 
 Lemma: An anchored tile set tiles the plane if and only if there is an n&times;n tiling with the anchor at the centre for all odd n.
 
