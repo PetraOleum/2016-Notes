@@ -57,7 +57,7 @@ In order to properly study algorithms, and to answer the question "what can be a
 
 ###Turing machines
 
-One option might be to take a random, commonly used programming language and say "an algorithm is anything that can be done by a program in this language." You can&mdash;and people do&mdash;mathematically analyse programming languages, so this is a perfectly plausible approach in theory. In practise, however, programming languages are complicated and redundant and therefore hard to work with like mathematically. As a stand-in, then, we use "an incredibly simplified sort of program introduced by Alan Turing."
+One option might be to take a random, commonly used programming language and say "an algorithm is anything that can be done by a program in this language." You can&mdash;and people do&mdash;mathematically analyse programming languages, so this is a perfectly plausible approach in theory. In practise, however, programming languages are complicated and redundant and therefore hard to work with mathematically. As a stand-in, then, we use "an incredibly simplified sort of program introduced by Alan Turing."
 
 **Definition:** A _Turing machine M_ is a triple (&Sigma;, _Q_, _&delta;_).
 
@@ -584,7 +584,7 @@ _Any reasonable model of computation gives precisely the same class of functions
 
 This is not a mathematical theorem: "reasonable model" isn't exactly a mathematical property. But the evidence seems to suggest it&mdash;we always end up back at the same set of functions. We'll be using this idea from now on, not taking the time to check that a algorithm that intuitively seems like something a human can do is actually computable.
 
-**Definition:** A _good numbering_ of computable functions is a list &phi;0, &phi;1, &hellip; of functions from N to N such that:
+**Definition:** A _good numbering_ of computable functions is a list &phi;<sub>0</sub>, &phi;<sub>1</sub>, &hellip; of functions from N to N such that:
 
 1. For every computable function there is an _e_ with &fnof; = &phi;e.
 2. There is a computable function that sends the description of a TM and outputs an _e_ such that &Rho;e is the function given by the Turing machine.
@@ -674,7 +674,7 @@ Proof: Suppose _A_ is computable. So &Chi;<sub>A</sub> is computable. Consider g
 Things not in _A_ will not be in the range of g(x):
 
 * If x &isin; A, &Chi;A(x)&darr; = 1, so g(x) = 1, so x &isin; dom(g).
-* If x &nin; A, &Chi;A(x)&darr; = 0, so g(x)&uarr;, so x &nin; dom(g)
+* If x &notin; A, &Chi;A(x)&darr; = 0, so g(x)&uarr;, so x &nin; dom(g)
 
 Theorem: TFAE:[^TFAE]
 
@@ -685,8 +685,8 @@ Theorem: TFAE:[^TFAE]
 
 Proof: 
 
-* (1)&rArr;(2): Suppose A is computable. The &Chi;N-A = 1 - &Chi;A. So N-A is computable. By the lemma, A and N-A are c.e.
-* (2)&rArr;(2): Suppose A os tje dp,aom pf &fnof;, and N - A is the domain of g, where f and g are computable. Here is an alogarythm for &Chi;A(x):
+* (1)&rArr;(2): Suppose A is computable. The &Chi;<sub>N-A</sub> = 1 - &Chi;<sub>A</sub>. So N-A is computable. By the lemma, A and N-A are c.e.
+* (2)&rArr;(2): Suppose A is the domain of &fnof;, and N - A is the domain of g, where f and g are computable. Here is an algorithm for &Chi;A(x):
 	1. Set _t_ = 0
 	2. Run f(x) for t steps. If f(x) halts within t steps, halt and output 1
 	3. Run g(x) for t steps. If g(x) halts within t steps, halt and output 0
@@ -695,7 +695,7 @@ Proof:
     Eventually one must halt, and we will know the correct answer: 
 
     * If x &isin; A, then there is a t such that f(x) halts in t steps. Also, g(x) never halts. So our algorithm eventually outputs 1
-    * If x &nin; A, same but with f and g reversed.
+    * If x &notin; A, same but with f and g reversed.
 
 Definition: A computable function &fnof; is called extendible if there is a total computable g with &fnof;(x) = g(x) for all x &isin; dom(&fnof;). g(x) "fills in the holes" of &fnof; without changing the results within the domain.
 
@@ -828,11 +828,11 @@ Rice's theorem: The only computable index sets are &#8469; and the empty set.
 
 Proof: Suppose A were a computable index set other than &#8469; and the empty set:
 
-Plan: fix e<sub>0</sub> &nin; A and e<sub>1</sub> &isin; A. Build n such that &phi;n(x) = {&phi;e0(x), if n &isin; A; &phi;e1(x), if n &nin; A}
+Plan: fix e<sub>0</sub> &notin; A and e<sub>1</sub> &isin; A. Build n such that &phi;n(x) = {&phi;e0(x), if n &isin; A; &phi;e1(x), if n &notin; A}
 
 Then n being in A implies that &phi;n = &phi;e0 withihc implies that n is not in A, and the reverse is also true. This is a contradiction; it remains to find n.
 
-h(x, y) = {&phi;e0(y), if x &isin; A; &phi;e1(y) if x &nin; A}
+h(x, y) = {&phi;e0(y), if x &isin; A; &phi;e1(y) if x &notin; A}
 
 Algorithm for h:
 
@@ -842,7 +842,7 @@ Algorithm for h:
 
 By the s-m-n theorem there is a total computable ss swith &phi;s(x)(y) = h(x, y). By the recursion theorem, there is an n with &phi;n(y) = &phi;s(n)(y). This is the n we wanted.
 
-&phi;n(y) = &phi;s(n)(y) = h(n, y) = {&phi;e0(y) if n &isin; A; &phi;e1(y) if n &nin; A}
+&phi;n(y) = &phi;s(n)(y) = h(n, y) = {&phi;e0(y) if n &isin; A; &phi;e1(y) if n &notin; A}
 
 Corollary: Tot and Inf are not computable
 
@@ -874,7 +874,7 @@ Example: A {3x + 1|x &isin; K}
 
 K &le;1 A, &fnof;(x) = 3x + 1
 
-Now, fix some c &nin; K
+Now, fix some c &notin; K
 
 Define g(x) = {y, if x = 3y + 1; c otherwise}
 
@@ -1135,7 +1135,7 @@ At the beginning of the construction both &sigma; and &tau; are empty.
 At step 2e: we make sure that &phi;<sub>e</sub><sup>A</sup> does not compute B as follows:
 
 * Let n be the first bit that we have not decided whether or not it's in B.
-* Ask: is there any possible way to extend &sigma; to make &phi;eA(n) converge.[^WhywecanaskKthisqueston] If yes, then we extend &sigma; to something that makes &phi;<sub>e</sub><sup>A</sup>(n) converge. If &phi;eA(n) = 0, put n in B, otherwise put n &nin; B (i.e. make sure that &phi;<sub>e</sub><sup>A</sup>(n) does the wrong thing). If no, we have already won victory number 1: don't extend &sigma;, maybe declare n &nin;B.
+* Ask: is there any possible way to extend &sigma; to make &phi;eA(n) converge.[^WhywecanaskKthisqueston] If yes, then we extend &sigma; to something that makes &phi;<sub>e</sub><sup>A</sup>(n) converge. If &phi;eA(n) = 0, put n in B, otherwise put n &notin; B (i.e. make sure that &phi;<sub>e</sub><sup>A</sup>(n) does the wrong thing). If no, we have already won victory number 1: don't extend &sigma;, maybe declare n &nin;B.
 * In the odd stages we do the same thing where A and B are reversed.
 
 [^WhywecanaskKthisqueston]: Define an algorithm that (one any input) emulates &phi;<sub>e</sub><sup>-</sup>(n) on every oracle that agrees with &sigma;. Every time &phi;e(n) asks a question, if that question is something that &sigma; has decided, we use that answer, otherwise we try both, running both computations in paralell, waiting for either to converge. If any of these algorithms converge, then our search halts. This is a computable search, conducted by some &phi;i, so we can ask is "i &isin; K."
