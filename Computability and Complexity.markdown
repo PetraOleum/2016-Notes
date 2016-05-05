@@ -1233,6 +1233,39 @@ In general, a set is &Sigma;<sup>0</sup><sub>n+1</sub> if and only if it is c.e.
 
 Office hours: Tuesday, Thursday, 1 to 3 pm, CO426. Lecturer email: greg.igusa@msor.vuw.ac.nz
 
-Hopefully start after the break?
+Start 6/5
+
+We study "feasible" computations, that don't take too much time or memory. We're going to talk about the number of steps it takes, so our model of computation is relevant again&mdash;one model might run the same computation in a different amount of time. We will use Turing machines.[^Turingpolynomial]
+
+[^Turingpolynomial]: Note that a Turing machine can emulate any other reasonable model of computation in polynomial time. E.g. you might have an algorithm that you can run in linear time on your computer, but in cubic time on a Turing machine. On the other hand, if there is a problem that requires exponential time to be run on a Turing machine then it also requires exponential time on a computer.
+
+We generally say as a first approximation that all polynomial time things are feasible, and all exponential time things are not. Using Turing machines we will end up with the same class of polynomial time solvable things that would be solvable on your computer.
+
+###Notation fir discussing how quickly functions grow
+
+Given functions[^functiontypes] &fnof; and g, we say that:
+
+[^functiontypes]: These functions can be from the naturals to the naturals, the naturals to the reals, the reals to the reals etc.
+
+* &fnof; is O(g) if there is a bound n<sub>0</sub>, and a constant c, so that for all n &ge; n<sub>0</sub>, &fnof;(n) &lt; c&times;g(n).[^Ogexample]
+
+    _c_ does not need to be a natural number, the definition does not change. But you can always replace _c_ with a number higher than _c_, so if you wanted to use e.g. &pi; you could replace it with 4 (or 23456789).
+
+* &fnof; is o(g) if the limit as n goes to infinity of &fnof;(n) / g(n) is 0.
+* &fnof; is &Omega;(g) if there is a constant _c &gt; 0_ so that there exist infinitely many different ns such that &fnof;(n)&times;c &gt;(n).[^RealOmega][^Hardylittlewood]
+
+[^Ogexample]: <em>5n<sup>2</sup> - n - 500</em> is O(n<sup>2</sup>). Proof: if we let n<sub>0</sub> = 1 and c = 506, then for all n &ge; n<sub>0</sub> 5n<sup>2</sup> - n - 500 &le; 5n<sup>2</sup> + 0 + 500n2 = 505n<sup>2</sup> &lt; 506n<sup>2</sup> = c&times;n<sup>2</sup>. However, more strict c can be used too.
+
+[^RealOmega]: For functions from the real numbers, we want &forall;x&exist;y&gt;x(c&fnof;(y) &gt; g(y)).
+
+[^Hardylittlewood]: This is the Hardy-Littlewood definition, which is described in wikipedia as the "number theory definition" as opposed to the "complexity theory definition."
+
+###Accepting and rejecting strings
+
+In complexity theory, we frequently discuss "decision problems": some strings we want to accept, and some we want to reject.
+
+We have a finite alphabet &Sigma; = {0, 1} (usually). Our inputs will be finite strings of symbols from &Sigma;. Our Turing machines will have two halt states. Our Turing machines will have two halt states, "accept and halt" and "reject and halt."
+
+Definition: &Sigma;<sup>&lowast;</sup> is the set of finite strings of elements of &Sigma;. We will use letters like x, y, z, &sigma;. &tau;, &rho; to denote elements of &Sigma;<sup>&lowast;</sup>. If x &isin; &Sigma;-star, |x| is the length of x. We put a 2 on the tape to denote the end of the input string.
 
 ##Footnotes
