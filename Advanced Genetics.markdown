@@ -1199,6 +1199,31 @@ Microsatellite instability is the expansion or contraction of microsatellite rep
 
 Both permissive and repressive markers on a given bit of chromatin. Capable of going either way very rapidly.
 
+##Next Generation Sequencing
+
+Andrew again. Start 9/5
+
+###Introduction to NGS
+
+Technically we're in the world of "third generation sequencing," but most don't have access to that yet. The number of human genomes sequenced per year has increased exponentially. The speed of sequencing has increased extremely fast, from labour intensive processes in the 1980's to the present automated sequencing.
+
+####In the beginning
+
+DNA polymerase was first described in 1955 (though the paper was rejected and was only published in 1958). In the 70's and early 80's, the DNA was chemically treated in four different ways to then run on a gel. You only got 50 bases tops after a huge amount of work. In the 80's and 90's we radio labelled each base.
+
+Then Sanger sequencing was created, using fluorescent di-deoxy sequencing. Sequences would be resolved on a gel or by an automated sequencing machine with a laser. The chemistry and technology only allowed a few hundred bases to be labelled in this way before you ran out of fluorescence. Gels were replaced with capillaries to reduce exposure to poly acrylamide gels. Regardless of method this was still shotgun sequencing with DNA fragments cloned into plasmids grown in bacteria.
+
+####Next gen idea
+
+Start with chomosomal DNA, shear DNA into small pieces of 200 to 500 nt. Add adaptors to fragment library, enrich and amplify library by PCR, and then sequence.
+
+The essence:
+
+* Library preparation
+* Cluster generation
+* Sequencing
+* Alignment and data analysis
+
 ##GAT1
 
 Lab partners: Britt and Pania
