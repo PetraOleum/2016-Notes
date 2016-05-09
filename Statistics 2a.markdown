@@ -345,6 +345,9 @@ The mean E[Y] = &mu; = np. The variance Var(Y) = &sigma;<sup>2</sup> = np(1 - p)
 
 When _n_ is suffiently large, the binomial distribution can be approximated by normal distributions. The larger _n_ gets, the better the approximation becomes, but it also depends on p. As a general rule, the normal approximation is adequate when both np &ge; 5 and n(1 - p) &ge; 5.
 
+###Chi-squared
+
+Test for independence, e.g. "is gender and political party affiliation independent?"
 
 ##Tutorials
 
