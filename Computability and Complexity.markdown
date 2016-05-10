@@ -6,6 +6,8 @@ Computability and Complexity is a 300 level mathematics paper, with three one-ho
 * Wednesday 10am to 11am, CO 220
 * Friday 10am to 11am, CO 118
 
+Exam: 3 hours at 2:30 pm on **Wednesday 15 June** in MCLT102.
+
 _Cover picture is of David Hilbert in 1912._[^HilbertPicture]
 
 [^HilbertPicture]: From [_File:Hilbert.jpg_](https://commons.wikimedia.org/wiki/File:Hilbert.jpg), Wikimedia Commons.

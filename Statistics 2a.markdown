@@ -2,6 +2,8 @@
 
 Stats 2a (STAT 292) is the complement to STAT 293, and occurs in trimester 1. The course website is [here](http://sms.victoria.ac.nz/Courses/STAT292_2016T1/WebHome), but the blackboard site also has material. There are three 1 hour classes per week, on Mondays, Wednesdays and Fridays from 12 to 1pm. The Friday lecture clashes with Genetics, so make sure to pay attention, go over readings etc.
 
+Exam: 3 hours from 9am 27 June in MY221
+
 ##Readings
 
 Ivy Liu has provided a "Reading list" for STAT 292,[^Rlist] the significance of which is not immediately apparent. It is composed entirely of books, of which online links to some are provided. It is divided into three sections, like so:

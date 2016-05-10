@@ -17,7 +17,7 @@ Key dates:
 * Mid-term break: Monday 25 &mdash; Friday 29 April
 * Second mid-term test: Friday 6 May
 * Last lecture: Friday 3 June[^lastlecture]
-* Exam: TBA, 2 hours
+* Exam: 2 hours, 9:00 am (come 15 mins early) Wednesday 22 June in MY221 (typing)
 
 [^lastlecture]: Presumably, as this is the last day and is a Friday.
 
