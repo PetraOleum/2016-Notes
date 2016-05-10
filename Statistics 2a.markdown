@@ -597,4 +597,26 @@ P(30 &le; Y &le; 35) for binomial translates to P(29.5 &le; Y &le; 3.5.) for nor
 
 Definition of a p-value: The probability of getting a test statistic as, or more, extreme as the one we've got.
 
+###Tutorial 9, Wednesday 11 May
+
+Piosson dist and contingency tables
+
+####1)
+
+A piosson trial is one that counts events over time or an area. A is a proportion, not a count, B is a length, not a count, C is a count over a volume, so it is.
+
+####2)
+
+Our null hypothesis is that the population distribution is poisson. The alternative is that it is not.
+
+Poisson has a single parameter, the mean &lambda;. We use the sample mean to calculate a Poisson, and see if it matches our sample. (The sample mean is 1.5 in this case.)
+
+Suppose we had a Poisson dist with &lamda; = 1.5. Need to calculate theoretical probabilities that _r_ = a particular value, then convert to expected frequencies by multiplying by the total. We then use &Chi;<sup>2</sup> to test if they differ. But for this test our expected frequencies need to be all at least 2, which requires pooling rows.
+
+We calculate the test statistic and its degrees of freedom (which is equal to the mean of the distribution). The &Chi;2 statistic is 1.64, but the critical value for 10% is 6.25, so we cannot reject the null and say that the distribution follows the poisson distribution.
+
+####3)
+
+If the data is independent, we can find the expected frequency by multiplying row total by column total and divided by the grand total.
+
 ##Footnotes
