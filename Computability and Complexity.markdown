@@ -1266,6 +1266,46 @@ In complexity theory, we frequently discuss "decision problems": some strings we
 
 We have a finite alphabet &Sigma; = {0, 1} (usually). Our inputs will be finite strings of symbols from &Sigma;. Our Turing machines will have two halt states. Our Turing machines will have two halt states, "accept and halt" and "reject and halt."
 
-Definition: &Sigma;<sup>&lowast;</sup> is the set of finite strings of elements of &Sigma;. We will use letters like x, y, z, &sigma;. &tau;, &rho; to denote elements of &Sigma;<sup>&lowast;</sup>. If x &isin; &Sigma;-star, |x| is the length of x. We put a 2 on the tape to denote the end of the input string.
+Definition: &Sigma;<sup>&lowast;</sup> is the set of finite strings of elements of &Sigma;. We will use letters like x, y, z, &sigma;. &tau;, &rho; to denote elements of &Sigma;<sup>&lowast;</sup>. If x &isin; &Sigma;-star, |x| is the length of x. We put a 2 on the tape to denote the end of the input string.[^EndofString]
+
+[^EndofString]: Actually, we can use the blank symbols we were using before to communicate which parts of the tape were in the input&mdash;this was a failure of communication between lecturers. The adding two at the end is another valid approach to demarcing the end of the input, as is writing the input on alternate bits and using the skipped bits to indicate whether it's valid input etc. Our method is simpler though, albeit requireing the extra symbol.
+
+If A &sube; &Sigma;<sup>&lowast;</sup>, and M is a deterministic Turing machine, we say that _M accepts A_ if M accepts every x that's in A and rejects every x that's not in A. Subsets of &Sigma;<sup>&lowast;</sup> are sometimes called _languages_.
+
+Definition: DTIME(|x|<sup>c</sup>) = {A : A is acceptable in time O(|x|<sup>c</sup>) by a deterministic Turing machine. Example: DTIME(|x|<sup>2</sup>) is the set of languages so that there is a machine whose runtime bounded by a quadratic polynomial in the length of the input so that the machine accepts all x &isin; A and rejects all x &notin; A.
+
+A simple example: A = {x : x is all 1s (no zeros)}. That is {(blank), 1, 11, 111, 1111}. A is in DTIME (|x|<sup>1</sup>), because the runtime is bounded by |x| + 1 (though sometimes the algorithm runs faster).
+
+###Non-deterministic Turing machines
+
+A non-deterministic Turing machine can have two options when confronted with the same bit. These can be thought of as having free will, doing both options simultaneously, doing them randomly, or whatever you want to think of them as.
+
+Definition: A non-deterministic Turing machine is a Turing machine that, in a given state, might have more than one instruction it can do.
+
+Example:
+
+![Non deterministic Turing machine](Nondeterm.png)
+
+This machine, on a blank input, is capable of producing any string and halting, or never halting at all. The only non-deterministic part is the three options on a blank bit.
+
+A "choice" occurs when the machine has multiple instructions it could do. Because we are using polynomial time-bounds, which if it exceeds it can be made to just halt and reject, we can have them always halt.
+
+If A &sube; &Sigma;<sup>&lowast;</sup>, and M is a non-deterministic Turing machine, we say M accepts A if for every x &isin; A there is some sequence of choicesM can make that will cause it to accept, and for every x &notin; A every sequence of choices will cause M to reject x.
+
+NP problems can be phrased as "does x have a solution?" where it's difficult to answer this question, but easy to answer "is y a solution to x?"
+
+A nondeterministic M will use it's choices to guess at what y could be. If any choice works then x has a solution. If x has no solution &hArr; no choice will work.
+
+NTIME(|x|<sup>c</sup>) = {A : A is acceptable in tome O(|x|<sup>c</sup>) by a nondeterministic Turning machine.
+
+Definition: P = &cup; DTIME(|x|c); NP = &cup; NTIME(|x|c). (c &isin;N).
+
+We think of P as the set of feasible problems (the polynomial time acceptable languages).
+
+We think of NP (the non-deterministic polynomial time acceptable languages).
+
+Note: P &sube; NP because every deterministic Turing machine is (or can be trivially converted to, depending on your definition) a non-deterministic Turing machine.
+
+Question: is P = NP? It is widely believed that P &ne; NP but is an open question. The security of most encryption is dependent on the assumption that P &ne; NP.
 
 ##Footnotes
