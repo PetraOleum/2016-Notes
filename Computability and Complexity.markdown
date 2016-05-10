@@ -586,7 +586,7 @@ _Any reasonable model of computation gives precisely the same class of functions
 
 This is not a mathematical theorem: "reasonable model" isn't exactly a mathematical property. But the evidence seems to suggest it&mdash;we always end up back at the same set of functions. We'll be using this idea from now on, not taking the time to check that a algorithm that intuitively seems like something a human can do is actually computable.
 
-**Definition:** A _good numbering_ of computable functions is a list &phi;<sub>0</sub>, &phi;<sub>1</sub>, &hellip; of functions from N to N such that:
+**Definition:** A _good numbering_ of computable functions is a list &phi;<sub>0</sub>, &phi;<sub>1</sub>, &hellip; of functions from &#8469; to &#8469; such that:
 
 1. For every computable function there is an _e_ with &fnof; = &phi;e.
 2. There is a computable function that sends the description of a TM and outputs an _e_ such that &Rho;e is the function given by the Turing machine.
@@ -683,12 +683,12 @@ Theorem: TFAE:[^TFAE]
 [^TFAE]: The following are equivalent.
 
 1. A is computable
-2. A and N - A are both c.e
+2. A and &#8469; - A are both c.e
 
 Proof: 
 
-* (1)&rArr;(2): Suppose A is computable. The &Chi;<sub>N-A</sub> = 1 - &Chi;<sub>A</sub>. So N-A is computable. By the lemma, A and N-A are c.e.
-* (2)&rArr;(2): Suppose A is the domain of &fnof;, and N - A is the domain of g, where f and g are computable. Here is an algorithm for &Chi;A(x):
+* (1)&rArr;(2): Suppose A is computable. The &Chi;<sub>&#8469;-A</sub> = 1 - &Chi;<sub>A</sub>. So &#8469;-A is computable. By the lemma, A and &#8469;-A are c.e.
+* (2)&rArr;(2): Suppose A is the domain of &fnof;, and &#8469; - A is the domain of g, where f and g are computable. Here is an algorithm for &Chi;A(x):
 	1. Set _t_ = 0
 	2. Run f(x) for t steps. If f(x) halts within t steps, halt and output 1
 	3. Run g(x) for t steps. If g(x) halts within t steps, halt and output 0
@@ -887,7 +887,7 @@ So A &equiv;m K
 
 Lemma: 
 
-1. If A is computable and B is any set except &empty; or _N_, then A &le;m B.
+1. If A is computable and B is any set except &empty; or &#8469;, then A &le;m B.
 2. If A &le;m B and B is computable, then A is computable.
 
 Proof: exercise
@@ -921,7 +921,7 @@ Definition: A Wang tile is a 1&times;1 square with a colour on each side.[^WangS
 
 [^WangSide]: That is, edge.
 
-Formally, a Wang tile is a 4-tuple &lang;a, b, c, d&rang;, where a, b, c, d &isin; **N**. It doesn't matter which side matches which letter, and which colour matches which number, it doesn't matter what you've chosen. A tile has an orientation&mdash;rotating and mirroring produces a new tile.
+Formally, a Wang tile is a 4-tuple &lang;a, b, c, d&rang;, where a, b, c, d &isin; &#8469;. It doesn't matter which side matches which letter, and which colour matches which number, it doesn't matter what you've chosen. A tile has an orientation&mdash;rotating and mirroring produces a new tile.
 
 Definition: A _tiling_ is an arrangement of Wang tiles in the plane such that adjacent tiles have the same colour on their common edge.
 
@@ -1070,7 +1070,7 @@ Notation: In practise, when we write &phi;<sub>e</sub> we mean &phi;<sub>e</sub>
 
 ####The Limit Lemma
 
-Theorem: A is computable from K if and only if there is a computable function &fnof; : N&times;N &rarr; {0, 1} so that for every _n_ the limit as s goes to infinity of &fnof;(n, s) = &Chi;<sub>A</sub>(n).
+Theorem: A is computable from K if and only if there is a computable function &fnof; : &#8469;&times;&#8469; &rarr; {0, 1} so that for every _n_ the limit as s goes to infinity of &fnof;(n, s) = &Chi;<sub>A</sub>(n).
 
 &fnof;(n, s) "guesses" at whether or not n &isin; A, potentially changing its mind several times, but eventually stops changing its mind and gives the right answer.
 
@@ -1153,7 +1153,7 @@ Construction:
 * A: _ _ _ _ _ _ _
 * B: _ _ _ _ _ _ _ &hellip;
 
-Pick an n. Hold _n_ out of _B_. Wait for &phi;<sub>e</sub><sup>A</sup>(N) to converge. If it finally converges, we&hellip; (see notes.)
+Pick an n. Hold _n_ out of _B_. Wait for &phi;<sub>e</sub><sup>A</sup>(&#8469;) to converge. If it finally converges, we&hellip; (see notes.)
 
 ####Finite injury in general
 
@@ -1298,9 +1298,9 @@ NP problems can be phrased as "does x have a solution?" where it's difficult to 
 
 A nondeterministic M will use it's choices to guess at what y could be. If any choice works then x has a solution. If x has no solution &hArr; no choice will work.
 
-NTIME(|x|<sup>c</sup>) = {A : A is acceptable in tome O(|x|<sup>c</sup>) by a nondeterministic Turning machine.
+NTIME(|x|<sup>c</sup>) = {A : A is acceptable in tome O(|x|<sup>c</sup>)} by a nondeterministic Turning machine.
 
-Definition: P = &cup; DTIME(|x|c); NP = &cup; NTIME(|x|c). (c &isin;N).
+Definition: P = &cup; DTIME(|x|<sup>c</sup>); NP = &cup; NTIME(|x|<sup>c</sup>). (c &isin;&#8469;).
 
 We think of P as the set of feasible problems (the polynomial time acceptable languages).
 
@@ -1309,5 +1309,37 @@ We think of NP (the non-deterministic polynomial time acceptable languages).
 Note: P &sube; NP because every deterministic Turing machine is (or can be trivially converted to, depending on your definition) a non-deterministic Turing machine.
 
 Question: is P = NP? It is widely believed that P &ne; NP but is an open question. The security of most encryption is dependent on the assumption that P &ne; NP.
+
+&forall;c &isin; &#8469;, DTIME(|x|<sup>c</sup>) &sub; DTIME(|x|<sup>c + 1</sup>) (but not equal to).
+
+Proof: DTIME(|x|<sup>c</sup>) &sube; DTIME(|x|<sup>c + 1</sup>) because any function that is O(|x|<sup>c</sup>) is also O(|x|<sup>c + 1</sup>)
+
+Idea: We define an |x|<sup>c + 1</sup>-time algorithm, and prove that the A it computes is not O(|x|<sup>c</sup>)-time decidable.[^decidablecomputable]
+
+[^decidablecomputable]: Decidable and Computable mean the same thing here.
+
+Plan: On input &sigma; = 111100000, that is 1<sup>n</sup>0<sup>m</sup>, or n ones in a row followed by m zeros in a row. Run &phi;<sub>n</sub> on &sigma; for |&sigma;|<sup>c + 1</sup> may steps. If it accepts, we reject, if it rejects or doesn't halt, accept.
+
+If &phi;<sub>n</sub> runs in O(|x|<sup>c</sup>) time, then from some point on the runtime of &phi;<sub>n</sub> will be bounded by d(|x|<sup>c+1</sup>) for some d. If |x| > d then |x|<sup>c+1</sup> > d(|x|<sup>c</sup>). So &phi;<sub>n</sub> will halt before we do, and then we can do opposite.
+
+Problem: it might take more than |&sigma;|<sup>c + 1</sup> steps for me to emulate |&sigma;|<sup>c + 1</sup> steps of &phi;<sub>n</sub>.
+
+Solution: First of all, we always do |&sigma;|<sup>n + 1</sup> many steps of our Turing machine. Second of all, use an efficient universal Turing machine. Such a machine is able to emulate any Turing machine while not in linear time can do close enough&mdash;a machine that in |x|c + 1 steps can eventually emulate &phi;<sub>n</sub>(x) if &phi;<sub>n</sub> runs in O(|x|<sup>c</sup>) time. (Using a two-tape machine it can emulate it in _nlog(n)_ time, which is less than n<sup>2</sub> time.)
+
+Note: we will ignore this problem and its solution in the proof.
+
+Theorem: L &isin; NP if and only if there is a polynomial time relation R( , )[^polyrelation] and a polynomial p such that x &isin; L &hArr; &exist;y(|y| &lt;' p(|x|) &and; R(x, y)).
+
+[^polyrelation]: This is a deterministic polynomial time relation.
+
+Alternately written as x &isin; L &hArr; &exist;<sub>y<sub><sup>p</sup>R(x,y); meaning that L is &Sigma;<sup>p</sup><sub>1</sub>; or even NP = &Sigma;<sup>p</sup><sub>1</sub>.
+
+Proof: Suppose L &isin; NP. L is accepted by a nondeterministic Turing machine M in time O(|x|<sup>k</sup>). For any x &isin; L, let c be the sequence of choices that M makes when it accepts x.[^cisinsigmastar]
+
+[^cisinsigmastar]: Strictly speaking, c &isin; &Sigma;<sup>&lowast;</sup> where &Sigma; is the set of instructions in M. We can code this with a sequence of 0s and 1s if we like.
+
+R(x, y) says "y codes a sequence of choices that M can make in order to accept x." Further, y must be smaller than p(|x|)
+
+Other direction: Suppose x &isin; L &hArr; &exist;<sup>p</sup><sub>y</sub>(R(x, y)).
 
 ##Footnotes
