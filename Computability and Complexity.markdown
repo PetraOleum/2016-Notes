@@ -1332,7 +1332,7 @@ Theorem: L &isin; NP if and only if there is a polynomial time relation R( , )[^
 
 [^polyrelation]: This is a deterministic polynomial time relation.
 
-Alternately written as x &isin; L &hArr; &exist;<sub>y<sub><sup>p</sup>R(x,y); meaning that L is &Sigma;<sup>p</sup><sub>1</sub>; or even NP = &Sigma;<sup>p</sup><sub>1</sub>.
+Alternately written as x &isin; L &hArr; &exist;<sub>y</sub><sup>p</sup>R(x,y); meaning that L is &Sigma;<sup>p</sup><sub>1</sub>; or even NP = &Sigma;<sup>p</sup><sub>1</sub>.
 
 Proof: Suppose L &isin; NP. L is accepted by a nondeterministic Turing machine M in time O(|x|<sup>k</sup>). For any x &isin; L, let c be the sequence of choices that M makes when it accepts x.[^cisinsigmastar]
 
