@@ -1243,7 +1243,7 @@ We study "feasible" computations, that don't take too much time or memory. We're
 
 We generally say as a first approximation that all polynomial time things are feasible, and all exponential time things are not. Using Turing machines we will end up with the same class of polynomial time solvable things that would be solvable on your computer.
 
-###Notation fir discussing how quickly functions grow
+###Notation for discussing how quickly functions grow
 
 Given functions[^functiontypes] &fnof; and g, we say that:
 
@@ -1340,6 +1340,56 @@ Proof: Suppose L &isin; NP. L is accepted by a nondeterministic Turing machine M
 
 R(x, y) says "y codes a sequence of choices that M can make in order to accept x." Further, y must be smaller than p(|x|)
 
-Other direction: Suppose x &isin; L &hArr; &exist;<sup>p</sup><sub>y</sub>(R(x, y)).
+Other direction: If there is a polynomial time relation R( , ) and a polynomial p such that x &isin; L &hArr; &exist;y(|y| &lt; p(|x|) &and; R(x, y)) then L &isin; NP.
+
+Can assume R(x, y) can be checked in p(|x|) time.
+
+Nondeterministic machine:
+
+On input x, first compute p(|x|), then nondeterministically write a y so that |y| &le; p(|x|). Then check if R(x, y) is true. If yes, accept. Otherwise, reject. If there actually is a y that makes makes x &isin; L then the machine will produce such a y at least once.
+
+Deterministically, we could write down _every_ y so that |y| = p(x), then check if R(x, y) is true for every single one y. Accept if we find a y, reject if we don't. There are 2<sup>p(|x|)</sup>-many ys, which would make it exponential time, not polynomial. Incidentally, this proves that any language in NP is exponential-time solvable.
+
+###A warning
+
+Warning: we didn't prove that you _can't_ answer a question in polynomial time, merely that it can be done in exponential time&mdash;whether or not it can be done depends on whether or not P = NP.
+
+Note that determining that an algorithm is optimal for a purpose is hard, and would mean that you could compute the halting problem.
+
+###NP-complete
+
+We think that NP problems must be hard. Suppose we have a function that's NP, we don't know that it's not also P. We can, however, prove that it is "NP complete", i.e. as hard as an NP possibly can be. We know then that the only way it could be polynomial time decidable is if P = NP.
+
+####Polynomial-time m-reducible
+
+Definition: A is &le;<sup>p</sup><sub>m</sub> B (A is polynomial-time m-reducible to B) if there is a polynomial-time computable function &fnof; such that x &isin; A if and only if &fnof;(x) &isin; B.
+
+Theorem: if A is &le;pm B and B is polynomial-time computable then so is A.
+
+Proof: on input x, compute &fnof;(x), compute whether &fnof;(x) is in B. If yes, accept. If no, reject. Computing whether &fnof;(x) is in B takes time that is polynomial in |&fnof;(x)|, but the length of &fnof;(x) is bounded by the time it takes to compute &fnof;(x) because Turing machines can only write one symbol per step, so it's a polynomial in a polynomial which is a polynomial.
+
+Definition: A is **NP-hard** if for every B in NP, B &le;<sup>p</sup><sub>m</sub> A.
+
+Theorem: if A is NP-hard, and A is in P, then P = NP.
+
+Proof: If A is in P, then everything that is below A is in P, and if A is NP-hard, then everything in NP is below A, so everything in NP is P.
+
+If you take it on faith that P &ne; NP, then if A is NP hard then A &notin; P.
+
+Definition: A is **NP-complete** if A is NP-hard _and_ A &isin; NP.
+
+####SAT
+
+Definition: SAT.
+
+Input: A formula &Phi; of predicate logic.
+
+Question: is &Phi; satisfiable (consistent).
+
+Examples: 
+
+* ((P &or; Q) &and (&not;P &or; &not;Q)), e.g. by making P true and Q false, or making P false and Q true.
+* (P &and; &not;P) is not satisfiable.
+* (((P &or; Q) &and ((&not;Q &or; (&not;P &and; &not;R)) &and; &not;(Q &and; &not;(R &and; P)))) &and; &not;(P &and; R)) is not satisfiable.
 
 ##Footnotes
