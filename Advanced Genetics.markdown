@@ -1215,7 +1215,7 @@ Then Sanger sequencing was created, using fluorescent di-deoxy sequencing. Seque
 
 ####Next gen idea
 
-Start with chomosomal DNA, shear DNA into small pieces of 200 to 500 nt. Add adaptors to fragment library, enrich and amplify library by PCR, and then sequence.
+Start with chromosomal DNA, shear DNA into small pieces of 200 to 500 nt. Add adaptors to fragment library, enrich and amplify library by PCR, and then sequence.
 
 The essence:
 
@@ -1223,6 +1223,56 @@ The essence:
 * Cluster generation
 * Sequencing
 * Alignment and data analysis
+
+###Third generation
+
+A variety of technologies, not yet much in use and with potentially high error rate, have been developed.
+
+####SMRT
+
+Single-molecule real-time sequencing. DNA polymerase is confined in a zero-mode waveguide. Base additions are measured with fluorescent detection of gamma-labelled phosphonucleotides.
+
+####Oxford Nanopore
+
+DNA is sequenced through a microscopic pore in a membrane. Bases are identified by the way each base affects ions flowing through the pore. This system does not require polymerase and allows extremely long reads.
+
+####ZS genetics 3G
+
+Still in its early stages, involves electron microscopy. You denature the DNA and label bases with heavy atoms, run PCR, and line it up on a glass slide. Then image with transmission electron microscopy (TEM). The slide holds static charge to hold the DNA in place.
+
+###Exome sequencing
+
+With next generation sequencing it still isn't all that feasible to sequence an entire genome. Instead we can sequence the exome, which is only a tiny portion of the genome but contains all protein coding genes (by definition). Something like 80% of disease-causing mutations are in the exome, which is 37 million bases long.
+
+####Advantages
+
+* Cost effective
+* 85% pf disease-causing mutations are in exons
+* Identifies non-synonymous variation
+* Detects rare variants even at n = 1
+* Amenable to parents-child trio analysis (e.g. determine inherited or _de novo_ mutations) or cancer-normal gene comparison
+* Detects incomplete penetrance (identification of mutation that should or will cause disease but has not done yet).
+
+####Sequence of events
+
+* Start with ~3 million SNPs per individual
+* Filter down to 15 to 20 thousand coding SNPs per individual
+* Seven to 10 thousand non synonymous coding SNPs per individual
+* Remove previously identified variants, leaving 200-500 novel non synonymous coding SNPs per individual
+* Restrict to variants fitting dominant/recessive model of inheritance to find one or several putative genes
+
+####Disadvantages
+
+* If you're only looking at the exons you're not looking at the introns, or epigenetic changes, or structural changes, or copy-number variation etc
+* No information on gene-gene interactions
+* No accounting for uniparental disomy, i.e. inheriting both copies of a gene from the same parent which would show up as one copy from each parent
+* No accounting for control sequences (e.g. gene silencing microRNAs in introns)
+
+###The microbiome
+
+The interaction between microbes and humans. We determine the species present by sequencing the 12S rRNA gene. Microbes have an important role in metabolism, particularly lose in the gut. Some argue that the microbiome is the "second genome," which has become the name of a company that sequences it.
+
+The microbiome changes throughout life and depending on environment and disease.
 
 ##GAT1
 
