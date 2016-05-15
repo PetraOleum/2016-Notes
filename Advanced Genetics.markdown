@@ -1274,6 +1274,45 @@ The interaction between microbes and humans. We determine the species present by
 
 The microbiome changes throughout life and depending on environment and disease.
 
+###Transcriptomes and methylomics
+
+The transcriptome is the set of all transcripts in any given cell, all products of the transcriptional machinery. It only includes the RNA that is being transcribed, as opposed to all _potential_ transcripts. The transcriptome is thus different from exome sequencing. Typically trying to analyse differential gene expression.
+
+####qRT-PCR
+
+Quantitative real-time PCR measures specific gene expression starting from cDNA made from RNA. You measure the expression level from the point at which the amplification crosses a threshold, normalised to a housekeeping gene (or some other gene that does not change from your treatment).
+
+####RNA-seq
+
+RNA-seq is the process of sequencing the transcriptome. RNA-seq replaced transcriptional microarrays.
+
+RNA-seq allows you to determine differential gene expression (quantitative) and do transcriptome assembly (qualitative).
+
+* First, you need to remove the DNA from the RNA sample.
+* Fragment RNA
+* Reverse transcribe to cDNA
+* Ligate sequence adaptors
+* PCR amplification
+* Select a range of sizes
+* Sequence cDNA ends
+* Remove artefacts from raw reads
+* Correct errors
+* Assemble into transcripts
+* Post-process transcripts
+* Align reads to transcripts to quantify expression
+
+####Approaches to transcriptome assembly
+
+Reference-based assembly versus _de novo_ assembly: Align then assemble versus assemble then align. Some elements of both may be needed to include all reads.
+
+####Methylome
+
+Methylation is the addition of a methyl group to cytosine, which can be deaminated to thymine.
+
+Can use a pair of restriction enzymes that cut at the same spot but respond differently to methylation.
+
+Bisulphite sequencing generates methylation-specific SNPs. An unmethylated cytosine is converted to uracil and PCR amplifications recognises uracil as thymine.
+
 ##GAT1
 
 Lab partners: Britt and Pania
