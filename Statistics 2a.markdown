@@ -351,6 +351,10 @@ When _n_ is suffiently large, the binomial distribution can be approximated by n
 
 Test for independence, e.g. "is gender and political party affiliation independent?"
 
+###Binary response variables
+
+
+
 ##Tutorials
 
 Tutorials are in MY 632 on Wednesdays between Computability and the Stats class itself (11am to 12pm). The tutor is Lindsay(sp?).
