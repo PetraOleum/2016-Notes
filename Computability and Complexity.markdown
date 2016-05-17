@@ -1392,4 +1392,42 @@ Examples:
 * (P &and; &not;P) is not satisfiable.
 * (((P &or; Q) &and ((&not;Q &or; (&not;P &and; &not;R)) &and; &not;(Q &and; &not;(R &and; P)))) &and; &not;(P &and; R)) is not satisfiable.
 
+Theorem: SAT is NP-complete
+
+Note that the vast majority of SAT problems can be completed in a reasonable amount of time, however there are certain problems that are extremely difficult to solve
+
+#####SAT &isin; NP
+
+Proof: Use a nondeterministic Turing machine that looks at &Phi;, guesses value for all the propositional variables, checks whether the guess works.
+
+#####SAT is NP-hard
+
+Given A &isin; NP, we need to show that A &le;<sup>p</sup><sub>m</sub> SAT.
+
+Let M be a NTM that accepts A in time bounded by p(|x|). x &rarr; &Phi; so that &Phi; is satisfiable &harr; M accepts x. The size of &Phi; needs to be polynomial in the length of x, and the time to generate &Phi; needs to be polynomial in |x| also.
+
+On input x, let N = p(|x|)
+
+Propositional variables:
+
+* Q<sub>i,k</sub> 0 &le; i &le; N: "At time i, M is in state q<sub>k</sub>" (k is the total number of state in the machine, which is fixed for a given machine).
+* H<sub>i,j</sub> for 0 &le; i &le; and -N &le; j &le; N: "At time i, M is scanning cell j"
+* S<sub>i,j,k</sub> 0 &le; i &le; and -N &le; j &le; N: "At time i, tape cell j contains symbol S<sub>k</sub>". k ranges over all symbols in the alphabet
+* Ai,k "At time i, the next action preformed by M is action a<sub>K</sub>". k ranges over all possible actions
+
+Formula &Phi; is a conjunction[^bigconjunction] of the following:
+
+[^bigconjunction]: A conjunction is a bunch of formulas joined by &and; symbols; a disjunction is joined by &or; symbols
+
+* At each time i, M is in exactly one state: A conjunction over i of a conjunction between (a conjunction over k of Qi,k) and (a conjunction over all k1 &ne; k2 such that not Qi,k1 &and Qi,k2).
+* At each time i, M is scanning exactly one cell
+* At each time i, M performs exactly one action, which requires two "ghost" actions&mdash;stay in accept state, and stay in reject state&mdash;because it would be too hard to code what to do after it has halted
+* At each time i, each cell contains exactly one symbol
+* At time 0, the computation is in the start state, looking aat the first cell, x is written on the tape: Q0,0 &and; H0,0 &and; a conjunction over j &lt; |x| that S,0,j,[xj] amd a conjunction over j &notin; [0, |x|] S0,j,B.
+* The machine performs its actions correctly
+    * Conjunction over i of A<sub>i,staya</sub> &rarr; (Q<sub>i,accept</sub> &and; Q<sub>i+1,accept</sub>)
+    * Similar for staying in the reject state
+    * Action is &lang;q<sub>x</sub>, s<sub>y</sub>, s<sub>z</sub>, q<sub>w</sub>&rang;: A conjunction over i&hellip;
+* At step N, you have to be in the accept state
+
 ##Footnotes

@@ -1313,6 +1313,14 @@ Can use a pair of restriction enzymes that cut at the same spot but respond diff
 
 Bisulphite sequencing generates methylation-specific SNPs. An unmethylated cytosine is converted to uracil and PCR amplifications recognises uracil as thymine.
 
+###QTLs and QTNs
+
+QTL: Quantitative Trait Loci.
+
+Most traits including diseases are complex or polygenic&mdash;i.e. a function of many contributing genes. A simple formula to calculate the genetic and environmental regulation of a quantatative trait is Y = X + e.
+
+A Quantatative Trait Loci is a genes(s) or chromosomal region(s) that affects variation of a quantitative trait; this can be one or more QTLs.
+
 ##GAT1
 
 Lab partners: Britt and Pania
