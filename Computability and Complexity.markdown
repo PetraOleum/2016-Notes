@@ -1419,15 +1419,69 @@ Formula &Phi; is a conjunction[^bigconjunction] of the following:
 
 [^bigconjunction]: A conjunction is a bunch of formulas joined by &and; symbols; a disjunction is joined by &or; symbols
 
-* At each time i, M is in exactly one state: A conjunction over i of a conjunction between (a conjunction over k of Qi,k) and (a conjunction over all k1 &ne; k2 such that not Qi,k1 &and Qi,k2).
+* At each time i, M is in exactly one state: A conjunction over i of a conjunction between (a conjunction over k of Q<sub>i,k</sub>) and (a conjunction over all k<sub>1</sub> &ne; k<sub>2</sub> such that &not; Q<sub>i,k<sub>1</sub></sub> &and; Q<sub>i,k<sub>2</sub></sub>).
 * At each time i, M is scanning exactly one cell
 * At each time i, M performs exactly one action, which requires two "ghost" actions&mdash;stay in accept state, and stay in reject state&mdash;because it would be too hard to code what to do after it has halted
 * At each time i, each cell contains exactly one symbol
-* At time 0, the computation is in the start state, looking aat the first cell, x is written on the tape: Q0,0 &and; H0,0 &and; a conjunction over j &lt; |x| that S,0,j,[xj] amd a conjunction over j &notin; [0, |x|] S0,j,B.
+* At time 0, the computation is in the start state, looking aat the first cell, x is written on the tape: Q<sub>0,0</sub> &and; H<sub>0,0</sub> &and; a conjunction over j &lt; |x| that S<sub>0,j,[xj]</sub> amd a conjunction over j &notin; [0, |x|] S<sub>0,j,B</sub>.
 * The machine performs its actions correctly
     * Conjunction over i of A<sub>i,staya</sub> &rarr; (Q<sub>i,accept</sub> &and; Q<sub>i+1,accept</sub>)
     * Similar for staying in the reject state
     * Action is &lang;q<sub>x</sub>, s<sub>y</sub>, s<sub>z</sub>, q<sub>w</sub>&rang;: A conjunction over i&hellip;
 * At step N, you have to be in the accept state
+
+####CNF-SAT and 3-CNF-SAT
+
+Both are NP-complete, but are for simpler formulas/are simpler.
+
+Definition: A formula &Phi; is in conjunctive normal form (CNF) if it is a conjunction of disjunctions of literals.
+
+Definiton: &Phi; is in k-conjunctive normal form (k-CNF) if every clause has &le;k literals.
+
+Definition: CNF-SAT (or k-CNF-SAT) is given by:
+
+* Input: A forumala &Phi; in CNF (or k-CNF)
+* Question: Is &Phi; satisfiable?
+
+Proof: CNF-SAT is NP-hard
+
+It's possible to turn the SAT formula previously into a CNF formula.
+
+CNF-SAT is NP because SAT is NP, and CNF-SAT is "easier" than SAT.
+
+Proof: 3-CNF-SAT (3-SAT) is NP-complete
+
+If you have a formula written (A &or; B &or; C &or; D) &hArr; (A &or; B &or; Z) &and; (C &or; D &or; &not;Z) &mdash; the formulas aren't technically equivalent, because Z is in one of them, but one side is true if and only if the other is true.
+
+(A &or; B &or; C &or; D &or; E) &hArr; (A &or; B &or; Z) &and; (C &or; D &or; E &or; &not;Z) &hArr; (A &or; B &or; Z) &and; (C &or; D &or; Y) &and; (E &or; &not;Z &or; &not;Y) etc.
+
+This expands in linear time, in face something like &times;3 or &times;6, depending on how you look at it.
+
+Corollary: For k&ge;3, k-CNF-SAT is NP-complete.
+
+Theorem: For k = 1 or k = 2, k-CNF-SAT &isin; P.
+
+Proof for k = 1: We just have a conjunction of literals, so so long as no literal appears both as it's standard form and its negation. Checking this takes polynomial time, and indeed approximately quadratic time.
+
+We might double back later for k = 2.
+
+###The Clique problem
+
+Definition: Given a graph G, with verticies V, a k-clique is a subset U &sube; V with exactly k elements, such that any two elements of U are joined by an edge in G.
+
+Every element is a 1-clique; any two elements joined by an edge make a 2-clique; a triangle makes a 3-clique; a square with a cross in it makes a 4-clique etc.
+
+Definition of the clique problem:
+
+* Input: Graph G, number k
+* Output: Does G have a k-clique?
+
+Theorem: The clique problem is NP-complete
+
+(However, any given k-clique problem &isin; P.)
+
+Proof: The clique problem is NP
+
+Build a machine that nondeterministically selects k elements of G, then checks if they are a clique. The first part is linear, the second is quadratic.
 
 ##Footnotes
