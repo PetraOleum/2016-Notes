@@ -623,4 +623,10 @@ We calculate the test statistic and its degrees of freedom (which is equal to th
 
 If the data is independent, we can find the expected frequency by multiplying row total by column total and divided by the grand total.
 
+###Tutorial 9
+
+####1)
+
+Fisher's exact test is useful when the assumptions that &Chi;2 has, specifically the size of the values in the cells, don't hold.
+
 ##Footnotes

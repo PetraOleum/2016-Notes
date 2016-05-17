@@ -1,6 +1,6 @@
 all: genetics stats2a computability
 
-genetics:
+genetics: Advanced\ Genetics.markdown
 	ebook-convert "Advanced Genetics.markdown" \
 	"Advanced Genetics.azw3" \
 	--smarten-punctuation \
@@ -27,7 +27,7 @@ genetics:
 	--start-reading-at="//h:h1"
 	python -m markdown -x extra -x toc "Advanced Genetics.markdown" -f "Advanced Genetics.html"
 
-computability:
+computability: Computability\ and\ Complexity.markdown
 	ebook-convert "Computability and Complexity.markdown" \
 	"Computability and Complexity.azw3" \
 	--smarten-punctuation \
@@ -54,7 +54,7 @@ computability:
 	--start-reading-at="//h:h1"
 	python -m markdown -x extra -x toc "Computability and Complexity.markdown" -f "Computability and Complexity.html"
 
-stats2a:
+stats2a: Statistics\ 2a.markdown
 	ebook-convert "Statistics 2a.markdown" \
 	"Statistics 2a.azw3" \
 	--smarten-punctuation \
