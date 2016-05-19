@@ -1429,7 +1429,11 @@ Sequence _simularity_ was not key for replacement, but whether or not they retai
 
 ####Selecting the genes
 
-There are 757 genes in humans that have a 1:1 orthology with essential yeast genes&mdash;that is to say, there is one ortholog in yeast to 1 human gene, and not gene families (which would cause complications if they concealed the effect of one of their deletions or replacements).
+There are 547 genes in humans that have a 1:1 orthology with essential yeast genes&mdash;that is to say, there is one ortholog in yeast to 1 human gene, and not gene families (which would cause complications if they concealed the effect of one of their deletions or replacements). Of these, 469 were selected, on the grounds of what they had available, but somehow this gets selected further down to 414.
+
+####Characteristics of the genes
+
+Sequence similarity does not completely predict replacibility
 
 ##Past Exams
 

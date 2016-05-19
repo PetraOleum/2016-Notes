@@ -1484,4 +1484,73 @@ Proof: The clique problem is NP
 
 Build a machine that nondeterministically selects k elements of G, then checks if they are a clique. The first part is linear, the second is quadratic.
 
+####CNF-SAT &le;<sup>p</sup><sub>m</sub> Clique
+
+&Phi; in CNF &rarr; graph G of number k, i.e. converting a problem of the CNF-SAT type to a Clique problem, and proving that the CNF-SAT problem is polynomial-time computable if and only if the Clique problem is.
+
+* &Phi; is a formula in conjunctive normal form, e.g. (A &or; B &or; &not;C) &and; (A &or; &not;B) &and; (B &or; C)
+* k = the number of clauses in &Phi;
+* The vertices in G will be the occurrences of literals in &Phi;&mdash;if the same literal occurs more than once, they will have two different nodes in G. In our example the nodes will be A, B, &not;C, A, &not;B, B, C.[^nodelabelling]
+* We put an edge between two vertices if they are in different clauses and they aren't the negations of each other
+
+[^nodelabelling]: As there can be only one of an element in a set, the set can be considered {0, 1, 2, 3&hellip;}, but _labelled_ with A, B, &not;C etc.
+
+Claim: G has a k-Clique if and only if &Phi; is satisfiable
+
+Proof: &rArr; We have k clauses, so if we make all the literals in a clique true&mdash;and the rest whichever&mdash;we satisfy our formula, because nothing is connected to anything in the same clause or it's inverse.
+
+Note that you can't always generate a CNF &Phi; by the reverse process.
+
+&lArr; If the formula is satisfiable, then pick some way to satisfy it. You must have made at least one thing from every clause true. The fact that it's possible to do that means that you can find that clique in the graph.
+
+####Independent sets
+
+Given a graph G = (V, E), where V is the vertices and E is the edges, an independent set is a subset U &sube; V such that no two elements of U are connected by an edge.
+
+The _Independent Set Problem_ is:
+
+* Input: Graph G, number k
+* Question: Does G have an independent set of size k?
+
+Theorem: The independent set problem is NP-complete (proof: homework). It's the inverse of the clique problem.
+
+####The colourability problem
+
+Definition: C is a finite set of colours, G = (V, E) is a graph. A colouring of G is a map from &Chi;: V &rarr; C such that if you have two vertices joined by an edge they have different colours.
+
+Definition: if k is an integer, the K colourability problem (written k-Col) is given by:
+
+* Input: A graph G
+* Question: Is G k-colourable
+
+Note: k is not part of the input
+
+Observation: If k = 0, 1, or 2, then k-Col &isin; P &mdash; a graph is 0-Col if and only if it has not vertices; it is 1-Col if and only if there are no edges; if k = 2 then there is a little bit of work to do.
+
+Proof that 2-Col &isin; P:
+
+Start with some graph, pick two colours, pick a vertices, and start colouring from there. Continue until the entire graph is coloured, or you colour two adjacent things the same colour. If that happens then you know whether or not it is possible to colour the graph at all. This takes quadratic time, because you have to search for each edge.
+
+Theorem: if k &ge; 3 then k-Col is NP-complete.
+
+First, k-Col is always &isin; NP. Nondeterministically colour the entire graph, then check if you coloured it right&mdash;this happens to be linear time.
+
+Second, k-Col is NP-hard:
+
+Lemma 1: if k &ge; 3, then 3-Col &le;<sup>p</sup><sub>m</sub> k-Col.
+
+Lemma 2: 3-CNF-SAT &le;<sup>p</sup><sub>m</sub> 3-Col.
+
+#####Proof of Lemma 1
+
+We start with a graph G, which we turn into G&prime;. Then we prove that G is 3-colourable &hArr; G' is k-colourable. That is, we convert the G problem to the G&prime; one, and if the G&prime; is solvable.
+
+To convert, add to G a k-3 clique, and connect each point of the clique to G. You have to spend k-3 of your colours on the clique, and are only left with 3 to colour the original G. If you can colour G with three colours you can colour G&prime; and vice versa.
+
+#####Proof of Lemma 2
+
+Start with a propositional formula &Phi; in 3-CNF and convert it to a graph G. &Phi; is satisfiable if and only if G is 3-colourable.
+
+Begin by drawing three nodes, R, G, and B. For every propositional variable P &isin; &Phi;, we draw three nodes P, &not;P, and B (the same B as before).
+
 ##Footnotes
