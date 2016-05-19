@@ -1413,7 +1413,26 @@ If all of these experiments produce the expected result we would have verified a
 * The response of the system to nitrogen source quality
 * The order of several components of the system
 
+##Kachroo _et al_
+
+Systematic humanization of yeast genes reveals conserved functions and genetic modularity, _Science_, 22 May 2015.
+
+###Idea
+
+* Take yeast
+* Knockout 414 essential genes
+* Replace with human analogues, creating 414 strains
+* Grow
+* 47% were viable
+
+Sequence _simularity_ was not key for replacement, but whether or not they retained similar function. The near-half viability comes in spite of a billion-year split between the two species.
+
+####Selecting the genes
+
+There are 757 genes in humans that have a 1:1 orthology with essential yeast genes.
+
 ##Past Exams
+
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
 
 ###SENS
