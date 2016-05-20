@@ -1321,6 +1321,32 @@ Most traits including diseases are complex or polygenic&mdash;i.e. a function of
 
 A Quantatative Trait Loci is a genes(s) or chromosomal region(s) that affects variation of a quantitative trait; this can be one or more QTLs.
 
+####QTL mapping
+
+* Select parents that differ for a trait
+* Screen the two parents for polymorphic marker loci
+* Generate recombinant loci
+* Collect genotype and phenotype data on recombinant progeny
+* Contrast the mean difference of the parental lines at every marker locus
+* Declare QTL where parental difference is greatest
+
+####Single-marker analysis
+
+* Select parents that differ for a trait
+* Screen the two parents for polymorphic marker loci
+* Generate recombinant progeny
+* Collect genotype and phenotype data on recombinant progeny
+* Do a seperate ANOVA on the effect of each marker
+* Declare QTL where F-test is significant
+
+####LOD
+
+Logarithm of the odds ratio; prob of the data occuring with a QTL versus prob occuring with no QTL.
+
+###Personalised medicine
+
+Human gene knockout mutants. A way of dodging ethics committees.
+
 ##GAT1
 
 Lab partners: Britt and Pania
