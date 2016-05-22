@@ -1336,16 +1336,30 @@ A Quantatative Trait Loci is a genes(s) or chromosomal region(s) that affects va
 * Screen the two parents for polymorphic marker loci
 * Generate recombinant progeny
 * Collect genotype and phenotype data on recombinant progeny
-* Do a seperate ANOVA on the effect of each marker
+* Do a separate ANOVA on the effect of each marker
 * Declare QTL where F-test is significant
 
 ####LOD
 
-Logarithm of the odds ratio; prob of the data occuring with a QTL versus prob occuring with no QTL.
+Logarithm of the odds ratio; prob of the data occurring with a QTL versus probability occurring with no QTL.
 
 ###Personalised medicine
 
 Human gene knockout mutants. A way of dodging ethics committees.
+
+###Buffer Genes
+
+While many diseases are caused by Loss of Function mutations, but it is difficult to develop drugs to restore that function specifically. "Buffer genes" can protect against the causal variant.
+
+More than 6,000 mendelian disorders have been described, with more than 150,000 variants associated with these diseases. Few of these variants have successfully been targeted with drugs; we tend to treat the symptoms but not cure the disease. This is because it is difficult to develop small molecule therapies to restore protein activity.
+
+We have databases of human DNA sequences, and databases of clinical records for mendelian diseases, but not much in the way of data bridging these two. Instead we have to rely on model organisms to find suppressors that buffer disease progression.
+
+####Duchenne muscular dystrophy
+
+DMD is caused by mutations in the dystrophin gene, causing a complete loss of function&mdash;there is no cure. We have two cases of Golden Retrievers with no dystrophin expression, and mild symptoms of muscular dystrophy, despite their relatives having more severe symptoms.
+
+The breeding program identified the Jagged1 variant that confers resistance to DMD in the dogs. This was done via linkage analysis of SNP variants. The SNP that causes the change is on a site that is widely conserved; the mutation seems to allow a different, muscle-centric, transcription factor to bind to the promotor.
 
 ##GAT1
 
