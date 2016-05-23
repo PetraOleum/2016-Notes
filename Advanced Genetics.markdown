@@ -1361,6 +1361,14 @@ DMD is caused by mutations in the dystrophin gene, causing a complete loss of fu
 
 The breeding program identified the Jagged1 variant that confers resistance to DMD in the dogs. This was done via linkage analysis of SNP variants. The SNP that causes the change is on a site that is widely conserved; the mutation seems to allow a different, muscle-centric, transcription factor to bind to the promotor.
 
+###Transgenerational inheritance
+
+The inheritance of epigenetic informamation, e.g. methylation. HDAC inhibitor drugs can have transgenerational effects on methylation, gene expression, and disease progression. This seems to work in both cell culture and mice.
+
+###IPOP
+
+Integrative Personal Omics Profile (iPOP). A record for largest number of buzzwords in a four-letter acronym.
+
 ##GAT1
 
 Lab partners: Britt and Pania
