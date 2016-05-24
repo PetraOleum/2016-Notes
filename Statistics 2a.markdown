@@ -629,4 +629,43 @@ If the data is independent, we can find the expected frequency by multiplying ro
 
 Fisher's exact test is useful when the assumptions that &Chi;2 has, specifically the size of the values in the cells, don't hold.
 
+###Tutorial 10
+
+logit models
+
+We have race and poltical views, and the numbers of people voting for/against Reagan.
+
+Is this a saturated model? I.e., are the residual degrees of freedom is the # of logits - the number of non-reduntant parameters. 2 races times 7 levels of ideology = 14 logits. &alpha; gives us 1 level, &beta;R gives us 2 - 1, &beta;v = 6, &beta;RV = 6. These also add to 14, so it is a saturated model.
+
+What information does "step 1" in the model provide? It removes the interaction term, and tests H0 that BRVij = 0 for all ij, and H1 that at least one BRVij &ne; 0. It does not reject the null hypothesis&mdash;that there is no significant interaction.
+
+The deviance value of this new model is 4.96. p = 0.5488. The deviance can be used to assess model fit.
+
+Estimates of the parameters:
+
+* &alpha; = -2.1501
+* &beta;1R = 2.88
+* &beta;2R = 0
+* &beta;1V = -3.2511
+* &beta;2V = -2.2335
+* &beta;3V = -1.1737
+* &beta;4V = -0.6871
+* &beta;5V = -0.3423
+* &beta;6V = 0.1859
+* &beta;7V = 0
+
+SAS sets the last parameter to 0
+
+We need to do conditional odds ratios, not marginal odds ratios. Given a particular race, we calculate the odds ratio at each level.
+
+The race effect: Given any level of political view, the estimated odds of voting for regan for the white race is 17.934 times that of the non-whites (from SAS output directly). This is e^(2.88 - 0)
+
+Political view effects: given any race, the odds of voting for Regan are the highest when politcal view is at level 6, and the lowest is at political view 1. We can calcuate the odds ratio between any two levels.
+
+There are now six residual degrees of freedom, having removed the six non-redundant parameters of the interaction parameter. This is the degrees of freedom number after the deviance value given by SAS.
+
+Wald statistic is given by Z<sup>2</sup> because the standard normal distribution squared is the &Chi;<sup>2</sup> distribution with 1 df.
+
+For testing if the model provides a good fit, the null is that it is&mdash;use the p-value provided next to the deviance to attempt to reject. In this case we cannot reject, so it is a good fit.
+
 ##Footnotes
