@@ -1551,6 +1551,49 @@ To convert, add to G a k-3 clique, and connect each point of the clique to G. Yo
 
 Start with a propositional formula &Phi; in 3-CNF and convert it to a graph G. &Phi; is satisfiable if and only if G is 3-colourable.
 
-Begin by drawing three nodes, R, G, and B. For every propositional variable P &isin; &Phi;, we draw three nodes P, &not;P, and B (the same B as before).
+Begin by drawing three nodes, R, G, and B. For every propositional variable P &isin; &Phi;, we draw three nodes P, &not;P, and B (the same B as before). These form the central triangle and the variable triangles. The variable triangles all radiate out from the B vertex of the central triangle. If P is true we colour it green and &not;P red, and the other way around if &not;P is true.
+
+Clause gadgets: If (X &or; Y &or; Z) is a clause in &Phi;. X, Y, and Z are literals, and they are the same node as in the variable traingle. The clause gadget ensures that at least one of the literals in the clause must be coloured green (i.e. is true). It can be shown that if X, Y, and Z are all red, then you cannot colour the clause gadget, while if any one of them is green then you can.
+
+If the formula is satisfiable then you can assign the variable triangles then all of the clause gadgets are colourable, and vice versa.
+
+####Planar graphs
+
+Definition: A planar graph is a graph that you can draw in a plane, without any edge crossing.
+
+The _planar_ k-colourability problem, written k-Col (planar), is given by:
+
+* Input: a planar graph G
+* Question: does G have a k-colouring?
+
+Theorem: If k &ne; 3, then k-Col (planar) &isin; P.
+
+Proof: We've already done k = 0, 1, 2 because k-Col &isin; P for those values of k regardless of the graph. If k &ge; 4 then k-Col (planar) is actually constant-time solvable, by the algorithm: accept. Any planar graph can be four-coloured, and so it can be coloured by more than four colours.[^Fourcolourtheorem] This is a case of an optimal solution being non-obvious, and of a problem not having an obvious increase/decrease of hardness with increase of a parameter.
+
+[^Fourcolourtheorem]: There is no intuitive proof for the four colour theorem, but it is the one that states that you can colour any map of contiguous countries on a plane with four colours. It required a computer to prove, having reduced it to several thousand cases. There is, however, an intuitive proof for the five-colour problem. Maps are usually coloured with at least five colours, to give choices and to deal with the ascetics of a four-way border cross.
+
+Theorem: 3-Col (planar) is NP-complete (see tutorial).
+
+####Exact-cover problem
+
+Definition: The exact-cover problem is defined:
+
+* Input: A finite set X, and a family of subsets S of X
+* Question: Is there a subset S&prime; &sube; S such that every elements of X lies in exactly one element of S&prime;.
+
+Examples: 
+
+* X = {1, 2, 3, 4}; S = { {1, 3, 4}, {1, 3}, {2, 4} }. Here, X has an exact cover S&prime; = { {1, 3}, {2, 4} }.
+* X = {1, 2, 3, 4}; S = { {1, 3, 4}, {1, 3}, {1, 2, 4}, {1, 4} }. Here X has no exact cover, because you would need at least two sets in S, and every set has a 1 in it.
+
+Theorem: Exact cover is NP-complete
+
+Proof: First need to show that exact cover &isin; NP. Non-deterministically build a subset S&prime; &sube; S, then check if every element of X is in exactly one element of S&prime;.
+
+NP-hardness: We show that 3-Col &le;<sup>p</sup><sub>m</sub> exact cover.
+
+Start with a graph G = (V, E). We build sets X, S such that this has an exact cover if and only if this is 3-colourable.
+
+X = {1, 2, 3, 4, and then elements of each colour for each edge e.g. |, /, \, &mdash;}.
 
 ##Footnotes
