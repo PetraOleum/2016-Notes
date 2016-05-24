@@ -1596,4 +1596,58 @@ Start with a graph G = (V, E). We build sets X, S such that this has an exact co
 
 X = {1, 2, 3, 4, and then elements of each colour for each edge e.g. |, /, \, &mdash;}.
 
+####Subset sum and partition problems
+
+Definition: The subset sum problem is defined:
+
+* Input: A finite set S, a weight function w : S &rarr; &#8469;, a target integer B
+* Question: is there a subset S&prime; &sube; S, such that &Sum;{a &isin; S&prime;} w(a) = B?
+
+Definition: The partition problem is defined:
+
+* Input: A finite set S, w : S &rarr; &#8469;
+* Question: is there an S&prime; &sube; S such that &Sum; {a &isin; S&prime;} w(a) = &Sum;{a &isin; S - S&prime;} w(a).
+
+Before we show that they are NP-complete, we will show that they are equivalent.
+
+Theorem: Subset sum &equiv;<sup>p</sup><sub>m</sub> Partition
+
+Proof: Partition &le;<sup>p</sup><sub>m</sub> Subset sum. Given an instance S, w of Partition, let B equal (&Sum;{a &isin; S) w(a))/2. This subset sum problem is solvable if and only if the partition problem is solvable.
+
+Proof: Subset sum &le;<sup>p</sup><sub>m</sub> Partition:
+
+Given an instance S, w, B of Subset sum create an instance S&prime;, w&prime; of partition. S&prime; = S with two new elements, and the weights B + 1, N - B + 1, where N is the total weight of all the elements of S. These two elements cannot be placed on the same side, because they are greater than all other elements combined. In order to balance you need to add N - B-worth to the side with B + 1, and B-worth to the side with N - B + 1. This can only be done if a subset of S of size B can be created, i.e. if and only if subset sum was solvable.
+
+Theorem: Subset sum (and therefore Partition) is NP-complete:
+
+Proof: Subset sum &isin; NP. Nondeterministally select a subset, add up the weights, and see if they weigh the correct amount.
+
+Proof: Subset sum is NP-hard. We reduce exact cover &le;<sup>p</sup><sub>m</sub> subset sum. Start with an instance X, S of exact cover. X = {0, 1, 2, &hellip;. m - 1} (if it isn't, we translate it into that set). We build our instance of subset sum by taking S from exact cover and using it as the S in subset sum, we need a w &rarr; &#8469; and a B. Let n = the number of elements in S, + 1. If A &isin; S, we define w(A) = &Sum;{x &isin; A} n<sup>x</sup>. e.g. if A = {0, 1, 5}, in base n would be 100011. Our target sum B = &Sum;{x = 0 to m - 1} n<sup>x</sup>, which in base n would look like 1111111111&hellip; for n 1's. An exact cover would look like a exactly one 1 in each column when adding together. Because n is greater than the number of elements in S, adding them together will never cause you to carry a 1, so this is the only way to get the string of 1's.
+
+####The Knapsack problem
+
+Definition: The knapsack problem:
+
+* Input: a finite set S, a weight function w : S &rarr; &#8469;, a benefit function b : S &rarr; &#8469;, a weight limit W, a desired benefit B.
+* Question: Is there an S&prime;&sube;S such that &Sum; {a &isin; S&prime;} w(a) &le; W; &Sum;{a &isin; S&prime;} b(a) &ge; B?
+
+Theorem: Knapsack is NP-complete
+
+Proof: Knapsack &isin; NP. Nondeterministically choose S&prime;, check weight/benefit.
+
+Proof: Knapsack is NP-hard: subset sum &le;pm knapsack. Given an instance S, w, B of subset sum, w = w, b = w, W = B, B = B. The question now becomes can you make a subset that is at most B, and at least B.
+
+####The bin packing problem
+
+Definition: The bin packing problem:
+
+* Input: a finite set S, a weight function w : &rarr; &#8469;, a bin size B &isin; &#8469;, number k
+* Question: can you divide S into at most k bins, with each bin holding at most B weight?
+
+Theorem: bin packing is NP-complete
+
+Proof: bin packing &isin; NP: take your things, distribute them into k bins, see if they are all in the weight limit.
+
+Proof: bin packing is NP-hard: Partition &le;pm Bin-packing. Given an instance S, w of partition, give ourselves two bins that can contain half the total weight n of set S.
+
 ##Footnotes
