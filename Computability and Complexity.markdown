@@ -1465,7 +1465,9 @@ Proof for k = 1: We just have a conjunction of literals, so so long as no litera
 
 We might double back later for k = 2.
 
-###The Clique problem
+###Some NP-complete proofs
+
+####The Clique problem
 
 Definition: Given a graph G, with verticies V, a k-clique is a subset U &sube; V with exactly k elements, such that any two elements of U are joined by an edge in G.
 
@@ -1484,7 +1486,7 @@ Proof: The clique problem is NP
 
 Build a machine that nondeterministically selects k elements of G, then checks if they are a clique. The first part is linear, the second is quadratic.
 
-####CNF-SAT &le;<sup>p</sup><sub>m</sub> Clique
+Theorem: CNF-SAT &le;<sup>p</sup><sub>m</sub> Clique
 
 &Phi; in CNF &rarr; graph G of number k, i.e. converting a problem of the CNF-SAT type to a Clique problem, and proving that the CNF-SAT problem is polynomial-time computable if and only if the Clique problem is.
 
@@ -1649,5 +1651,55 @@ Theorem: bin packing is NP-complete
 Proof: bin packing &isin; NP: take your things, distribute them into k bins, see if they are all in the weight limit.
 
 Proof: bin packing is NP-hard: Partition &le;pm Bin-packing. Given an instance S, w of partition, give ourselves two bins that can contain half the total weight n of set S.
+
+####The vertex cover problem
+
+A vertex cover is a set of vertices, such that every edge in the entire graph touches at least one of those vertices.
+
+Definition: The vertex cover problem is defined:
+
+* Input: Graph G, number k
+* Question: Is there a vertex cover of G of size k?
+
+Theorem: Vertex cover is NP-complete
+
+Proof: If _G = (V, E)_ is a graph, then _U_ is a vertex cover if and only if _V - U_ is an independent set. Therefore, vertex cover &equiv;<sup>p</sup><sub>m</sub> independent set. G, k &rarr; G, |V| - k converts between both. Note that the prove that polynomial time equivalancy to an NP-complete problem makes the other problem also NP-complete has not been proved so far, but is instead in the homework.
+
+####The Hamiltonian Circuit problem
+
+Given a finite graph G, a Hamiltonian circuit is a circuit (loop) that visits every vertex in G exactly once. The graph may be directed or undirected (though we have done nothing with directed circuits).
+
+Definition: The Hamiltonian Circuit problem is:[^CapitalHamilton]
+
+[^CapitalHamilton]: Hamilton is a person's name; the Hamiltonian Circuit problem is capitalised; a Hamiltonian circuit is not.
+
+* Input: Graph G
+* Question: Is there a Hamiltonian circuit?
+
+Theorem: Hamiltonian Circuit is NP-complete
+
+Proof: NP: Non-deterministically build a path, stop when you get back to some place you were (or the path is exactly the number of vertices long), check. Takes at most O(|V|) many steps; each step takes at most O(|E|) long to figure out your choices before making a choice.
+
+Proof: NP-hard:
+
+This requires a bunch of gadgets, and involves reducing vertex cover to Hamiltonian Circuit.
+
+Vertex Cover &le;<sup>p</sup><sub>m</sub> Hamiltonian Circuit.
+
+G = (V, E), k &rarr; H.
+
+H: For every edge in E, we build a gadget involving twelve points where you must exit in a specific way, going through the entire bottom but none of the top, or go though all twelve points. See notes for diagram. One side is said to belong to one the two vertexes that make the edge ('U'), the other to the other.
+
+For every vertex in V, we string together all the 'U' sides of all the gadgets of edges touching U. This makes a U loop, which is actually a string.
+
+Add k additional dummy vertices, where every dummy vertex is connected to the beginning of every U loop, and the end of every U loop.
+
+Claim: If there is a vertex cover u<sub>1</sub>, &hellip;, u<sub>k</sub>, of size k, then we can build a Hamiltonian circuit in H.
+
+####The Hamiltonian Circuit solution problem
+
+How hard is it to find a Hamiltonian circuit in a graph that has one.
+
+Theorem: If we could solve the Hamiltonian circuit in polynomial time, then we could find a Hamiltonian circuit in polynomial time.
 
 ##Footnotes
