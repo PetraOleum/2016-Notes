@@ -1479,27 +1479,42 @@ Sequence _simularity_ was not key for replacement, but whether or not they retai
 
 There are 547 genes in humans that have a 1:1 orthology with essential yeast genes&mdash;that is to say, there is one ortholog in yeast to 1 human gene, and not gene families (which would cause complications if they concealed the effect of one of their deletions or replacements). Of these, 469 were selected, on the grounds of what they had available, but somehow this gets selected further down to 414.
 
-####Toxicity
-
-They tested whether human genes could replace yeast genes, but several other tests need to be done to properly control the experiment. If adding both genes caused no growth, then the gene is toxic. If the deletion of the yeast gene without the human gene grows then the gene was not essential and is "non-informative."
-
 ####Characteristics of the genes
 
 Sequence similarity does not completely predict replaceability.
 
-####Figures
+###Script
+
+Two slides, supposed to be around two minutes.
+
+####Method
+
+* They selected genes with both a 1:1 orthology, and were essential in yeast. These genes would have been the easiest to test&mdash;being essential made it easier to see if the human gene replaced the yeast gene, while the 1:1 orthology ratio ensured that they only had to contend with _one_ human gene replacing _one_ yeast gene
+* Human genes were inserted into plasmids under the control of GAL or GPD promoters
+* Yeast genes were made able to be down-regulated, segregated away, or inactivated
+* They tested to see whether the yeast could be made to survive the knockout of one of their essential genes if replaced by the orthologos human gene
+
+####Toxicity
+
+The crucial test was whether, when the yeast gene was switched off and the human gene was switched on, the yeast would grow. However several other tests had to me made in order to correctly control the experiment:
+
+* Yeast on, human off&mdash;the strain equivalent to the wildtype really ought to grow or else the test is broken
+* Yeast off, human off&mdash;the genes are supposed to be essential in yeast, so if they grow in spite of them then the gene should be discarded as Not Informative (NI)
+* Yeast on, human on&mdash;the question is whether the human gene compensates for the lack of the yeast gene, so when both are present the yeast should grow. If both genes together make the yeast not grow then the gene is classed as “Toxic.” In most cases, however, reducing the expression levels of the genes removed the toxicity
+
+###Figures
 
 2B, 2C, 4A.
 
-#####2B
+####2B
 
 Amino acid similarity is only partially predictive, mostly at the extremes of similarity&mdash;not as predictive as they expected it to be. The ones that are replaceable tend to be shorter and more highly expressed.
 
-#####2C
+####2C
 
 Some groups, e.g. metabolism (92%), are much more likely to be able to be replaced than others, e.g. cell growth and death (3%). Yeast cell growth requires yeast genes, but a yeast metabolism gene can be replaced by a human metabolism gene without much issue.
 
-#####4A
+####4A
 
 Specific example&mdash;proteosome genes, part of "folding, sorting, and degradation."
 
