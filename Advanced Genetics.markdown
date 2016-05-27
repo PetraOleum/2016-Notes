@@ -1479,9 +1479,29 @@ Sequence _simularity_ was not key for replacement, but whether or not they retai
 
 There are 547 genes in humans that have a 1:1 orthology with essential yeast genes&mdash;that is to say, there is one ortholog in yeast to 1 human gene, and not gene families (which would cause complications if they concealed the effect of one of their deletions or replacements). Of these, 469 were selected, on the grounds of what they had available, but somehow this gets selected further down to 414.
 
+####Toxicity
+
+They tested whether human genes could replace yeast genes, but several other tests need to be done to properly control the experiment. If adding both genes caused no growth, then the gene is toxic. If the deletion of the yeast gene without the human gene grows then the gene was not essential and is "non-informative."
+
 ####Characteristics of the genes
 
-Sequence similarity does not completely predict replacibility
+Sequence similarity does not completely predict replaceability.
+
+####Figures
+
+2B, 2C, 4A.
+
+#####2B
+
+Amino acid similarity is only partially predictive, mostly at the extremes of similarity&mdash;not as predictive as they expected it to be. The ones that are replaceable tend to be shorter and more highly expressed.
+
+#####2C
+
+Some groups, e.g. metabolism (92%), are much more likely to be able to be replaced than others, e.g. cell growth and death (3%). Yeast cell growth requires yeast genes, but a yeast metabolism gene can be replaced by a human metabolism gene without much issue.
+
+#####4A
+
+Specific example&mdash;proteosome genes, part of "folding, sorting, and degradation."
 
 ##Past Exams
 
