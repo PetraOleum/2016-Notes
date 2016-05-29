@@ -1518,6 +1518,14 @@ Some groups, e.g. metabolism (92%), are much more likely to be able to be replac
 
 Specific example&mdash;proteosome genes, part of "folding, sorting, and degradation."
 
+###Future
+
+We want use this to make yeast models more like humans, so we should:
+
+* Test more genes
+* Test whole pathways
+* Test if it really is more human-like
+
 ##Past Exams
 
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
