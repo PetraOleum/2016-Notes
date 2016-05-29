@@ -1526,6 +1526,27 @@ We want use this to make yeast models more like humans, so we should:
 * Test whole pathways
 * Test if it really is more human-like
 
+##Other presentations
+
+###Yeast in space
+
+Nislow et al. 2015
+
+Identifying genes required for survival in microgravity. Used genome-wide yeast deletions, in space.
+
+* Launch conditions
+* Microgravity
+* Increased cosmic radiation
+
+Use an opticell processing model (OPM) using a model organism (yeast). Difficult to separate effects of microgravity and cosmic rays.
+
+OPM was specially designed for expirement.
+
+Some genes increased fitness but then became unviable, but others increased fitness and did not decrease. tRNA, protein localisation in mitochondria, DNA repair, and ribosomal RNA were all found to be important in spaceflight.
+
+Would be nice if we could add a 1g centrifuge to the expirement in space, to control for gavity versus cosmic rays.
+
+
 ##Past Exams
 
 A variety of formats exist&mdash;a different one each year. It looks like in 2013 part 1 wasn't in the exam, so presumably Joe was involved. 2014 and 2015 have three parts divided into two subparts&mdash;question 3b seems to be about a presentation, presumably Melanie's.
