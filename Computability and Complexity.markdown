@@ -1696,7 +1696,7 @@ Add k additional dummy vertices, where every dummy vertex is connected to the be
 
 Claim: If there is a vertex cover u<sub>1</sub>, &hellip;, u<sub>k</sub>, of size k, then we can build a Hamiltonian circuit in H.
 
-####The Hamiltonian Circuit solution problem
+#####The Hamiltonian Circuit solution problem
 
 How hard is it to find a Hamiltonian circuit in a graph that has one?
 
@@ -1721,7 +1721,7 @@ Proof NP-hard: Hamiltonian circuit &le;<sup>p</sup><sub>m</sub> TSP. Given an in
 
 Proof NP: You want to construct some kind of a path in polynomial time, but it seems like this might take exponential time. K, given to us in binary, can grow in size exponentially as it grown in length, so just stopping after reaching k doesn't work. But note: in any optimal solution you never have to visit any vertex more than |V|-many times, because if you're not visiting any city you haven't visited before at each revisit then you can just remove that part of the graph; this provides a polynomial bound. So we polynomially build a path of length at most |V|<sup>2</sup>, then check if it works. We could probably find a lower bound, but we just need _a_ bound.
 
-####Travelling salesman solution problem
+#####Travelling salesman solution problem
 
 The travelling salesman solution problem is defined:
 
@@ -1735,5 +1735,57 @@ There are two big steps. Step 1 is find the optimal k; while step 2 is find the 
 First we find a k<sub>0</sub> that is big enough that there _must_ be a solution. One option is to multiply the largest weight by |V|<sup>2</sup>. The size of k<sup>0</sup> in your input is polynomial time, but the value may be exponential. This means that you can't just decrease by one until it finds the lowest, as this may take exponentially many steps. Instead, we do divide and conquer; the total number of steps that this takes is the log of the number, which is linear in its length.
 
 For step 2 we need to double the size of all the weights, to ensure that all are at least 2, and double the size of k accordingly. We do this so that we can put dots in the middle to test whether the path goes through that edge&mdash;adding a city in the middle of a road forces the algorithm to go through this road. If the new graph has a solution, then the old graph goes through that edge. Then we need to know if the graph _uses this edge more than once_, which we didn't need to know for Hamiltonian circuits. We do this by adding another path between the two edges of the same length, divided by another new city. We can keep doing this until we know how many times it goes over that edge, which is bounded by at most |V| (really much smaller: just 2). We can do this for all edges, one at a time, which gives us the information of both how many times we use each edge and which edges we use. We can turn this into a circuit in polynomial time, using the new graph we created.
+
+###Time bounds for computations
+
+From one of the assignments, we made a Turing machine that orders a string of 1's and 0's so that there is a list of 1's and a list of 0's.
+
+* "It runs in O(|x|<sup>2</sup>) time because it runs in O(|x|) &times; O(|x|) time." This just rephrases the question, so 0/3 marks
+* "&hellip;it takes O(|x|) time to move each 1, and there are O(|x|) 1's." 2/3; not quite enough detail.
+* "&hellip;it needs to find a 1, carry it to the left, and drop it off (O(|x|)), and it needs to do this for at most |x| 1's, and then it needs to move all the way right. This makes (O(|x|) + O(|x|))&times;O(|x|) + O(|x|) = O(|x|<sup>2</sup>)." Perfectly acceptable; 3/3. Better though to state explicit _bounds_.
+* "&hellip;the longest possible runtime is on a string of n 0's followed by n 1's, and on such a string, the runtime is&hellip;" 1/3 points: two issues, it may not actually be true&mdash;there may be actually longer runtimes from slightly more 1's than 0's. Second, you haven't actually proved that the total time is always O(|x|<sup>2</sup>). This can be turned into 2/3 and 3/3 answers, but it takes vastly more effort than it ought to.
+
+##Godel's First Incompleteness Theorem
+
+Optional lecture at the end of the trimester (Wednesday 1st of June 2016). Godel has two dots over the o.
+
+Theorem: (Godel's first incompleteness theorem)
+
+Idea: for every sufficiently strong proof system[^proofsystem] (or theory) there will always be at least one true statement that is unprovable by the proof system.
+
+[^proofsystem]: A set of axioms, and rules of inference.
+
+###Historical context
+
+Historical context: was hated by logicians when proved, "destroyed logic." Before it was proved, the idea of logic was to create a single axiomatic system that encompassed all of mathematics and could prove any true concept. If that could be done you could make a machine that could search for proofs; if your proof system wasn't strong enough you could always make it more robust and able to prove more things. Godel's first incompleteness theorem shows that you will never be able to do that. Instead logic has branched out from there.
+
+###Properties of our proof system
+
+What does "sufficiently strong" mean? For one, it can mean "stronger than Peano arithemetic."
+
+Properties of our proof system:
+
+* It can talk about Turing machines (Can make the sentence &phi;<sub>n</sub>(n)&darr;, even if it can't prove it). Where "sufficently strong" is replaced by "stronger than PA", this statement takes 90% of the proof. However, we've already seen how to model Turing machine in propositional logic, and first order logic allows us to model halting.
+* It is valid: It doesn't prove false statements. But what does it mean for a statement to be false? Formally: it doesn't prove false statements concerning whether or not Turing machines halt. In the "stronger than PA" case it would mean "doesn't prove false statements about natural numbers."
+* It is computable: Given a proof, there is a way of checking whether or not it is a proof. Any proof system people use is computable, because you otherwise would not be able to use it. The proof can be made to work if the proof system is merely _computably enumerable_, but nobody actually uses these. This is because you only need to be able to show that purported proofs are really proofs, and not reject false proofs.
+
+###"This sentence is unprovable"
+
+We would like to write the liar paradox, but you can't actually do that&mdash;this is the next best thing. We'll call it "S". If S _can_ be proved, then it's false, but we can't prove things that are wrong. But how do we build it?
+
+Consider the Turing machine that searches for a proof of S, and halts if it finds such a proof. That machine halts. This sort of works, but isn't very good. We'd need to prove the recursion theorem over sentences in our proof system, but we'd rather not know anything about it.
+
+Better: Build an algorithm which, on input n, does the following:
+
+* It writes Sn = "&phi;<sub>n</sub>(n)&uarr;" = &not;"&phi;<sub>n</sub>(n)&darr;"
+* It searches for a proof of S<sub>n</sub>. If it finds such a proof, it halts.
+
+This algorithm is carried out by some Turing machine &phi;<sub>m</sub>. What does &phi;<sub>m</sub>(m) do? The statement S is S<sub>m</sub>. The value of m will change depending on the proof system, but it _will always exist_.
+
+###Godel's Second Incompleteness Theorem
+
+Idea: For any sufficiently strong proof system, the proof system cannot prove its own consistency.
+
+No proof system can prove that it cannot prove itself false. E.g. you can have Con-PA, PA + "PA is consistent," but this cannot prove that Con-PA is provable, so you need Con-Con-PA, etc.
 
 ##Footnotes
