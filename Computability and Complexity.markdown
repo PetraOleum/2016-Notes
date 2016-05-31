@@ -1698,8 +1698,42 @@ Claim: If there is a vertex cover u<sub>1</sub>, &hellip;, u<sub>k</sub>, of siz
 
 ####The Hamiltonian Circuit solution problem
 
-How hard is it to find a Hamiltonian circuit in a graph that has one.
+How hard is it to find a Hamiltonian circuit in a graph that has one?
 
-Theorem: If we could solve the Hamiltonian circuit in polynomial time, then we could find a Hamiltonian circuit in polynomial time.
+Theorem: If we could solve the Hamiltonian Circuit problem in polynomial time, then we could find a Hamiltonian circuit in polynomial time.
+
+Note: It's trivial that if we could find a circuit in polynomial time then we could prove that one existed in polynomial time, and the same is true with NP-complete problems generally, however the reverse is not always true.
+
+####Travelling salesman problem
+
+Definition: The Travelling salesman problem (TSP) is given by:
+
+* Input: A directed or undirected graph G = (V, E); a weight function w : E &rarr; &#8469;; and a number k.
+* Question: is there a circuit that hits all vertices, so that the circuit has weight &le; k?
+
+This is the way to phrase it as a decision problem, rather than the more well-known solution problem version. This is also interchangable with the version where there must be a path between every two vertex, which simplifies the solution problem as it means there is always _a_ solution merely more and less optimal ones.
+
+Theorem: The Travelling salesman problem is NP-complete
+
+The proof that it is NP-hard is easier than the proof that it is NP.
+
+Proof NP-hard: Hamiltonian circuit &le;<sup>p</sup><sub>m</sub> TSP. Given an instance of Hamiltonian circuit, use the same graph, give each edge weight 1, and let the target number k be equal to |V| (the number of vertices in G). If there is a travelling salesman solution then there is a way to visit all cities (vertices), and because k is the number of cities then you must not revisit the same city twice.
+
+Proof NP: You want to construct some kind of a path in polynomial time, but it seems like this might take exponential time. K, given to us in binary, can grow in size exponentially as it grown in length, so just stopping after reaching k doesn't work. But note: in any optimal solution you never have to visit any vertex more than |V|-many times, because if you're not visiting any city you haven't visited before at each revisit then you can just remove that part of the graph; this provides a polynomial bound. So we polynomially build a path of length at most |V|<sup>2</sup>, then check if it works. We could probably find a lower bound, but we just need _a_ bound.
+
+####Travelling salesman solution problem
+
+The travelling salesman solution problem is defined:
+
+* Input: Strongly connected graph G = (V, E); weight function w : E &rarr; &#8469;
+* Question: Find an optimal solution (the solution with the smallest weight).
+
+Theorem: given a polynomial time oracle for TSP, we could solve the travelling salesman solution problem in polynomial time.
+
+There are two big steps. Step 1 is find the optimal k; while step 2 is find the solution with that k. 
+
+First we find a k<sub>0</sub> that is big enough that there _must_ be a solution. One option is to multiply the largest weight by |V|<sup>2</sup>. The size of k<sup>0</sup> in your input is polynomial time, but the value may be exponential. This means that you can't just decrease by one until it finds the lowest, as this may take exponentially many steps. Instead, we do divide and conquer; the total number of steps that this takes is the log of the number, which is linear in its length.
+
+For step 2 we need to double the size of all the weights, to ensure that all are at least 2, and double the size of k accordingly. We do this so that we can put dots in the middle to test whether the path goes through that edge&mdash;adding a city in the middle of a road forces the algorithm to go through this road. If the new graph has a solution, then the old graph goes through that edge. Then we need to know if the graph _uses this edge more than once_, which we didn't need to know for Hamiltonian circuits. We do this by adding another path between the two edges of the same length, divided by another new city. We can keep doing this until we know how many times it goes over that edge, which is bounded by at most |V| (really much smaller: just 2). We can do this for all edges, one at a time, which gives us the information of both how many times we use each edge and which edges we use. We can turn this into a circuit in polynomial time, using the new graph we created.
 
 ##Footnotes
