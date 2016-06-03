@@ -1546,6 +1546,13 @@ Some genes increased fitness but then became unviable, but others increased fitn
 
 Would be nice if we could add a 1g centrifuge to the expirement in space, to control for gavity versus cosmic rays.
 
+###Health and population effects of rare gene knockouts in adult humand with related parents
+
+Effects of incest? Naturally occuring knockouts in adults. Specifically PRDM9 gene knockout, related to meiotic recombination.
+
+Autozygosity: homozygosity, but the homologous chromosomes are consanguineous. That is, the genes are homozygous because _they are the same gene_, with recent common anscestry. That is, incest.
+
+Need to exclude mosaicism, deal with loss-of-function variants.
 
 ##Past Exams
 

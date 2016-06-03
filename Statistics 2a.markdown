@@ -668,4 +668,8 @@ Wald statistic is given by Z<sup>2</sup> because the standard normal distributio
 
 For testing if the model provides a good fit, the null is that it is&mdash;use the p-value provided next to the deviance to attempt to reject. In this case we cannot reject, so it is a good fit.
 
+###Tutorial 11
+
+
+
 ##Footnotes
