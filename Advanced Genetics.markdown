@@ -1572,6 +1572,23 @@ Two of three of the most recent past exams[^nonessexam] have questions asking ab
 
 The 2015 version is worth 20 marks, and is trimmed down (the advisor is no-longer "evil") but still functionally equivalent albeit now worth 1/5 of the exam and not 1/7.
 
+####Plan
+
+* We have a gene
+* We know that the knockout survives
+* We want to know what protein it produces
+* We want to know what that protein interacts with
+* We want to know what compounds the protein interacts with
+* We want to use those compounds to investigate the pathway the protein is involved with
+
+####Attempt
+
+If we have a gene, with no known function, and which is not essential according to the results of a deletion mutant study, then the first thing we will want to know is whether the gene is expressed, and what protein is produced. I'll assume that it is, and that we can find the protein via mass spectrometry and searching for the expected peptide sequence.
+
+Next, we should determine what other proteins physically interact with the protein associated with the gene. We can do this using Yeast-2-Hybrid (Y2H). This involves fusing the "bait" protein to the DNA binding domain of a transcription factor, and a library of target proteins to the corresponding activation domain. The bait fusion protein is expressed, and exposed to expression of the target fusion proteins in turn. Where our protein interacts physically with another protein in our library, a reporter gene will be activated, and the interaction can be detected.
+
+It would be useful to know what compounds interact with the protein
+
 ###Molecular signature of natural selection
 
 Question 2 in part A of the 2015 exam[^natselsigexam] asks:
