@@ -1587,7 +1587,9 @@ If we have a gene, with no known function, and which is not essential according 
 
 Next, we should determine what other proteins physically interact with the protein associated with the gene. We can do this using Yeast-2-Hybrid (Y2H). This involves fusing the "bait" protein to the DNA binding domain of a transcription factor, and a library of target proteins to the corresponding activation domain. The bait fusion protein is expressed, and exposed to expression of the target fusion proteins in turn. Where our protein interacts physically with another protein in our library, a reporter gene will be activated, and the interaction can be detected.
 
-It would be useful to know what compounds interact with the protein
+It would be useful to know what compounds interact with the protein, particularly simulating its deletion. This could be done e.g. via reverse yeast two hybrid (rY2H), where the protein produced by the gene, along with one of the interacting proteins detected via classical Y2H, screened against a library of compounds to find those that disrupt the interaction.
+
+Having found a suitable compound we can use it in a HIP-HOP expirement. HaploInsufficiency Profiling finds the primary target of a drug; we already have the target so this is less useful for is. Homozygous deletion profiling
 
 ###Molecular signature of natural selection
 
