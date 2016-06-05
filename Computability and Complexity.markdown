@@ -22,11 +22,11 @@ The _Theory of Computation_ originated in the 1930's, and its goal is to:
 
 The theory is divided into three areas:
 
-* **Complexity Theory**  
+* **Complexity Theory** 
   Classification of problems into _hard_ and _easy_, proof that hard problems are really of that nature.
-* **Computability Theory**  
+* **Computability Theory** 
   Classification of problems as _solvable_ or _unsolvable_
-* **Automata Theory**  
+* **Automata Theory** 
   Considering different types of _computational models_, such as _finite automata_, _context-free grammars_, and _turing machines_, determine whether they are of equal power or if one can solve more problems than others.
 
 ##Hilbert's Radio Address
@@ -1787,5 +1787,29 @@ This algorithm is carried out by some Turing machine &phi;<sub>m</sub>. What doe
 Idea: For any sufficiently strong proof system, the proof system cannot prove its own consistency.
 
 No proof system can prove that it cannot prove itself false. E.g. you can have Con-PA, PA + "PA is consistent," but this cannot prove that Con-PA is provable, so you need Con-Con-PA, etc.
+
+##Exam practise
+
+###State and prove Rice's theorem
+
+> The only computable index sets are &#8469; and &empty;
+
+Suppose A were a computable index set, and that A &ne; &#8469; and A &ne; &empty;. Since A &ne; &#8469; there exists an e<sub>0</sub> &notin; A; since A &ne; &empty; there exists an e<sub>1</sub> &isin; A. Since A is computable we can fix an e<sub>0</sub> and e<sub>1</sub>.
+
+We want to build an _n_ such that &phi;<sub>n</sub>(x) = {&phi;<sub>e<sub>0</sub></sub>(x), if n &isin; A; &phi;<sub>e<sub>1</sub></sub>(e), if n &notin; A}
+
+To do so, create an h(x, y) = {&phi;<sub>e<sub>0</sub></sub>(y), if x &isin; A; &phi;<sub>e<sub>1</sub></sub>(y) if x &notin; A}
+
+An algorithm for h:
+
+1. Run &Chi;<sub>A</sub>(x)
+2. If &Chi;<sub>A</sub>(x) = 1, run and output &phi;<sub>e<sub>0</sub></sub>(y)
+3. Else, run and output &phi;<sub>e<sub>1</sub></sub>(y)
+
+By the s-m-n theorem, there is a total computable _s_ with &phi;<sub>s(x)</sub>(y) = h(x, y). By the recursion theorem there is an _n_ with &phi;<sub>n</sub>(y) = &phi;<sub>s(n)</sub>(y)&mdash;this is the n we want.
+
+&phi;<sub>n</sub>(y) = h(n, y) = {&phi;<sub>e<sub>0</sub></sub>(y), if n &isin; A; &phi;<sub>e<sub>1</sub></sub>(y) if n &notin; A}
+
+Then n &isin; A &rArr; &phi;<sub>n</sub> = &phi;<sub>e<sub>0</sub></sub> &rArr; n &notin; A, and n &notin; A &rArr; &phi;<sub>n</sub> = &phi;<sub>e<sub>1</sub></sub> &rArr; n &isin; A. This is a contradiction, so A does not exist.
 
 ##Footnotes
