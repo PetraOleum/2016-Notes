@@ -1589,7 +1589,7 @@ Next, we should determine what other proteins physically interact with the prote
 
 It would be useful to know what compounds interact with the protein, particularly simulating its deletion. This could be done e.g. via reverse yeast two hybrid (rY2H), where the protein produced by the gene, along with one of the interacting proteins detected via classical Y2H, screened against a library of compounds to find those that disrupt the interaction.
 
-Having found a suitable compound we can use it in a HIP-HOP expirement. HaploInsufficiency Profiling finds the primary target of a drug; we already have the target so this is less useful for is. Homozygous deletion profiling
+Having found a suitable compound we can use it in a HIP-HOP expirement. HaploInsufficiency Profiling finds the primary target of a drug; we already have the target so this is less useful for us. Homozygous deletion profiling (HOP) will identify downstream targets.
 
 ###Molecular signature of natural selection
 
