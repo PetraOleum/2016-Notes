@@ -658,9 +658,9 @@ SAS sets the last parameter to 0
 
 We need to do conditional odds ratios, not marginal odds ratios. Given a particular race, we calculate the odds ratio at each level.
 
-The race effect: Given any level of political view, the estimated odds of voting for regan for the white race is 17.934 times that of the non-whites (from SAS output directly). This is e^(2.88 - 0)
+The race effect: Given any level of political view, the estimated odds of voting for Regan for the white race is 17.934 times that of the non-whites (from SAS output directly). This is e^(2.88 - 0)
 
-Political view effects: given any race, the odds of voting for Regan are the highest when politcal view is at level 6, and the lowest is at political view 1. We can calcuate the odds ratio between any two levels.
+Political view effects: given any race, the odds of voting for Regan are the highest when political view is at level 6, and the lowest is at political view 1. We can calculate the odds ratio between any two levels.
 
 There are now six residual degrees of freedom, having removed the six non-redundant parameters of the interaction parameter. This is the degrees of freedom number after the deviance value given by SAS.
 
@@ -668,8 +668,6 @@ Wald statistic is given by Z<sup>2</sup> because the standard normal distributio
 
 For testing if the model provides a good fit, the null is that it is&mdash;use the p-value provided next to the deviance to attempt to reject. In this case we cannot reject, so it is a good fit.
 
-###Tutorial 11
-
-
+##Exam practise
 
 ##Footnotes
