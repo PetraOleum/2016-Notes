@@ -717,9 +717,61 @@ A is a random variable, taking value A<sub>i</sub> for group i. Instead of estim
 
 ####f)
 
-
 &sigma;<sup>2</sup> = MSE = 6.4305556; &sigma;<sup>2</sup> + r&sigma;<sup>2</sup><sub>A</sub> = MST = 7.1583333; r&sigma;<sup>2</sup><sub>A</sub> = 7.1583333 - 6.4305556 = 0.7277777. r = 10; &sigma;<sup>2</sup><sub>A</sub> = 0.0727778.
 
 The percentage explained = &sigma;<sup>2</sup><sub>A</sub> / (&sigma;<sup>2</sup><sub>A</sub> + &sigma;<sup>2</sup>) = 0.01119 = 1.1%.
+
+###Q2 2015
+
+> An experiment was run to determine the effects of soil moisture on the early growth of different varieties of wheat. The following data show Y = the average biomass (g) of wheat plants in 2m<sup>2</sup> plots after a fixed growing period. The 36 plots had six different varieties (V1-V6) planted in three different levels of soil moisture (Low, Medium, and High).
+
+####a)
+
+The advantages of balance include:
+
+* Equal precision of comparisons
+* Better power
+* Robustness to a failure of the constant variance assumption
+
+####b)
+
+The effects model for two-way ANOVA has the model equation:
+
+Y<sub>ijk</sub> = &mu; + &alpha;<sub>i</sub> + &beta;<sub>j</sub> + (&alpha;&beta;)<sub>ij</sub> + E<sub>ijk</sub>
+
+Where:
+
+* Y<sub>ijk</sub> is an instance of the response variable
+* &mu; is the overall average
+* &alpha;<sub>i</sub> is the effect of factor i
+* &beta;<sub>j</sub> is the effect of factor j
+* (&alpha;&beta;)<sub>ij</sub> is the interaction between the two factors i and j
+* E<sub>ijk</sub> is an instance of the error random variable
+
+####c)
+
+The null hypothesis for the interaction test H0 is that there is no interaction between the factors, i.e. that all (&alpha;&beta;)<sub>ij</sub> = 0
+
+The alternate hypothesis for the interaction test Ha is that there is some interaction between the factors, i.e. that at least one (&alpha;&beta;)<sub>ij</sub> &ne; 0
+
+####d)
+
+* Variety&times;Soil Moisture (interaction): 10 df; F = 0.78; p = 0.6462; p &gt; 0.05, therefore do not reject the null hypothesis&mdash;there is no effect of the interaction between variety and soil moisture on biomass
+* Soil Moisture: 2 df; F = 4.66; p = 0.0234; p &lt; 0.05, therefore we reject the null hypothesis for this test, that there is no effect of soil moisture on biomass
+* Variety: 5 df; F = 50.89; p &lt; 0.0001 &lt; 0.05, therefore we reject the null hypothesis for this test, that there is no effect of variety on biomass
+
+####e)
+
+There is no evidence for an interaction between variety and moisture level&mdash;there is no particular variety that does noticibly better or worse at a particular moisture level, for example.
+
+The factors on their own, however, have discernable effects.
+
+####f)
+
+There is judged to be no interaction, so a Tukey test on each factor to determine which groups differ from each other is justified
+
+####g)
+
+The Tukey test given tests the groups in the Variety factor. It shows that the varities cluster into two groups that are each statistically different from all the members of the other group. One group contains varities 1 and 5, the other 2, 3, 4, and 6.
 
 ##Footnotes
