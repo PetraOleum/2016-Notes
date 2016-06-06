@@ -670,4 +670,56 @@ For testing if the model provides a good fit, the null is that it is&mdash;use t
 
 ##Exam practise
 
+###Q1 2015
+
+> Four hospitals in a certain district are compared for their speed in attending to emergency admissions. Ten emergency patients were chosen from each hospital one Tuesday between 5pm and 11pm, and their waiting time until first interviewed by a doctor is recorded.
+
+####a)
+
+The effects model equation is: Y<sub>ij</sub> = &mu; + &alpha;<sub>i</sub> + E<sub>ij</sub>. The null hypothesis is that &forall;i, &alpha;<sub>i</sub> = 0. The alternate hypothesis is that &exist;i such that &alpha;<sub>i</sub> &ne; 0.
+
+* i indexes the groups
+* j indexes the individuals in group i
+* Y is the response variable
+* &mu; is the mean
+* &alpha;<sub>i</sub> is the effect for group i
+* E<sub>ij</sub> is the error term for individual ij.
+
+####b)
+
+The test statistic is 1.11; the degrees of freedom are 3, 36; the _p_-value is 0.3565.
+
+_p_ &gt; 0.05 so we cannot reject the null hypothesis at the 5% level. We conclude that there is no difference between the waiting times of the hospitals.
+
+####c)
+
+The assumptions for ANOVA are:
+
+* Normality: The data approximately follows the diagonal line in the Q/Q graph; suggesting that this assumption holds
+* Constant variance: The residuals plot shows a degree of shape, including some outliers; this assumption is dubious
+* Independence: The patients were picked randomly; so far as we can tell from the information give this assumption holds
+
+I conclude that the constant variance assumption does not hold, or is dubious, and so the results of the ANOVA are dubious.
+
+####d)
+
+_Probably not on the test this year_
+
+The null hypothesis was not rejected; this might be because there really is no difference in means, or because there was insufficient power to detect the difference because the same size was too small.
+
+####e)
+
+The parameter &alpha; is replaced by the random variable A, producing:
+
+Y<sub>ij</sub> = &mu; + A<sub>i</sub> + E<sub>ij</sub>
+
+A is a random variable, taking value A<sub>i</sub> for group i. Instead of estimating the parameter &alpha;<sub>i</sub>, we estimate the realisation A<sub>i</sub> of the random variable A.
+
+####f)
+
+
+&sigma;<sup>2</sup> = MSE = 6.4305556; &sigma;<sup>2</sup> + r&sigma;<sup>2</sup><sub>A</sub> = MST = 7.1583333; r&sigma;<sup>2</sup><sub>A</sub> = 7.1583333 - 6.4305556 = 0.7277777. r = 10; &sigma;<sup>2</sup><sub>A</sub> = 0.0727778.
+
+The percentage explained = &sigma;<sup>2</sup><sub>A</sub> / (&sigma;<sup>2</sup><sub>A</sub> + &sigma;<sup>2</sup>) = 0.01119 = 1.1%.
+
 ##Footnotes
