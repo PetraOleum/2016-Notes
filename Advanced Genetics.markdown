@@ -1635,5 +1635,37 @@ Part 1 question three of 2015 asks:
 
 > Define linkage disequilibrium and explain how linkage disequilibrium is regulated by recombination.
 
+###Hutchinson-Gilford progeria syndrome
+
+2014 Part 1 Q5; 5 points
+
+> Describe in detail the synthesis, inheritance, and toxic accumulation of LaminA that causes premature ageing in Hutchinson-Gilford progeria syndrome (HGPS)
+
+LaminA is a protein that forms a network of filaments beneath the nuclear membrane, and can bind directly to DNA. A _de novo_ point mutation causes the loss of 50 amino acids due to messing up mRNA splicing. The mutation is autosomal dominant, in theory, however because people who have the disease do not live to have children, the mutation is not inherited. Build-up of the mutant protein causes an increase in genomic instability due to the interaction with DNA, and decreased length of telomeres. Decreased length of telomeres leads to symptoms of premature ageing, e.g. slow growth, dwarfism, hair loss, thin skin, growth and join defects, etc.
+
+###DNA repair mechanisms
+
+2014 Part 1 Q4; 5 points
+
+> Describe two DNA repair mechanisms. What is common between these mechanisms? What is different between these mechanisms?
+
+**Base-excision repair**
+
+* Works on deaminated and oxidised DNA
+* Damage base recognised and cleaved from backbone
+* Backbone cleaved near AP site
+* Polymerase I initiates repair from the free 3&prime; OH at the nick, replacing a portion of the damaged strand and replacing it with undamaged DNA
+* Remaining nick sealed with DNA ligase
+
+**Nuclease excision repair**
+
+* Thymine dimers
+* DNA cleaved on damaged strand at 5&prime; and 3&prime; ends of dimer
+* Helicase removes DNA segment
+* DNA polymerase fills gap
+* Ligase seals the nick
+
+In both cases, the damaged DNA is removed and then replaced by DNA polymerase using the opposing strand as a template&mdash;instead of, say, directly editing the damage and reversing the process. In base-excision repair, however, a nick is made at a standard site some distance upstream of the error and a number of bases around the error are replaced until the polymerase disassociates. In nuclease excision repair, the damage is specifically removed with nicks made immediately up and downstream of the error and those bases specifically are replaced.
+
 ##Footnotes
 Footnotes appear below this line, but are coded in markdown after the paragraph in which they feature.
