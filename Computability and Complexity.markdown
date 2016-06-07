@@ -1812,4 +1812,16 @@ By the s-m-n theorem, there is a total computable _s_ with &phi;<sub>s(x)</sub>(
 
 Then n &isin; A &rArr; &phi;<sub>n</sub> = &phi;<sub>e<sub>0</sub></sub> &rArr; n &notin; A, and n &notin; A &rArr; &phi;<sub>n</sub> = &phi;<sub>e<sub>1</sub></sub> &rArr; n &isin; A. This is a contradiction, so A does not exist.
 
+###M-reducibility
+
+2014 Q2A:
+
+> i. Define the term: A is m-reducible to C, A &le;<sub>m</sub> C
+
+A is m-reducible to C if there is a total computable &fnof;, such that x &isin; A &harr; &fnof;(x) &isin; C.
+
+> ii. Using the s-m-n theorem, or otherwise, show that K &le;<sub>m</sub> D, where K = {x | &phi;<sub>x</sub>(x)&darr;} and D = {x | &phi;<sub>x</sub>(x<sup>3</sup>)&darr;}
+
+?
+
 ##Footnotes
