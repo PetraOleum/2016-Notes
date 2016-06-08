@@ -1822,6 +1822,19 @@ A is m-reducible to C if there is a total computable &fnof;, such that x &isin; 
 
 > ii. Using the s-m-n theorem, or otherwise, show that K &le;<sub>m</sub> D, where K = {x | &phi;<sub>x</sub>(x)&darr;} and D = {x | &phi;<sub>x</sub>(x<sup>3</sup>)&darr;}
 
-?
+&fnof;(x, y):
+
+1. Run &phi;x(x<sup>3</sup>)
+2. Halt and output the result
+
+&fnof;(x, y)&darr; &harr; &phi;x(x<sup>3</sup>)&darr; &harr; x &isin; D
+
+By s-m-n &exist; some function s(x) such that &fnof;(x, y) = &phi;<sub>s(x)</sub>(y), where s is a totally computable injective function.
+
+&phi;<sub>s(x)</sub>(s(x)) = &phi;<sub>s(x)</sub>(y) &forall;y = &fnof;(x, y) = &phi;<sub>x</sub>(x<sup>3</sup>)
+
+&phi;<sub>x</sub>(x)&darr; &harr; x &isin; K; &phi;<sub>s(x)</sub>(s(x))&darr; &harr; s(x) &isin; K?
+
+Somehow, this s(x) is the function we need, but I don't really get it&hellip;
 
 ##Footnotes
