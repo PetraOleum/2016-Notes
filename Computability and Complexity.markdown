@@ -1837,4 +1837,25 @@ By s-m-n &exist; some function s(x) such that &fnof;(x, y) = &phi;<sub>s(x)</sub
 
 Somehow, this s(x) is the function we need, but I don't really get it&hellip;
 
+###Primitive recursion
+
+2013 Q1b
+
+> Prove that g(x) = (x + 3)! + 1 is primitive recursive
+
+* x + 3 is primitive recursive because x + 3 = S(S(S(x)))
+* x + 1 is primitive recursive because x + 1 = S(x)
+* x! is primitive recursive:
+    * Consider g&prime;(u, x) = g(x) = x!
+    * Define &fnof;(u) = 1
+    * Take x &times; y to have already been proven primitive recursive
+    * Define h(u, x, z) = &times;(P<sub>2</sub>(u, x, z), P<sub>3</sub>(u, x, z)) = x &times; z
+    * Define g&prime;(u, x):
+	    * g&prime;(u, 0) = &fnof;(u)
+	    * g&prime;(u, n + 1) = h(u, n + 1, g&prime;(u, n))
+    * This function does x!, by induction on x:
+	    * 0! = g&prime;(u, 0) = 1
+	    * (x + 1)! = g&prime;(u, x + 1) = h(u, x + 1, g&prime;(u, x)) = (x + 1) &times; x!
+* (x + 3)! + 1 is primitive recursive by substitution 
+
 ##Footnotes

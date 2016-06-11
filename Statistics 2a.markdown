@@ -772,6 +772,14 @@ There is judged to be no interaction, so a Tukey test on each factor to determin
 
 ####g)
 
-The Tukey test given tests the groups in the Variety factor. It shows that the varities cluster into two groups that are each statistically different from all the members of the other group. One group contains varities 1 and 5, the other 2, 3, 4, and 6.
+The Tukey test given tests the groups in the Variety factor. It shows that the verities cluster into two groups that are each statistically different from all the members of the other group. One group contains verities 1 and 5, the other 2, 3, 4, and 6.
+
+###Q3 2015
+
+> The biodiversity of 80 species of insects is recorded from a 1m<sup>2</sup> quadrat at each of 60 sites. (The index of diversity Y has high values indicating higher diversity.) Site factors of annual rainfall (mm) and annual average of the daily maximum temperature (&deg;C) were also found from weather data. This is an observational study. The data are shown on page 15.
+
+####a)
+
+
 
 ##Footnotes
