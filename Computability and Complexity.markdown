@@ -121,9 +121,7 @@ A _partial function_ &fnof; : _A_ &rarr; _B_ is a function &fnof; : _D_ &rarr; _
 
 ####Turing machines and functions
 
-**Definition:** A Turing machine _M_ _simulates_ a partial function &fnof; : &Sigma;<sup>&lowast;</sup> &rarr; &Sigma;&lowast;[^notemistake] if
-
-[^notemistake]: This might be a minor mistake in the notes. I'm not sure what the difference in asterix position means, if anything.
+**Definition:** A Turing machine _M_ _simulates_ a partial function &fnof; : &Sigma;<sup>&lowast;</sup> &rarr; &Sigma;<sup>&lowast;</sup>[^notemistake] if
 
 1. &forall;&sigma; &isin; dom(&fnof;), _M_(_&sigma;_)&darr; = &fnof;(_&sigma;_); and
 2. &forall;&sigma; &notin; dom(&fnof;), _M_(_&sigma;_)&uarr;.[^TMfuncexp]
