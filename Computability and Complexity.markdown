@@ -488,7 +488,7 @@ This means that primitive recursive functions are not good models for algorithms
 
 ####Theorem: Every primitive recursive function is computable
 
-Not all computable functions are primitive recursive, but all primitive recursive functions are computable. We need to show that all primitive recursive functions can be modelled by Turing machines.[^turinput] That is to say, if &fnof; is a primitive recursive function, there is a TM _M_ such that _M_(b(n)) = b(&fnof;(n)) where b(n) is the biinary representation of n.
+Not all computable functions are primitive recursive, but all primitive recursive functions are computable. We need to show that all primitive recursive functions can be modelled by Turing machines.[^turinput] That is to say, if &fnof; is a primitive recursive function, there is a TM _M_ such that _M_(b(n)) = b(&fnof;(n)) where b(n) is the binary representation of n.
 
 [^turinput]: The machine takes an input in binary and outputs in binary.
 
@@ -545,9 +545,9 @@ Proof:
 2. Exercise
 3. &Chi;&not;R = 1 &#8760; R
 
-**Lemma:** If R(x0, &hellip;, xm, y) is a primitive recursive relation, then T(x0, &hellip;, xm, z) = &forall; y &le; z R(x0, &hellip;, y) is primitive recursive
+**Lemma:** If R(x<sub>0</sub>, &hellip;, x<sub>m</sub>, y) is a primitive recursive relation, then T(x<sub>0</sub>, &hellip;, x<sub>m</sub>, z) = &forall;y &le; z R(x<sub>0</sub>, &hellip;, y) is primitive recursive
 
-Proof: &Chi;T(x0, &hellip;, xm, z) = sg ( &Sigma;<sub>y &le; z</sub>(&Chi;R(x0, &hellip;, xm, y))
+Proof: &Chi;<sub>T</sub>(x<sub>0</sub>, &hellip;, x<sub>m</sub>, z) = sg ( &Sigma;<sub>y &le; z</sub>(&Chi;<sub>R</sub>(x<sub>0</sub>, &hellip;, x<sub>m</sub>, y))
 
 ####Bounded search
 
