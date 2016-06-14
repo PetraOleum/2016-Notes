@@ -587,13 +587,13 @@ This is not a mathematical theorem: "reasonable model" isn't exactly a mathemati
 **Definition:** A _good numbering_ of computable functions is a list &phi;<sub>0</sub>, &phi;<sub>1</sub>, &hellip; of functions from &#8469; to &#8469; such that:
 
 1. For every computable function there is an _e_ with &fnof; = &phi;e.
-2. There is a computable function that sends the description of a TM and outputs an _e_ such that &Rho;e is the function given by the Turing machine.
-3. There is a computable h(x, y) such that &forall;y h(e, y) = &Rho;e(y)
-4. (Padding) There is a computable _g_ such that _g_ is total, &forall;x g(x) > x and &forall;e &Rho;e = &Rho;<sub>g(e)</sub>
+2. There is a computable function that sends the description of a TM and outputs an _e_ such that &phi;<sub>e</sub> is the function given by the Turing machine.
+3. There is a computable h(x, y) such that &forall;y h(e, y) = &phi;<sub>e</sub>(y)
+4. (Padding) There is a computable _g_ such that _g_ is total, &forall;x g(x) > x and &forall;e &phi;e = &phi;<sub>g(e)</sub>
 
 **Lemma:** There is a good numbering.
 
-Proof: Remember our Universal Turing Machine _U_. Define &Rho;e(y) = U(b(e), y), where b(e) is the binary expansion of _e_. Check:
+Proof: Remember our Universal Turing Machine _U_. Define &phi;e(y) = U(b(e), y), where b(e) is the binary expansion of _e_. Check:
 
 1. If &fnof; is computable, fix M a Turing machine giving &fnof;. M has a description &sigma;. &sigma; = b(e) for some e. So &Rho;e(y) = U(b(e), y) = U(&sigma;, y) = M(y) = &fnof;(y).
 2. Must send &sigma; to _e_ such that b(e) = &sigma;. _e_ = &Sigma; <sub>i = 0 to |&sigma;| - 1</sub> 2<sup>|&sigma;| - i - 1</sup>&sigma;(i).[^lensigma]
