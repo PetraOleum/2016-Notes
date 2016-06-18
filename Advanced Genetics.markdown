@@ -1264,6 +1264,8 @@ With next generation sequencing it still isn't all that feasible to sequence an 
 ####Disadvantages
 
 * If you're only looking at the exons you're not looking at the introns, or epigenetic changes, or structural changes, or copy-number variation etc
+* Nothing on gene ex[ressopm
+* Nothing on copy-number variation
 * No information on gene-gene interactions
 * No accounting for uniparental disomy, i.e. inheriting both copies of a gene from the same parent which would show up as one copy from each parent
 * No accounting for control sequences (e.g. gene silencing microRNAs in introns)
