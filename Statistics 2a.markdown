@@ -345,7 +345,7 @@ A binomial distribution is created by repeating an identical and independent Ber
 
 The mean E[Y] = &mu; = np. The variance Var(Y) = &sigma;<sup>2</sup> = np(1 - p).
 
-When _n_ is suffiently large, the binomial distribution can be approximated by normal distributions. The larger _n_ gets, the better the approximation becomes, but it also depends on p. As a general rule, the normal approximation is adequate when both np &ge; 5 and n(1 - p) &ge; 5.
+When _n_ is sufficiently large, the binomial distribution can be approximated by normal distributions. The larger _n_ gets, the better the approximation becomes, but it also depends on p. As a general rule, the normal approximation is adequate when both np &ge; 5 and n(1 - p) &ge; 5.
 
 ###Chi-squared
 
@@ -780,6 +780,40 @@ The Tukey test given tests the groups in the Variety factor. It shows that the v
 
 ####a)
 
+1. Only one _x_-predictor is needed. X1 gives a p-value of 0.1876, while X2 gives a p-value of 0.0008; X2 makes a statistically significant addition to the model when X1 has already been added, while X1 does not give a statistically significant addition to the model when X2 has already been added. Therefore X2 is needed to predict diversity, but X1 is not required.
+2. The assumptions for multiple regression are that the error term E has a normal distribution centred on 0 with constant &sigma;<sup>2</sup> variance, and that the errors are independent of each other and of all the x variables. The Q/Q graph shows data adhering to the diagonal line, showing normality; the residuals plot has no obvious shape. None of the points have a Cook's distance of &ge;1. I conclude that the assumptions hold.
 
+####b)
+
+1. Analysis of Covariance; Two explanatory variables; One qualitative (rainfall) and one quantitative (temperature)
+2. Both explanatory variables now significant, no significant interaction (parallel lines)
+
+##Cheat Sheet
+
+###Binomial distribution:
+
+* Mean = E[Y] = &mu; = np
+* Variance = Var(Y) = &sigma;<sup>2</sup> = np(1 - p)
+* Normal approx valid when np &ge; 5 &and; n(1 - p) &ge; 5
+    * e.g. P(30 &le; Y &le; 35) &rArr; translates to P(29.5 &le; Y &le; 35.5)
+* BpD on calculator gives probability for specific Y = x
+* BcD gives cumulative probability, i.e. Y &le; x.
+
+###Poisson:
+
+* Null is that it _is_ Poisson
+* The mean&mdash;&lambda;&mdash;is the single parameter
+* Calculate expected probabilities that _r_ is equal to a particular value, and convert to expected frequencies by multiplying by total
+* Use &Chi;<sup>2</sup> to test if they differ, but expected frequencies need to all be at least 2 &rArr; pooling rows
+* The degrees of freedom are the mean of the distribution (&Chi;<sup>2</sup> or Poisson?)
+
+###Logit link:
+
+* <em>logit(p) = log(p / (1 - p)) = &alpha; + &beta;<sub>1</sub>x<sub>1</sub> + &hellip; + &beta;<sub>k</sub>x<sub>k</sub></em>
+* Number of logits = number of each type of levels, e.g. 2 races times 7 levels of ideology = 14 logits.
+* The number of non-redundant parameters is, e.g. 1 + (2 - 1) + (7 - 1) + (2 - 1) &times;(7 - 1) = 14, where the first 1 comes from the &alpha; term and the 1&times;6 comes from the interaction term, which may not be present
+* The _residual degrees of freedom_ are the number of logits minus the number of non-redundant parameters
+* The model is "saturated" if the residual DF = 0
+* At each step terms are removed (starting with the interaction term). A test is made, and if the null hypothesis is _not_ rejected that means that this term can be removed from the model
 
 ##Footnotes
