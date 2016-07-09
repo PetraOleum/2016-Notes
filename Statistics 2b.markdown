@@ -1,4 +1,4 @@
-#STAT 293: Statistics 2b
+# STAT 293: Statistics 2b
 
 Notes for STAT 293: Statistics 2b, 2016, by Petra Lamborn, student ID 300280340.
 
@@ -14,4 +14,4 @@ Key dates:
 * Tests: TBD
 * Final exam: TBD
 
-##Footnotes
+## Footnotes

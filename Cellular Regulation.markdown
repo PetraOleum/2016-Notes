@@ -1,4 +1,4 @@
-#BMSC 339: Cellular Regulation
+# BMSC 339: Cellular Regulation
 
 Notes for BMSC 339: Cellular Regulation, 2016, by Petra Lamborn, student ID 300280340.
 
@@ -36,4 +36,15 @@ Course requirements:
 * An overall pass grade of 50%
 * A mark of 45% or more in _each_ section, including exam sections, in-term tests, individual lab sections _etc_.
 
-##Footnotes
+## Signal Transduction
+
+Multiple methods, including:
+
+* Phosphorylation
+* Protein kinases A &amp; C
+* Trimeric G-proteins
+* MAP kinases
+* Tyrosine kinases
+* Ca<sup>2+</sup> signalling
+
+## Footnotes
