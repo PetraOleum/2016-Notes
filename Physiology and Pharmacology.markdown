@@ -43,8 +43,11 @@ Controls e.g.
 * Intestinal mobility
 * Perspiration
 
+You can teach yourself to control _some_ of the autonomic functions, but not all of them.
+
 #### Sympathetic Nervous System (SNS)
 
+* "Excitable", like when being chased or scared
 * Ganglia lie near spinal cord
 * Accelerates
     * Cardiovascular system
@@ -93,5 +96,9 @@ Controls e.g.
 ### Cardiovascular system
 
 The cardiovascular system is made of two circuits: systemic and pulmonary
+
+The left heart pumps blood to all the tissues&mdash;systemic system&mdash;and is therefore much more muscular. The right heart is floppier, because it only has to pump to the heart.
+
+In the systemic system the capillaries are in parallel, not in series. The portal circuits allow blood to go from the gut to the liver.
 
 ## Footnotes
