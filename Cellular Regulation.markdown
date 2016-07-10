@@ -38,13 +38,62 @@ Course requirements:
 
 ## Signal Transduction
 
+### Introduction
+
 Multiple methods, including:
 
 * Phosphorylation
 * Protein kinases A &amp; C
 * Trimeric G-proteins
 * MAP kinases
+    * Mechanism of getting signals from surface of the cell to nucleus
 * Tyrosine kinases
 * Ca<sup>2+</sup> signalling
+* Wnt signalling
+
+We'll also talk about:
+
+* Signalling domains
+* Scaffolding and anchoring
+* STATS transcription factors
+* Nuclear receptors
+
+We'll emphasise mechanisms, techniques, specificity, and consequences.
+
+#### Regulating cellular activity
+
+Regulation between cells:
+
+* Small organic molecules
+* Small inorganic molecules
+* Peptides
+* Extracellular vesicles
+
+Regulation within cells:
+
+* Second messengers
+* Covalent modification
+    * Phosphorylation
+	* Often associated with on/off changes in activity, including by location changes, and recruiting other proteins (allowing binding)
+	* Competing phosphatases and kinases allow rapid response
+	* Serine, Threonine, Tyrosine
+    * Prenylation
+    * Fatty acids
+    * Proteolysis (cutting up)
+    * Glycosylation (sugars)
+    * Adenylation (AMP)
+* Cellular distribution
+
+### Techniques for studying signal transduction
+
+To detect phosphorylation in cellular systems or isolated proteins we can use immunological detection (antibodies&mdash;western blot), phosphoprotein stains, and labelled ATP or phosphate. Mass spectrometry will tell you protein abundance and phosphorylation state, but not the location of the protein in the tissue or cell.
+
+If looking at protein in a rat brain:
+
+* Take out brain
+* Slice up
+* Use primary antibody to attach to target protein
+* Use secondary antibody to attach to primary antibody&mdash;fluorescently label
+* Inspect with microscope to see location
 
 ## Footnotes
