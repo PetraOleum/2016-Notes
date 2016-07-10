@@ -1,6 +1,6 @@
 # BIOL 243: Physiology and Pharmacology
 
-Notes for BIOL 243: Physiology and Pharmacology, 2016, by Petra Lamborn, student ID: 300280340.
+Notes for BIOL 243: Physiology and Pharmacology, 2016, by Petra Lamborn, student ID: 300280340. Course coordinator: John Miller.
 
 Timetable:
 

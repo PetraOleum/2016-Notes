@@ -1,6 +1,6 @@
 # BMSC 339: Cellular Regulation
 
-Notes for BMSC 339: Cellular Regulation, 2016, by Petra Lamborn, student ID 300280340.
+Notes for BMSC 339: Cellular Regulation, 2016, by Petra Lamborn, student ID 300280340. Course co-ordinator: Darren Day.
 
 Timetable:
 
