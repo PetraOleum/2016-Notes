@@ -174,6 +174,6 @@ Example: Expression of PCNA shows proliferating cells.
 
 #### Cell culture
 
-Real animals > Explanted tissues > Cell culture
+Real animals &gt; Explanted tissues &gt; Cell culture, because cell culture cannot be expected to behave like real animals. However, expirements in cell culture can do more (ethically and practically) than animals. Explanted tissues provide a middle ground.
 
 ## Footnotes
