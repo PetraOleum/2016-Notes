@@ -98,9 +98,15 @@ If looking at protein in a rat brain:
 
 #### Receptor experiment
 
-> A new recreational drug named "Revellade"&hellip;
+> A new recreational drug named "Revellade" has recently become popular amongst young people. The drug induces feelings of euphoria and emotional empathy in users. Unfortunately long-term use has been associated with hallucinations and neurological damage. As director of a research laboratory you have received a small grant (approx NZ $100,000) to support your two PhD students to try and elucidate the signal transduction pathway whereby Revellade induces hight levels of dopamine and seretonin in the cerebral cortex of users. Preliminary data suggests Revellade acts through opiod and cannabinoid receptors, possibly causing calcium release or cAMP production. Describe the expiremental approach you plan to use to determine what protein kinases are activated and what their targets are. You have access to a mouse facility and a human neuronal cell line that expresses both opiod and cannabinoid receptors.
 
 "There is never an answer to this kind of question in your notes." This is a common exam question, which people either do terribly or really well. Either do well&mdash;practise&mdash;or don't attempt. Make an answer to this question before Friday.
+
+Homework: 50 words on how you measure the change in gene expression of the cannabinoid receptor in response to treatment with Revellade of cells grown in a petri dish.
+
+
+
+
 
 #### Measuring RNA quantities
 
