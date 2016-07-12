@@ -104,9 +104,7 @@ If looking at protein in a rat brain:
 
 Homework: 50 words on how you measure the change in gene expression of the cannabinoid receptor in response to treatment with Revellade of cells grown in a petri dish.
 
-
-
-
+Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells.
 
 #### Measuring RNA quantities
 
