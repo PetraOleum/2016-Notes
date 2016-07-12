@@ -96,4 +96,22 @@ If looking at protein in a rat brain:
 * Use secondary antibody to attach to primary antibody&mdash;fluorescently label
 * Inspect with microscope to see location
 
+#### Receptor experiment
+
+> A new recreational drug named "Revellade"&hellip;
+
+"There is never an answer to this kind of question in your notes." This is a common exam question, which people either do terribly or really well. Either do well&mdash;practise&mdash;or don't attempt. Make an answer to this question before Friday.
+
+#### Measuring RNA quantities
+
+This is particularly important when measuring the level of _mRNA_, as a proxy for gene expression. We use conventional PCR (rather than the new digital PCR), specifically Quantitative RT-PCR.
+
+We extract the RNA and convert to cDNA. To ensure that the primers for the PCR aren't amplifying off the original DNA, you use the splicing of introns&mdash;if you have the forward and reverse primers on different exons, you will get a different length of product depending on whether it is the original DNA or the cDNA. Alternately, if the individual primer crosses an exon boundary in the cDNA it will not be able to amplify off the DNA at all.
+
+You measure how many cycles it takes for the amount of amplified template to cross a threshold, measured via fluorescence or some other proxy. The threshold is set as a certain number of standard deviations (about 10) over the measured fluorescence in the first ~5 cycles. The threshold needs to be low, however, because quickly the increase in product ceases to be exponential because of product inhibition.
+
+You need a control of a housekeeping gene that (you assume) will not change in production from your treatment. If you instead tried to normalise due to e.g. tissue volume you risk bias from the age of the tissue, or from failing to get perfectly identical quality RNA from each sample. The &Delta;C between target and control tells you the relative amount of expression of the target gene. The &Delta; between treatment and control tells you the change from the treatment.
+
+To tag, you can either use SIBR green, which intercolates into the DNA, or TAQMAN probes which suppress flouresnce until polymerase comes through.
+
 ## Footnotes
