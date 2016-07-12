@@ -104,7 +104,7 @@ If looking at protein in a rat brain:
 
 Homework: 50 words on how you measure the change in gene expression of the cannabinoid receptor in response to treatment with Revellade of cells grown in a petri dish.
 
-Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells.
+Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells. Fluorescence can be measured via SYBR green, which may lead to false positives from primer dimers, or taqman.
 
 #### Measuring RNA quantities
 
@@ -116,6 +116,64 @@ You measure how many cycles it takes for the amount of amplified template to cro
 
 You need a control of a housekeeping gene that (you assume) will not change in production from your treatment. If you instead tried to normalise due to e.g. tissue volume you risk bias from the age of the tissue, or from failing to get perfectly identical quality RNA from each sample. The &Delta;C between target and control tells you the relative amount of expression of the target gene. The &Delta; between treatment and control tells you the change from the treatment.
 
-To tag, you can either use SIBR green, which intercolates into the DNA, or TAQMAN probes which suppress flouresnce until polymerase comes through.
+To tag, you can either use SYBR green (cheap, easy, versatile), which intercalates into the DNA, or Taqman probes (high specificity and allows multiplexing[^taqmulti]) which suppress fluorescence until polymerase comes through. Taqman also allows even greater specificity because if a spurious product is created because the probe can be made to only bind to the real one. 
+
+[^taqmulti]: Multiplexing means that you can do two PCRs into the same tube at the same time, such as both the housekeeping and target gene.
+
+Taqman is only feasible, due to price, when doing the same assay again and again (e.g. diagnostic), and so SYBR green would be more useful in a research setting.
+
+To control for degradation, amplify fragments of the same gene. If you get roughly the same result (never exactly the same) then the template is not much degraded, otherwise it has been.
+
+When doing low-copy number PCR it is essential to prevent contamination, including from previous experiments. Clean rooms and positive pressure flows, along with switching lab coats, can be used to ensure that this doesn't happen.
+
+#### Transparency and good practices in the qPCR literature
+
+_Read papers on blackboard_: Controls, information required for experiment to be valid.
+
+#### Normalisation of RT-PCR data
+
+We could normalise to:
+
+* Amount of tissue
+    * Assumes that amount and quality of RNA extracted is the same
+    * Can be problematic when one sample is older or younger
+    * Differing developmental stages mean differing availability and ease of extraction of RNA
+* Number of cells
+    * Doable in a Petri dish
+* To RNA content
+    * Common
+    * "Always going to add 1&mu;g of RNA into my experiment"
+    * One preparation might be more degraded than another
+* External standard
+    * Relative to a _known amount_ of transcript
+* House keeping gene
+    * Normalise to rough amount of RNA _and_ quality
+    * Assumption of constant housekeeping gene may not hold
+    * Use multiple housekeeping genes
+    * Check that the housekeeping genes do not change relative _to each other_
+
+#### FISH
+
+Fluorescent in-situ hybridisation&mdash;another way to detect RNA, particularly it's location within a tissue. Generally use RNA probes to target RNA, rather than DNA probes.
+
+T7 RNA polymerase promotor recognises the polymerase protein, allowing the creation of a probe for that RNA sequence. Label UTP with a fluorophore, Biotin, or "dig". Antibodies that recognise Dig, and then antibodies that recognise those with fluorophores to produce an amplification cascade.
+
+You need to get the annealing temperature just right so that the probe will bind with, and only with, the target sequence.
+
+#### Western blot
+
+Will do more of this with Lifeng. Use an antibody[^Crappyantibodies] specific to your protein. You have to grind it up, so you get no location data. It does allow both the abundance of protein but also post-translational modification. 
+
+[^Crappyantibodies]: Note that large numbers of antibodies don't recognise the right proteins, so need to validate it. Is the protein reported the right size?
+
+#### Immunohistochemistry
+
+IHC. Visualising protein location on tissue sections on glass slides. Sometimes the slide may have frozen tissue, sometimes it can be formaldehyde preserved&mdash;some antibodies don't work in some conditions.
+
+Example: Expression of PCNA shows proliferating cells.
+
+#### Cell culture
+
+Real animals > Explanted tissues > Cell culture
 
 ## Footnotes
