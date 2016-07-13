@@ -123,9 +123,125 @@ Internodal atrial pathways radiate out from the SA node and into the atria. One 
 
 #### Cardiac action potentials
 
-An individual heart muscle fibre cell first spikes, plateaus, and then reverts to normal. The refractory period is between 200 and 250 msec. The tension follows a different graph, trailing the action potential.
+An individual heart fast response fibre cell first spikes, plateaus, and then reverts to normal. The refractory period is between 200 and 250 msec. The tension follows a different graph, trailing the action potential.
 
-Slow response fibres..... 
+Slow response fibres have a different pattern, with spontaneous depolarisations due to an Na<sup>2+</sup> leak.
 
+#### Cardiac electrical pathologies
+
+A normal ECG has P, QRS, and T waves. The T wave is a repolarisation wave; while another repolarisation wave for the atria is concealed under the QRS wave.
+
+A ECG with "bipolar leads" means that the ECG is recorded from two electrodes on the body.
+
+* Lead I: left arm + right arm
+* Lead II: left leg + right arm
+* Lead III: left leg + leg arm
+
+Third lead is earth (ground).
+
+The Mean Electrical Axis is the mean vector through the partially depolarised heart. The average mean electrical axis is 59&deg; down, but the normal range is +110&deg; to -30&deg;. This will be calculated in lab 3, human circulation. Only two leads are needed to calculate the vector, however if you use all three you can work out how consistent your measurements are.
+
+The normal off-balance of the axis is due to the normal asymmetry of the heart, and so this can be used to diagnose diseases related to non-normal asymmetry. For example, hypertrophy of the left ventricle can be seen in a large left shift of the axis. Hypertrophy can be caused by the heart having to work a lot harder, whether due to exercise or through a variety of underlying pathologies.
+
+Left axis shift can also be called by a left bundle branch block, which slows the passage of current to the left and makes it pulse later.
+
+Right axis shift can be caused by hypertrophy of the right ventricle, pulmonary valve stenosis, or interventricle septal defect.
+
+#### Cardiac Arrhythmias
+
+This can be caused by:
+
+* Abnormal rhythmity of the pacemaker
+* Shift of pacemaker from sinoatrial node
+* Blocks at different points in the transmission of the cardiac impulse
+* Abnormal pathways of the transmission in the heart
+* Spontaneous generation of abnormal impulses (ectopic beats) from any parts of the heart
+
+Normal arrhythmias:
+
+* Bradycardia
+    * A slow heart rate usually less than 60 bpm
+    * Present in athletes who have a large stroke volume
+    * Can be caused by vagal stimulation
+* Tachycardia
+    * Fast heart rate, usually greater than 100 bpm
+    * Caused by:
+	* Increased body temperature
+	* Sympathetic stimulation (e.g. loss of blood or reflex stimulation of the heart)
+	* Emotion
+	* Toxic conditions of the heart
+	* Exercise
+    * E.g. Respiratory Sinus Arrhythmia (RSA)
+
+Abnormal arrhythmias:
+
+* Atrial Paroxysmal Tachycardia
+    * "Paroxysmal" = A series of rapid heart beats that suddenly start and then suddenly stop
+    * Can be stopped with a vagal reflex or quinidine or procainimide
+    * P waves is inverted if origin is near AV node
+    * Occurs by re-entrant pathways
+* Ventricular Paroxysmal Tachycardia
+    * Usually does not occur unless there has been ischemic damage
+    * Quinidine increases refractory period of cardiac muscle and can eliminate the problem
+* Extra beats (ectopic foci)
+    * Often near nodal tissue
+    * Premature contractions
+    * Caused by
+	* Local areas of ischemia
+	* Calcified plaques
+	* Toxic irritation of AV node, Purkinje system, or myocardium by drugs (nicotine, caffeine)
+* SA block
+    * Rare
+    * Impulses from the SA node are blocked
+    * Causes cessation of p waves
+    * New pacemaker&mdash;usually AV node (next fastest rate)
+* AV block
+    * May be due to fibrosis of conductile tissue
+    * Impulses through AV node and bundle are slowed or blocked due to
+	* Ischemia of AV nodal or AV bundle fibres (can be caused by coronary ischemia)
+	* Compression of AV bundle (by scar tissue or calcified tissue)
+	* AV nodal or AV bundle inflammation
+	* Excessive vagal stimulation
+    * First degree heart block
+	* Prolonged PR interval
+	* Normal PR interval is 0.16 seconds
+	* If interval is greater than 0.20 seconds, first degree block is present
+	* PR interval seldom increases above 0.35 to 0.45 seconds
+    * Second degree
+	* Intermittent
+	* 2:1 or 3:1 ratios common
+    * Third degree (complete block)
+	* Total block through AV node or AV bundle
+	* P-waves disassociated from QRST complexes
+	* Ventricles escape
+	* AV nodal rhythm ensues
+    * Stokes-Adams Syndrome
+	* Complete AV block comes and goes
+	* Ventricles stop for 5-30 seconds
+	* Patient faints due to poor cerebral blood flow
+	* Ventricular escape with AV nodal or bundle rhythm
+	* Ventricular pacemakers give
+* Fibrillation
+    * Prolonged or unusual conduction route, giving a circus movement
+    * Also known as flutter
+    * Little blood ends up flowing out of the heart due to inconsistent contraction
+    * Caused by electrical shock or cardiac ischemia
+    * Started via re-entrant phenomena
+    * Ventricular fibrillation
+	* Lethal
+	* Need CPR to survive
+	* Defibrillation makes the entire heart go into refractory period at same time
+    * Atrial fibrillation
+	* No P wave
+	* Arrhythmia
+	* Average heart rate is increased
+	* QRST wave is normal
+	* Generally not lethal as ventricle can still fill
+	* Atrial fibrillation doesn't usually also mean ventricular fibrillation
+	* Commonly caused by atrial enlargement from AV valve dysfunction
+	* Efficiency of ventricular pumping decreased 20-30%
+	* Irregular, fast heart rate due to irregular arrival of impulse to AV node
+	* Treat with drugs that reduce excitability
+	* Burn off bad conduction routes with a laser
 
 ## Footnotes
