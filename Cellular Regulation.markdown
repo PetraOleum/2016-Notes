@@ -130,6 +130,35 @@ When doing low-copy number PCR it is essential to prevent contamination, includi
 
 _Read papers on blackboard_: Controls, information required for experiment to be valid.
 
+> To obtain consistent and biologically relevant qPCR measurements, researchers must complete a number of complex technical steps, adequately address a range of quality-control issues, use appropriate instrument settings to generate accurate amplification plots, and select the relevant statistical approach for analyzing their data. Finally, experimental details need to be reported in a transparent manner that permits replication of the experiment and quality assessment of the qPCR results.
+
+It's argued that just because qPCR is conceptually simple does not mean that the expirement itself is simple. RT-qPCR, working with RNA, is particularly difficult.
+
+Key parameters determining quality:
+
+* RNA quality
+    * Purity
+    * Integrity
+    * Inhibition
+* Reverse transcription
+    * RNA input amount
+    * RT enzyme or kit
+    * Priming method
+* Polymerase and conditions
+    * Taq polymerase and conditions
+    * Primer concentration
+    * Template amount
+    * Primer and probe sequences
+    * Efficiency and specificity
+    * Cycling conditions and instrument
+* Analysis
+    * More than one reference gene
+    * Reference gene validation
+
+The multiple, validated reference gene thing seems important.
+
+People citing the MIQE guidelines seem to follow them better, but not in all cases.
+
 #### Normalisation of RT-PCR data
 
 We could normalise to:
