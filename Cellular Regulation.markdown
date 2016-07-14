@@ -106,6 +106,9 @@ Homework: 50 words on how you measure the change in gene expression of the canna
 
 Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells. Fluorescence can be measured via SYBR green, which may lead to false positives from primer dimers, or taqman.
 
+THC is an agonist to the cannabinoid receptor. How would you measure cannabinoid expression changes from treatment by THC?
+
+
 #### Measuring RNA quantities
 
 This is particularly important when measuring the level of _mRNA_, as a proxy for gene expression. We use conventional PCR (rather than the new digital PCR), specifically Quantitative RT-PCR.
@@ -195,14 +198,28 @@ Will do more of this with Lifeng. Use an antibody[^Crappyantibodies] specific to
 
 [^Crappyantibodies]: Note that large numbers of antibodies don't recognise the right proteins, so need to validate it. Is the protein reported the right size?
 
+In Western blotting you run the protein sample in a gel, then transfer it to a membrane, wash the membrane off, and then detect using fluorescent antibodies. Western blotting is quantitative, not so much qualitative.
+
 #### Immunohistochemistry
 
-IHC. Visualising protein location on tissue sections on glass slides. Sometimes the slide may have frozen tissue, sometimes it can be formaldehyde preserved&mdash;some antibodies don't work in some conditions.
+IHC. Visualising protein location on tissue sections on glass slides. Sometimes the slide may have frozen tissue, sometimes it can be formaldehyde preserved&mdash;some antibodies don't work in some conditions. IHC can show protein distribution within a cell, e.g.
 
-Example: Expression of PCNA shows proliferating cells.
+Example: Expression of PCNA shows proliferating cells. 
+
+This is qualitative, not quantitative.
 
 #### Cell culture
 
 Real animals &gt; Explanted tissues &gt; Cell culture, because cell culture cannot be expected to behave like real animals. However, expirements in cell culture can do more (ethically and practically) than animals. Explanted tissues provide a middle ground.
+
+### Cell type specific marks for identification
+
+Different cell types express a unique subset of surface markers/cytosolic proteins. IF/IHC staining with a panel of markers you can identify cell types in tissues.
+
+For example, markers in endothelial cells from less mature to more mature: CD133, CD34, CD31, vWF.
+
+Related: BRDU is a nucleotide analogue that gets incorporated into replicating DNA, so can be used to detect replicating cells. This only marks cells using S phase. Stains green.
+
+Phosphohistidane H3? Stains red. Stains only during M phase.
 
 ## Footnotes
