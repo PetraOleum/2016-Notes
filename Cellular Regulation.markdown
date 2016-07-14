@@ -74,9 +74,9 @@ Regulation within cells:
 * Second messengers
 * Covalent modification
     * Phosphorylation
-	* Often associated with on/off changes in activity, including by location changes, and recruiting other proteins (allowing binding)
-	* Competing phosphatases and kinases allow rapid response
-	* Serine, Threonine, Tyrosine
+        * Often associated with on/off changes in activity, including by location changes, and recruiting other proteins (allowing binding)
+        * Competing phosphatases and kinases allow rapid response
+        * Serine, Threonine, Tyrosine
     * Prenylation
     * Fatty acids
     * Proteolysis (cutting up)

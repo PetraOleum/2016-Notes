@@ -56,19 +56,19 @@ You can teach yourself to control _some_ of the autonomic functions, but not all
     * Gastrointestinal tract
 * Drugs that block the effect of noradrenalin and adrenalin 
     * Synthesis and storage
-	* Reserpine
+        * Reserpine
     * Release from the nerve terminal
-	* Guanethidine
+        * Guanethidine
     * Alpha blockers
         * Phentolamine
-	* Phenoxybenzamine
+        * Phenoxybenzamine
     * Beta blockers
-	* beta<sub>1</sub> and beta<sub>2</sub>: propranolol
-	* beta<sub>1</sub> only: metoprolol
-	* beta<sub>2</sub> only: albuterol
+        * beta<sub>1</sub> and beta<sub>2</sub>: propranolol
+        * beta<sub>1</sub> only: metoprolol
+        * beta<sub>2</sub> only: albuterol
     * Ganglionic blockers
-	* Hexamethonium
-	* Suxamethonium
+        * Hexamethonium
+        * Suxamethonium
 
 #### Parasympathetic Nervous System (PSNS)
 
@@ -81,8 +81,8 @@ You can teach yourself to control _some_ of the autonomic functions, but not all
 * Parasympathomimetic drugs (mimic effect of stimulated PSNS
     * Nicotine (activates nicotine receptors)
     * Pilocarpine and methacholine
-	* Activate muscuranic receptors
-	* Cause e.g. profuse sweating
+        * Activate muscuranic receptors
+        * Cause e.g. profuse sweating
 * Cholinesterase inhibitors
     * Neostigmine
     * Physostigmine (eserine)
@@ -166,11 +166,11 @@ Normal arrhythmias:
 * Tachycardia
     * Fast heart rate, usually greater than 100 bpm
     * Caused by:
-	* Increased body temperature
-	* Sympathetic stimulation (e.g. loss of blood or reflex stimulation of the heart)
-	* Emotion
-	* Toxic conditions of the heart
-	* Exercise
+        * Increased body temperature
+        * Sympathetic stimulation (e.g. loss of blood or reflex stimulation of the heart)
+        * Emotion
+        * Toxic conditions of the heart
+        * Exercise
     * E.g. Respiratory Sinus Arrhythmia (RSA)
 
 Abnormal arrhythmias:
@@ -187,9 +187,9 @@ Abnormal arrhythmias:
     * Often near nodal tissue
     * Premature contractions
     * Caused by
-	* Local areas of ischemia
-	* Calcified plaques
-	* Toxic irritation of AV node, Purkinje system, or myocardium by drugs (nicotine, caffeine)
+        * Local areas of ischemia
+        * Calcified plaques
+        * Toxic irritation of AV node, Purkinje system, or myocardium by drugs (nicotine, caffeine)
 * SA block
     * Rare
     * Impulses from the SA node are blocked
@@ -198,29 +198,29 @@ Abnormal arrhythmias:
 * AV block
     * May be due to fibrosis of conductile tissue
     * Impulses through AV node and bundle are slowed or blocked due to
-	* Ischemia of AV nodal or AV bundle fibres (can be caused by coronary ischemia)
-	* Compression of AV bundle (by scar tissue or calcified tissue)
-	* AV nodal or AV bundle inflammation
-	* Excessive vagal stimulation
+        * Ischemia of AV nodal or AV bundle fibres (can be caused by coronary ischemia)
+        * Compression of AV bundle (by scar tissue or calcified tissue)
+        * AV nodal or AV bundle inflammation
+        * Excessive vagal stimulation
     * First degree heart block
-	* Prolonged PR interval
-	* Normal PR interval is 0.16 seconds
-	* If interval is greater than 0.20 seconds, first degree block is present
-	* PR interval seldom increases above 0.35 to 0.45 seconds
+        * Prolonged PR interval
+        * Normal PR interval is 0.16 seconds
+        * If interval is greater than 0.20 seconds, first degree block is present
+        * PR interval seldom increases above 0.35 to 0.45 seconds
     * Second degree
-	* Intermittent
-	* 2:1 or 3:1 ratios common
+        * Intermittent
+        * 2:1 or 3:1 ratios common
     * Third degree (complete block)
-	* Total block through AV node or AV bundle
-	* P-waves disassociated from QRST complexes
-	* Ventricles escape
-	* AV nodal rhythm ensues
+        * Total block through AV node or AV bundle
+        * P-waves disassociated from QRST complexes
+        * Ventricles escape
+        * AV nodal rhythm ensues
     * Stokes-Adams Syndrome
-	* Complete AV block comes and goes
-	* Ventricles stop for 5-30 seconds
-	* Patient faints due to poor cerebral blood flow
-	* Ventricular escape with AV nodal or bundle rhythm
-	* Ventricular pacemakers give
+        * Complete AV block comes and goes
+        * Ventricles stop for 5-30 seconds
+        * Patient faints due to poor cerebral blood flow
+        * Ventricular escape with AV nodal or bundle rhythm
+        * Ventricular pacemakers give
 * Fibrillation
     * Prolonged or unusual conduction route, giving a circus movement
     * Also known as flutter
@@ -228,20 +228,84 @@ Abnormal arrhythmias:
     * Caused by electrical shock or cardiac ischemia
     * Started via re-entrant phenomena
     * Ventricular fibrillation
-	* Lethal
-	* Need CPR to survive
-	* Defibrillation makes the entire heart go into refractory period at same time
+        * Lethal
+        * "Heart attack"
+        * Need CPR to survive
+        * Defibrillation makes the entire heart go into refractory period at same time
     * Atrial fibrillation
-	* No P wave
-	* Arrhythmia
-	* Average heart rate is increased
-	* QRST wave is normal
-	* Generally not lethal as ventricle can still fill
-	* Atrial fibrillation doesn't usually also mean ventricular fibrillation
-	* Commonly caused by atrial enlargement from AV valve dysfunction
-	* Efficiency of ventricular pumping decreased 20-30%
-	* Irregular, fast heart rate due to irregular arrival of impulse to AV node
-	* Treat with drugs that reduce excitability
-	* Burn off bad conduction routes with a laser
+        * No P wave
+        * Arrhythmia
+        * Average heart rate is increased
+        * QRST wave is normal
+        * Generally not lethal as ventricle can still fill
+        * Atrial fibrillation doesn't usually also mean ventricular fibrillation
+        * Commonly caused by atrial enlargement from AV valve dysfunction
+        * Efficiency of ventricular pumping decreased 20-30%
+        * Irregular, fast heart rate due to irregular arrival of impulse to AV node
+        * Treat with drugs that reduce excitability
+        * Burn off bad conduction routes with a laser
+
+
+#### Cardiac cycle
+
+
+## Glossary
+
+ANS
+:   Autonomic Nervous System
+
+PNS
+:   Parasympathetic Nevous System
+
+SNS
+:   Sympathetic Nervous System
+
+Ganglion
+:   Knot of nervous tissue, or node of lymphatic system
+
+Bradycardia
+:   Abnormally slow heartbeat
+
+Tachycardia
+:   Abnormally fast heartbeat
+
+Paroxysmal
+:   Sudden reccurance of symptoms
+
+ECG
+:   Electrocardiogram
+
+Arrhythmia 
+:   An abnormal rate of muscle contractions in the heart
+
+RSA
+:   Respiratory Sinus Arrhythmia
+
+Ectopic
+:   Out of place
+
+Ischemia
+:   Local anemia
+
+Anemia
+:   A deficiency of red blood cells
+
+SA node
+:   Sinoatrial node, the primary pacemaker of the heart
+
+AV node
+:   Atrial-ventricular node
+
+AV valve
+:   Atrial-ventricular valve
+
+P wave
+:   First wave in ECG; caused by depolarisation of the atrium
+
+Fibrillation
+:   Muscular twitching without coordination
+
+Vagus nerve
+:   A cranial nerve that interfaces with the PNS
 
 ## Footnotes

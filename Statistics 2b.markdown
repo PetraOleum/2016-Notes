@@ -50,7 +50,7 @@ The _population correlation coefficient_ between X and Y is defined as the covar
 Expected values rules: 
 
 * _E(aY) = aE(Y)_ (where _a_ is a constant).
-* _E(X + Y) = E(X)_ + E(Y)
+* _E(X + Y) = E(X) + E(Y)_
 * _E(XY) = E(X)E(Y)_
 
 ### Linear combinations
