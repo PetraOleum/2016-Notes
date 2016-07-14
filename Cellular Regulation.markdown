@@ -220,6 +220,6 @@ For example, markers in endothelial cells from less mature to more mature: CD133
 
 Related: BRDU is a nucleotide analogue that gets incorporated into replicating DNA, so can be used to detect replicating cells. This only marks cells using S phase. Stains green.
 
-Phosphohistidane H3? Stains red. Stains only during M phase.
+Phosphohistidine H3 (pH3) stains red. Stains only during M phase.
 
 ## Footnotes
