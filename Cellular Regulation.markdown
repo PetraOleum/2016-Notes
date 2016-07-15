@@ -106,7 +106,7 @@ Homework: 50 words on how you measure the change in gene expression of the canna
 
 Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells. Fluorescence can be measured via SYBR green, which may lead to false positives from primer dimers, or taqman.
 
-THC is an agonist to the cannabinoid receptor. How would you measure cannabinoid expression changes from treatment by THC?
+Homework: THC is an agonist to the cannabinoid receptor. How would you measure cannabinoid expression changes from treatment by THC?
 
 
 #### Measuring RNA quantities
