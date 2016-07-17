@@ -102,12 +102,15 @@ If looking at protein in a rat brain:
 
 "There is never an answer to this kind of question in your notes." This is a common exam question, which people either do terribly or really well. Either do well&mdash;practise&mdash;or don't attempt. Make an answer to this question before Friday.
 
-Homework: 50 words on how you measure the change in gene expression of the cannabinoid receptor in response to treatment with Revellade of cells grown in a petri dish.
+**Homework**: 50 words on how you measure the change in gene expression of the cannabinoid receptor in response to treatment with Revellade of cells grown in a petri dish.
 
 Grow (in triplicate) the cells in petri dishes; treat one set with Revellade and one without. After appropriate growth period, extract RNA with trizole and reverse transcribe to cDNA. A pair of forward and reverse primers should be obtained such that they cross an exon boundary in some way, preferably within the sequence of the primer, to avoid amplifying the original DNA over the cDNA. A housekeeping gene is not needed to normalise for cells grown in petri dishes. Perform quantitative rt-PCR with the cDNA samples and the primers to find the &Delta; in the time to reach the threshold between treated and untreated cells. Fluorescence can be measured via SYBR green, which may lead to false positives from primer dimers, or taqman.
 
-Homework: THC is an agonist to the cannabinoid receptor. How would you measure cannabinoid expression changes from treatment by THC?
+**Homework**: THC is an agonist to the cannabinoid receptor. How would you measure cannabinoid expression changes from treatment by THC?
 
+Treat a group of rats with THC, and a control group without. Select some housekeeping genes that you expect to have constant gene expression regardless of the presence or absense of THC. Extract RNA from treated and untreated rats with trizole and reverse transcribe to cDNA. Select primers that cross exon boundaries to avoid amplifying the original DNA and run RT-PCR to compare cannabinoid gene expression to the housekeeping genes; verify that the houskeeping genes have constant gene expression.
+
+Similarly, extract proteins from the brains of the rats and run a Western Blot to compare protein abundance in treated and untreated rats. Also use IHC to find locations?
 
 #### Measuring RNA quantities
 
@@ -212,14 +215,27 @@ This is qualitative, not quantitative.
 
 Real animals &gt; Explanted tissues &gt; Cell culture, because cell culture cannot be expected to behave like real animals. However, expirements in cell culture can do more (ethically and practically) than animals. Explanted tissues provide a middle ground.
 
-### Cell type specific marks for identification
+#### Cell type specific marks for identification
 
 Different cell types express a unique subset of surface markers/cytosolic proteins. IF/IHC staining with a panel of markers you can identify cell types in tissues.
 
 For example, markers in endothelial cells from less mature to more mature: CD133, CD34, CD31, vWF.
 
-Related: BRDU is a nucleotide analogue that gets incorporated into replicating DNA, so can be used to detect replicating cells. This only marks cells using S phase. Stains green.
+Individual cells can be looked at via cell cytometry, particularly useful in the following:
 
-Phosphohistidine H3 (pH3) stains red. Stains only during M phase.
+#### Measuring proliferation
+
+BRDU is a nucleotide analogue that gets incorporated into replicating DNA, so can be used to detect replicating cells. This only marks cells using S phase. Stains green. Phosphohistidine H3 (pH3) stains red, and stains only during M phase. This can be used to show that Morphine slows the cell cycle relative to saline.
+
+PCNA can also be used as a marker, but also picks up cells that have _recently_ proliferated; not very specific.
+
+The gold standard for cell proliferation detective in vitro is, of course, counting the cells. Alternatively to counting directly, there is the MTT assay which involves a chemical that turns blue as cells respire&mdash;however this is indirect, and so if the treatment changes respiration rate this becomes problematic.
+
+#### Measuring cell death
+
+* Comet assay: measure DNA fragmentation pattern and amount. When apoptosis occurs you get a comet trail of small DNA fragments; in your control you get a relativly chohesive band with no comet. Not quantitative
+* TUNEL assay: "terminal doxynuclotidyl transferase dUTP end labelling." When DNA is fragmented you get lots of free ends, and terminal transferase adds nucleotides to the end of strands. Therefore you can use this to add flourescent markers to ends of fragments and cause their cells to flouresce. Good in tissues.
+* Annexin-V: Binds phosphatidyl serine, which is located on the cytosolic side of plasma membrane&mdash;therefore normally wont stain cell, but when apoptosis occurs the membrane flips and Annexin-V can bind.
+* PI: Propridium Iodide, a red flouro dye (and a "vital stain"). Living cells will exclude most dyes, pumping it out, but when they die and lose their membrane potential vital stains can flow in and stain the cell. The deader the cell the stronger the stain. (PI can also be used as a cell cycle marker because it intercolates into DNA). Good for flow cytometry.
 
 ## Footnotes
