@@ -248,6 +248,113 @@ Abnormal arrhythmias:
 
 #### Cardiac cycle
 
+"Lub/Dub"
+
+Make diagram
+
+Other side of the heart is lower pressure but same shape and volume.
+
+#### Control of heart rate
+
+The Cardiac Output (CO) is the volume pumped by each ventricle in a minute, i.e. the heart rate times the stroke volume.
+
+CO = HR &times; SV
+
+SV = EDV - ESV.
+
+E.g. resting: 70 bpm &times; 80 mL/beat = 5.6 L/min; Exercising: 173 bpm &times; 120 mL/beat = 21 L/min.
+
+In theory the heart could beat as fast as 400 bpm, however the maximum rate of the SA node is only 230 bpm.
+
+| Animal | CO (mL/min/kg) |
+|:------ | --------------:|
+| Fish   | 10             |
+| Human  | 85             |
+| Rat    | 200            |
+| Duck   | 500            |
+
+##### ANS
+
+The sympathetic system controls the SA node, with &beta;1 receptors. The Parasympathetic system controls the SA node via muscaranic receptors. The SNS increases HR (trachycardia); the PSNS decreases HR (bradycardia).
+
+The right thoracic branch of the SNS has mostly a chronotropic effect; the left has more of an inotropic. The right vagus nerve innevates the SA node to give a chronotropic effect; the left inneravates the AV node and some myocardial cells giving a prolonged PR interval and slight decreased inotropy (contractility).
+
+The SNS causes a increased repolarisation of the SNS, hitting the threshold earlier; the PSNS causes hyperpolarisation and then and slower repolarisation.
+
+When SNS or PSNS are stimulated or stop being stimulated you get sizable shitfs in heart rate&mdash;this is the "tonic" levels of ANS control of the heart. At reast the PSNS is dominant.
+
+##### Hormonal control
+
+Adrenaline and Noradrenaline cause increases in heart rate. Thyroxin causes increase in heart rate, while acetylcholine (Ach) causes decrease in HR.
+
+##### Reflexes
+
+* Bainbridge reflex (right and left atrial receptors)
+    * Increase in atrial pressure
+    * Prevents backup of veins, atria, and pulmonary circulation
+    * Stretch in atria sends signals to increase heart rate and contractility
+* Bezold-Jarish reflex (left ventricular receptors)
+    * Causes decrease in heart rate
+    * Role in pathologies, e.g. haemorrhage?
+    * Otherwise function unknown
+
+##### Other mechanisms
+
+These include temperature, electrolytes, pH, gas tensions etc.
+
+#### Stroke volume control
+
+Mathematical rules:
+
+* CO = HR &times; SV
+* SV = EDV - ESV
+* &uarr; EDV &rArr; &uarr;SV &rArr; &uarr;CO
+* &darr; ESV &rArr; &uarr;SV &rArr; &uarr;CO
+
+One way to control this is via the control of ventricular filling&mdash;that is, control of EDV (end diastolic volume)
+
+This can be controled via:
+
+* Venous return rate
+    * &uarr;Pveins &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
+* Filling time
+    * (effect of changes in heart rate)
+    * &uarr;HR &rArr; &darr;Filling time &rArr; &darr;EDV &rArr; &darr;SV &rArr; &darr;CO
+    * Increase in heart rate increases CO becuase CO = HR &times; SV, but the increase in HR also has a negative effect on CO via decreaseing SV due to less filling time. The balance is generally in favour of increasing CO however.
+* Intraventricular pressure
+    * The pressure of the thorax and ventricle effects the &Delta;P for VR.
+    * Internally, ventricular recoil immediately after systole causes negative Pventricle and rapid filling, like popping out of a pushed-in tennis ball.
+    * Externally, changes in thoracic pressure with breathing changes pressure
+        * Inspiration &rArr; &darr;Pvenous in thorax &amp; &darr;Pventricle &rArr; &uarr;&Delta;P between extrathoracic viens and thorax and ventricle &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
+        * Expiration is the reverse of inspiration, but the effect of inspiration dominates
+* Atrial contractility
+    * Forces extra blood into ventricle just before systole
+    * Minor at rest (~20% of filling ventrcle) but contributes up to 40% of SV with maximal exercise
+* Pericardial restraint
+    * The tissue around the heart ensures that the heart doesn't take in too much blood
+
+Another way is ESV control (control of contractility or inotropy)
+
+* Internal control
+    * The Frank-Sterling Law of the Heart: The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV)
+        * Heterometric autoregulation
+            * The effect of "preload" or EDV on stroke volume
+            * As EDV increases, SV increases, until the heart is so far extended that the actin and myosin are too streatched to interact
+            * Ensures that all blood entering the heart is pumped
+        * Homeometric Autoregulation
+            * Effect of "afterload" or aortic pressure
+            * Normally, &uarr; Mean Arterial Pressure (MBP) &rArr; &uarr;ESV &rArr; &darr;SV &rArr; &darr;CO
+            * But by compensation from homeometric autoregulation, &uarr;MBP &rArr; &uarr;inotropy &rArr; &darr;ESV (correction) &rArr; &uarr;SV back to normal
+* External control
+    * ANS control
+        * SNS control is dominant, increasing inotropy
+        * PSNS control is lesser, decreasing inotropy
+    * &uarr;HR increases Calcium ions becuase there is not enough time for them to be re-taken up by SR, which increases inotropy
+    * Certain hormones increase inotropy, e.g. adrenaline
+    * In the heart the plasma calcium concentration is important because plasma calcium entering the cell triggers calcium release within it; not true in skeletal muscles
+    * Acidosis and alkalosis both cause a decrease in inotropy
+    * Pharmacalogical agents can increase or decrease SV depending on what they are
+    * Heart failure has an effect here
 
 ## Glossary
 
@@ -307,5 +414,32 @@ Fibrillation
 
 Vagus nerve
 :   A cranial nerve that interfaces with the PNS
+
+EDV
+:   End Diastolic Volume
+
+ESV
+:   End Systolic Volume
+
+CO
+:   Cardiac Output
+
+HR
+:   Heart rate
+
+SV
+:   Stroke volume
+
+Inotropic
+:   Controlling strength of muscle contraction
+
+Chronotropic
+:   Controlling timing of muscle contraction
+
+Ach
+:   Acetylcholine
+
+Frank-Sterling law of the Heart
+:   The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV)
 
 ## Footnotes
