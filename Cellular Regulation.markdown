@@ -234,8 +234,57 @@ The gold standard for cell proliferation detective in vitro is, of course, count
 #### Measuring cell death
 
 * Comet assay: measure DNA fragmentation pattern and amount. When apoptosis occurs you get a comet trail of small DNA fragments; in your control you get a relativly chohesive band with no comet. Not quantitative
-* TUNEL assay: "terminal doxynuclotidyl transferase dUTP end labelling." When DNA is fragmented you get lots of free ends, and terminal transferase adds nucleotides to the end of strands. Therefore you can use this to add flourescent markers to ends of fragments and cause their cells to flouresce. Good in tissues.
+* TUNEL assay: "terminal doxynuclotidyl transferase dUTP end labelling." When DNA is fragmented you get lots of free ends, and terminal transferase adds nucleotides to the end of strands. Therefore you can use this to add fluorescent markers to ends of fragments and cause their cells to fluoresce. Good in tissues.
 * Annexin-V: Binds phosphatidyl serine, which is located on the cytosolic side of plasma membrane&mdash;therefore normally wont stain cell, but when apoptosis occurs the membrane flips and Annexin-V can bind.
-* PI: Propridium Iodide, a red flouro dye (and a "vital stain"). Living cells will exclude most dyes, pumping it out, but when they die and lose their membrane potential vital stains can flow in and stain the cell. The deader the cell the stronger the stain. (PI can also be used as a cell cycle marker because it intercolates into DNA). Good for flow cytometry.
+* PI: Propridium Iodide, a red fluoro dye (and a "vital stain"). Living cells will exclude most dyes, pumping it out, but when they die and lose their membrane potential vital stains can flow in and stain the cell. The deader the cell the stronger the stain. (PI can also be used as a cell cycle marker because it intercolates into DNA). Good for flow cytometry.
+
+### cAMP
+
+A ligand binds to a protein on the cell surface, which produces a second messenger. The second messanger produces a protein kinase cascade, e.g. mapKinase or protein kinase A. This then causes transcription factor phosphorylation, which then causes a change in mRNA production. The amount of second messenger is very localised.
+
+Protein kinase A is activated by cAMP, and is well understood. Not going to look at molecular mechanism this year. The crystal structure has been solved.
+
+cAMP is a second messenger
+
+* Synthesised from ATP on demand
+* Adenylate cyclase takes ATP&rarr;cAMP
+* Phosphodiesterase takes cAMP&rarr;AMP
+
+The entire protein kinase A family is activated by cAMP. Phosphorylates Ser/Thr OH in target proteins. The consensus target sequence is Arg-Arg-X-Ser. The inhibitor peptide sequence is Arg-Arg-X-Ala.
+
+Protein sequencing of PKA itself shows conserved motifs, particularly the glycine triad which binds ATP.
+
+A cAMP dependent protein kinase mediates the effects of the second messenger cAMP. It is a tetrameric protein containing two regulatory subunits "R" and two catalytic subunits "C". When it is active it exists as an R<sub>2</sub> dimer and two free C subunits.
+
+Each regulatory subunit binds two molecules of cAMP cooperatively. Free catalytic subunits have protein kinase activity, but instead bind to inhibitor motifs on the regulatory subunit; binding of cAMP frees the catalytic subunits.
+
+### G-protein systems
+
+A plasma-membrane receptor; a trimeric g-protein. The effector molecule generates second messenger. Their function is to act as a signal amplification cascade after ligand binding.
+
+G-protein coupled receptros are a single polypepetide chain that has seven transmembrane segments. They have an external ligand binding domain, while the transmembrane loops form the G-protein binding site. They are generally shown in textbooks as monomers, but this is not true.
+
+Continual activation leads to the phosphorylation or internalisation of the receptor, which causes more and more ligands needing to be bound to trigger the same level of response.
+
+Trimeric G-proteins are composed of three different polypeptides (&alpha;, &beta;, and &gamma;). Dissasociates into &alpha; and &beta;&gamma; when activated. G&alpha; activates effector protein, and has GTPase activity. &beta;&gamma; anchors &alpha; to plasma membrane, though is also involved in cell signalling.
+
+Ligand binds 7-TMS &rarr; Conformational change in G-protein receptor &rarr; G-protein attached to receptor activated &rarr; G-protein _swaps_ GDP for GTP &rarr; binding causes dissasociation &rarr; G&alpha; hydrolyses GTP to GDP.
+
+## Glossary
+
+COMET
+:   Assay which detects cell death via trails of DNA fragments in gel
+
+TUNEL
+:   Assay which detects cell death via inserting fluorescent nucleotides to ends of DNA fragments
+
+Vital stain
+:   Stain which is excluded from living cells but stains dead cells
+
+BRDU
+:   Nucleotide analogue, stains green
+
+Flow cytometry
+:   System for measuring cells individually via a machine, e.g. detecting count of fluorescing cells
 
 ## Footnotes
