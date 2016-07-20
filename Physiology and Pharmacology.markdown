@@ -316,16 +316,16 @@ One way to control this is via the control of ventricular filling&mdash;that is,
 This can be controled via:
 
 * Venous return rate
-    * &uarr;Pveins &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
+    * &uarr;P<sub>veins</sub> &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
 * Filling time
     * (effect of changes in heart rate)
     * &uarr;HR &rArr; &darr;Filling time &rArr; &darr;EDV &rArr; &darr;SV &rArr; &darr;CO
     * Increase in heart rate increases CO becuase CO = HR &times; SV, but the increase in HR also has a negative effect on CO via decreaseing SV due to less filling time. The balance is generally in favour of increasing CO however.
 * Intraventricular pressure
     * The pressure of the thorax and ventricle effects the &Delta;P for VR.
-    * Internally, ventricular recoil immediately after systole causes negative Pventricle and rapid filling, like popping out of a pushed-in tennis ball.
+    * Internally, ventricular recoil immediately after systole causes negative P<sub>ventricle</sub> and rapid filling, like popping out of a pushed-in tennis ball.
     * Externally, changes in thoracic pressure with breathing changes pressure
-        * Inspiration &rArr; &darr;Pvenous in thorax &amp; &darr;Pventricle &rArr; &uarr;&Delta;P between extrathoracic viens and thorax and ventricle &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
+        * Inspiration &rArr; &darr;P<sub>venous</sub> in thorax &amp; &darr;P<sub>ventricle</sub> &rArr; &uarr;&Delta;P between extrathoracic viens and thorax and ventricle &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;SV &rArr; &uarr;CO
         * Expiration is the reverse of inspiration, but the effect of inspiration dominates
 * Atrial contractility
     * Forces extra blood into ventricle just before systole
@@ -336,7 +336,7 @@ This can be controled via:
 Another way is ESV control (control of contractility or inotropy)
 
 * Internal control
-    * The Frank-Sterling Law of the Heart: The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV)
+    * The Frank-Sterling Law of the Heart: The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV). **Always on the test**
         * Heterometric autoregulation
             * The effect of "preload" or EDV on stroke volume
             * As EDV increases, SV increases, until the heart is so far extended that the actin and myosin are too streatched to interact
@@ -355,6 +355,42 @@ Another way is ESV control (control of contractility or inotropy)
     * Acidosis and alkalosis both cause a decrease in inotropy
     * Pharmacalogical agents can increase or decrease SV depending on what they are
     * Heart failure has an effect here
+
+### Vasculature
+
+Flow = &Delta;P/R, which is analogous to Ohm's law (I = V/R).
+
+* &Delta;P = P<sub>i</sub> - P<sub>o</sub>
+    * Controlled by heart contraction
+    * P<sub>i</sub> is "pressure in"
+    * P<sub>o</sub> is "pressure out"
+* R = 8L&eta;/&pi;r<sup>4</sup>
+    * L is the length (largely constant)
+    * &eta; is the coefficient of viscosity (related to hematocrit)
+    * r is the radius (the largest factor on resistance)
+* Conductance = 1/R
+
+#### Arteries
+
+Arteries are flow conduits: thick walled, high pressure. When the wall is damaged or otherwise thin, an aneurysm is the result. There is smooth muscle in the wall, though not with the same control as in veins. The "WindKessel Effect" creates an "elastic reservoir," as the artery increases pressure it expands, and then contracts, to preserve pressure.
+
+The pulse pressure is calculated as the difference between the systolic and diastolic pressure, i.e. PP = SP - DP. DP is the lowest pressure during a pulse, SP is the highest. Mean Blood Pressure (MBP) = CO &times; Total Peripheral Resistance (TPR), which can be derived from the flow equation (and will be **on the test**). MBP can be estimated as DP + &frac13;PP, as at rest diastole is &frac23; of the cardiac cycle. This relationship breaks down when exercising, however.
+
+There are various abnormal pressure pulse contours. Atherosclerosis is the hardening of the arteries, which leads to reduced compliance. Aortic stenosis is when the valve diameter is small, which causes reduced blood flow through the valve. Patent ductus arteriosis is the back flow of blood into pulmonary artery (up to 50%),  which allows the DP to fall very low before next systole. Aortic regurgitation, which is when the aortic valve is faulty, allows DP to fall very low before next systole, even down to 0 mm Hg, and leading to no dichrotic notch.
+
+Compliance is the ability to give and conform, and is equal to &Delta;V/&Delta;P &mdash; a completely rigid tube has no compliance.
+
+#### Arterioles
+
+Arterioles are resistance vessels: Small, variable diameter, with neural, hormonal, and local control of resistance via smooth muscle. The regulatino of resistance can divert flow to specific tissues, or raise arterial pressure.
+
+#### Capillaries
+
+Capillaries are exchange vessels:
+
+#### Veins
+
+Veins are capacitance vessels:
 
 ## Glossary
 
@@ -440,6 +476,6 @@ Ach
 :   Acetylcholine
 
 Frank-Sterling law of the Heart
-:   The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV)
+:   The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV). Always on the test.
 
 ## Footnotes
