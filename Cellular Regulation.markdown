@@ -270,6 +270,20 @@ Trimeric G-proteins are composed of three different polypeptides (&alpha;, &beta
 
 Ligand binds 7-TMS &rarr; Conformational change in G-protein receptor &rarr; G-protein attached to receptor activated &rarr; G-protein _swaps_ GDP for GTP &rarr; binding causes dissasociation &rarr; G&alpha; hydrolyses GTP to GDP.
 
+The lifetime of active &alpha; is short&mdash;the binding to the effector protein stimulates intrinsic GTPase activity. This allows rapid changes in cAMP concentration. There are more g-proteins than receptors; one receptor can activate multiple. The g-protein remains active after dissasociation, and is only deactivated when the GTP is hydrolysed to GDP.
+
+#### Types of G-protein
+
+Different types of G-protein may either activate _or inhibit_ Adenylate cyclase. Different cells produce different patterns of receptors and g-proteins. While all G-proteins have the same basic mechanism they may work with different receptors and effect different proteins. G-proteins can activate Ca<sup>2+</sup> channels and K<sup>+</sup> channels, or activate other proteins.
+
+| Family | Member | &alpha; subunits | Effect of bacterial toxin |
+|:------ |:------ |:---------------- |:------------------------- |
+| Fill | Out | Late | r |
+
+#### Cholera toxin
+
+A toxin produced by V. cholerae, ADP-ribroylation(?), inhibits GTP-ase activity. This can be used to work out which receptors and g-proteins are present in a cell. It causes proteins that are activated to not become deactivated and therefore continually be activated. Normally, in the intestine, this causes cAMP to build up and Chlorine channels to remain open and water to flow out.
+
 ## Glossary
 
 COMET
