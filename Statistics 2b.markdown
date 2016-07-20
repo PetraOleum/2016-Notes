@@ -117,6 +117,116 @@ tapply(smoke$fev1, smoke$group, var)
 
 Now we have a proper factor.
 
+Note: to create and output e.g. a 500&times;500 png in Rscript:
+
+```r
+png("Plot.png", width=500, height=500)
+plot(...)
+dev.off()
+```
+
+To make a boxplot then we go:
+
+```r
+boxplot(fev1~group, data=smoke, xlab="Category", ylab="FEV1 (litres)", ylim=c(1,5))
+```
+
+Fitting a model can be done with `lm`, such as like:
+
+```r
+fit1 = lm(fev1~group, data=smoke)
+summary(fit1)
+## Call:
+## lm(formula = fev1 ~ group, data = smoke)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max
+## -1.18000 -0.24208 -0.07417  0.44625  0.94000
+## 
+## Coefficients:
+##                      Estimate Std. Error t value Pr(>|t|)
+## (Intercept)            4.2200     0.2378  17.743 1.05e-13 ***
+## groupEarly    smoker  -0.2817     0.3364  -0.837  0.41225
+## groupRecent smoker    -0.7600     0.3364  -2.260  0.03517 *
+## groupSmoker           -1.0000     0.3364  -2.973  0.00752 **
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.5826 on 20 degrees of freedom
+## Multiple R-squared:  0.3521,    Adjusted R-squared:  0.2549
+## F-statistic: 3.623 on 3 and 20 DF,  p-value: 0.03085
+```
+
+Note that here the "intercept" is &mu;&#x0302;<sub>1</sub>, and all other &mu;&#x0302;<sub>i</sub> values are relative to that. Further the `Pr(>|t|)` gives the probability testing H<sub>0</sub>: &mu;<sub>i</sub> - &mu;<sub>1</sub> = 0 _vs_ H<sub>1</sub>: &mu;<sub>i</sub> - &mu;<sub>1</sub> &ne; 0.
+
+Vim note: to replace the fancy apostrophes in the significance codes line:
+
+```vim
+:%s/<Character>/'/g
+```
+
+This doesn't give us the ANOVA table directly, however. One way to do that is:
+
+```r
+anova(fit1)
+## Analysis of Variance Table
+## 
+## Response: fev1
+##           Df Sum Sq Mean Sq F value  Pr(>F)
+## group      3 3.6890 1.22967  3.6231 0.03085 *
+## Residuals 20 6.7879 0.33939
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+Alternately we can bypass `lm` using a different command, `aov`:
+
+```r
+fit2=aov(fev1~group, data=smoke)
+summary(fit2)
+##             Df Sum Sq Mean Sq F value Pr(>F)
+## group        3  3.689  1.2297   3.623 0.0309 *
+## Residuals   20  6.788  0.3394
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+There are slight differences between these two, but they seem to be down to significant figures.
+
+With this fit, but not the previous, we can run `TukeyHSD` to get the Tukey Honest Significant Difference test results:
+
+```r
+TukeyHSD(fit2)
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = fev1 ~ group, data = smoke)
+## 
+## $group
+##                                     diff       lwr         upr     p adj
+## Early    smoker-Nonsmoker     -0.2816667 -1.223089  0.65975578 0.8360677
+## Recent smoker-Nonsmoker       -0.7600000 -1.701422  0.18142245 0.1415657
+## Smoker-Nonsmoker              -1.0000000 -1.941422 -0.05857755 0.0348503
+## Recent smoker-Early    smoker -0.4783333 -1.419756  0.46308912 0.5008038
+## Smoker-Early    smoker        -0.7183333 -1.659756  0.22308912 0.1760748
+## Smoker-Recent smoker          -0.2400000 -1.181422  0.70142245 0.8905477
+```
+
+In both cases you can get the `coefficients` from the fit:
+
+```r
+coefficients(fit1)
+##          (Intercept) groupEarly    smoker   groupRecent smoker
+##            4.2200000           -0.2816667           -0.7600000
+##          groupSmoker
+##           -1.0000000
+coefficients(fit2)
+##          (Intercept) groupEarly    smoker   groupRecent smoker
+##            4.2200000           -0.2816667           -0.7600000
+##          groupSmoker
+##           -1.0000000
+```
+
 ## R commands
 
 `mean(x)`
