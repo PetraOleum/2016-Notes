@@ -39,4 +39,11 @@ div.footnote hr {
 
 dt {
 	font-weight: bold;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.r {
+	padding-left: 1em;
+	text-indent: -1em;
 }

@@ -33,7 +33,7 @@ The sum of elements in group 1 can be written as both &sum;Y<sub>1j</sub> and as
 
 The sum of elements in column 2 can be written Y<sub>.2</sub>, the jth column as Y<sub>.j</sub>, and the grand total as Y<sub>..</sub>.
 
-A bar over a symbol means the mean. These two notations can be combined to give, e.g. Y&#x0304;<sub>1.</sub> is the mean of the first row, which is the total of the first row (Y<sub>1.</sub>) divided by the number of elements in the row. Simularity the mean of the jth column is Y&#x0304;<sub>.j</sub>. The grand mean is Y&#x0304;<sub>..</sub>.
+A bar over a symbol means the mean. These two notations can be combined to give, e.g. Y&#x0304;<sub>1.</sub> is the mean of the first row, which is the total of the first row (Y<sub>1.</sub>) divided by the number of elements in the row. Similarly the mean of the jth column is Y&#x0304;<sub>.j</sub>. The grand mean is Y&#x0304;<sub>..</sub>.
 
 ### Expected value and variance of a random variable
 
@@ -70,6 +70,14 @@ For a completely randomised design the fixed effects model for one-way ANOVA is:
 Y<sub>ij</sub> = &mu; + &alpha;<sub>i</sub> + &epsilon;<sub>ij</sub>
 
 The mean for population i is &mu;<sub>i</sub> = &mu; + &alpha;<sub>i</sub>.
+
+The assumptions for ANOVA are written:
+
+<em>E<sub>ij</sub> &sim; iid[^iid] N(0, &sigma;<sup>2</sup>), i = 1, &hellip;, k, j = 1 &hellip;, n.</em>
+
+[^iid]: "iid" stands for "independently and identically distributed."
+
+And the constraint is <em>&sum;&alpha;<sub>i</sub> = 0 for all i from 1 to k</em>.
 
 ### Estimating model parameters
 
@@ -232,6 +240,12 @@ coefficients(fit2)
 `mean(x)`
 :   The mean of `x`
 
+`sd(x, na.rm = T)`
+:   The standard deviation of `x`, removing NA values
+
+`var(x)`
+:   The variance of `x`
+
 `read.csv("file.csv", header=T)`
 :   Read the contents of `file.csv`, preserving the headers
 
@@ -261,6 +275,9 @@ coefficients(fit2)
 
 `aov(data$result~data$group)`
 :   Do an anova on the data directly (**note** can do `TukeyHSD` on this but not `anova`)
+
+`coefficients(fit)`
+:   Get model coefficients from fits
 
 `TukeyHSD(fit)`
 :   Do a Tukey Honest Significant Difference test on `fit` (**note** can't do this on all fits)
