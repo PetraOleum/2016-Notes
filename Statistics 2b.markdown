@@ -79,6 +79,23 @@ The assumptions for ANOVA are written:
 
 And the constraint is <em>&sum;&alpha;<sub>i</sub> = 0 for all i from 1 to k</em>.
 
+#### Aside: the expected value of the model
+
+Given the model Y<sub>ij</sub> = &mu; + &alpha;<sub>i</sub> + &epsilon;<sub>ij</sub>, the expected value of Y<sub>ij</sub> is:
+
+* E(Y<sub>ij</sub>)
+* &rArr; E(&mu; + &alpha;<sub>i</sub> + &epsilon;<sub>ij</sub>)
+* &rArr; E(&mu;) + E(&alpha;<sub>i</sub>) + E(&epsilon;<sub>ij</sub>)
+* &rArr; &mu; + &alpha;<sub>i</sub> &equiv; &mu;<sub>i</sub>
+
+This is because:
+
+* The expected value of a constant is that constant
+* E(a + b) = E(a) + E(b)
+* E(&epsilon;<sub>ij</sub>) = 0 because the mean of the distribution that &epsilon; follows is 0
+
+Note however that the _variance_ of a constant is zero.
+
 ### Estimating model parameters
 
 | Parameter                     | Estimate                                                      |
@@ -234,6 +251,12 @@ coefficients(fit2)
 ##          groupSmoker
 ##           -1.0000000
 ```
+
+### Deriving the F statistic and distribution
+
+The Total Sum of Squares in an ANOVA balanced design is _TSS = SST + SSE_, or Sum of Squares of Treatment plus Sum of Squared Errors. <em>SST = n &times; &sum;<sub>i&rArr;k</sub>(Y&#x0304;<sub>i.</sub> - Y&#x0304;<sub>..</sub>)<sup>2</sup> = &sum;<sub>i&rArr;k</sub>&sum;<sub>j&rArr;n</sub>(Y&#x0304;<sub>i.</sub> - Y&#x0304;<sub>..</sub>)<sup>2</sup></em>, that is for each data point the square of its treatment means, summed togther. <em>SSE = &sum;<sub>i&rArr;k</sub>&sum;<sub>j&rArr;n</sub>(Y&#x0304;<sub>ij</sub> - Y&#x0304;<sub>i.</sub>)<sup>2</sup></em>, that is for each data point the square of the difference between the observation and the group mean, summed together. SST quantifies between-group variablity, while SSE quantifies the within-group variability&mdash;ANOVA compares these using 'averaged' sums of squared deviations.
+
+The mean 'between group' variability is MST, the Mean Squares for Treatment. <em>MST = 1/(k - 1) &times; SST</em>, because there are _k - 1_ degrees of freedom for this part. The mean 'within group' variability is MSE, the Mean Squares for Error. <em>MSE = SSE/(k&times;(n - 1)) = (1/k)&times;((s<sub>1</sub>)<sup>2</sup> + (s<sub>2</sub>)<sup>2</sup> + &hellip; + (s<sub>k</sub>)<sup>2</sup>)</em>, where _s<sub>i</sub>_ = the standard deviation of group _i_.
 
 ## R commands
 
