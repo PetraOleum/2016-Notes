@@ -276,13 +276,60 @@ The lifetime of active &alpha; is short&mdash;the binding to the effector protei
 
 Different types of G-protein may either activate _or inhibit_ Adenylate cyclase. Different cells produce different patterns of receptors and g-proteins. While all G-proteins have the same basic mechanism they may work with different receptors and effect different proteins. G-proteins can activate Ca<sup>2+</sup> channels and K<sup>+</sup> channels, or activate other proteins.
 
-| Family | Member | &alpha; subunits | Effect of bacterial toxin |
-|:------ |:------ |:---------------- |:------------------------- |
+| Family | Member | &alpha; subunits | Toxin effect |
+|:------ |:------ |:---------------- |:------------ |
 | Fill | Out | Late | r |
 
 #### Cholera toxin
 
-A toxin produced by V. cholerae, ADP-ribroylation(?), inhibits GTP-ase activity. This can be used to work out which receptors and g-proteins are present in a cell. It causes proteins that are activated to not become deactivated and therefore continually be activated. Normally, in the intestine, this causes cAMP to build up and Chlorine channels to remain open and water to flow out.
+A toxin produced by V. cholerae, ADP-ribroylation(?), inhibits GTP-ase activity. This can be used to work out which receptors and g-proteins are present in a cell. It causes proteins that are activated to not become deactivated and therefore continually be activated. Normally, in the intestine, this causes cAMP to build up and Chlorine channels to remain open and water(?) to flow out.
+
+### Phosphatidylinositol
+
+"PI" is a minor lipid on inner face of membrane
+
+* PI: Phosphatidylinositol
+* PIP: PI-phosphate
+* PIP2: PI-bisphosphate
+
+Basically, it's a lipid that can be phosphorylated, multiple times, to produce different signal molecules. There are a varity of different positions that can be phosphorylated, all producing different molecules.
+
+Phospholipases can cleave PI. PLA<sub>1</sub> and <sub>2</sub> cut off fatty acids from the glycerol, PLC cleaves the diacyl glycerol from the P and headgroup. PLD cleaves the P and glycerol from the headgroup. PLB does the functions of both PLAs. Cleaving the head from the lipid creates a signalling molecule that can now diffuse into the cytosol.
+
+Phospholpase effects:
+
+* PLA2: Inflammatory response
+* PLC: Activates protein kinase C via DAG
+* PLD: poroduces phosphatidic acid that mobilises calcium, inhibits AC, activates PLC
+
+#### Gq signalling activates PLC
+
+* Ligand binds to GPCR
+* Activation of Gq
+* &alpha;Gq-GTP activates phospholipase C &beta;
+* PLC cleaves PIP2 to inositol tripohosmphate (IPC) and diacyl glycerol (DAG)
+
+DAG and IP3 are important signalling molecules
+
+#### IP3 and Ca2+ relases
+
+IP3 is small and water soluble, so can diffuse from plasma membrane and find calcium stores(?). IP3-gated Ca2+ release channels in the ER open in response to IP3 binding. The channels are regulated by positive feedback from Ca<sup>2+</sup> binding&mdash;Ca<sup>2+</sup> binding to the channels causes Ca<sup>2+</sup> release ( **Calcium induced calcium release** ).
+
+IP3 is rapidly dephosphorylated by specific phosphatases, while Ca2+ entering the cytosol is rapidly pumped out of the cell and into ER and calciosomes. Some IP3 is also phosphorylated into IP4, which is also a signalling molecule in it's own right (stimulating pumping back into storage). The calcium relases thus stimulates it's own termination, forming a cycle.
+
+#### Calcium induced calcium release
+
+Ca2+ entering the cytoplasm comes from two sources: the extracellular environment and parts of the ER that are associated with the plasma membrane. The ER is a closed system, storing only a limited amount of calcium ions. These stores would deplete very quickly, but their release stimulates the ingress of calcium from outside the cell. Calcium release is therefore a two-step process.
+
+First, IP3 binds to receptors on ER and opens Ca2+ channels. Released Ca2+ binds to ER IP3-receptor complex, inducing a conformational change as ER Ca2+ empties **Fin missed**... Plasma membrane channels allow extracellular Ca2+ to enter. IP4 may help keep plasma membrane Ca<sup>2+</sup> channels open.
+
+#### Regulation of cellular Ca2+
+
+Free Ca2+ is kept very low and is tightly regulated (10-7 M), while the concentration of Ca2+ is extracellular fluiid and ER is high (10-3 M). **Darren is really going too fast today**. Antiport has low affinity for Ca2+ and operates after cytosolic Ca2+ rises. Failing to maintain calcium homeostasis causes Ca2+ leakage from mitochondria, which triggers apoptosis.
+
+**Draw a Diagram**
+
+Calcium is released and stored in cycles, and both the frequency and amplitude code information. Ligands can influence amplitude _or_ frequency.
 
 ## Glossary
 

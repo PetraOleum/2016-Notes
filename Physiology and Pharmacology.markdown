@@ -382,7 +382,13 @@ Compliance is the ability to give and conform, and is equal to &Delta;V/&Delta;P
 
 #### Arterioles
 
-Arterioles are resistance vessels: Small, variable diameter, with neural, hormonal, and local control of resistance via smooth muscle. The regulatino of resistance can divert flow to specific tissues, or raise arterial pressure.
+Arterioles are resistance vessels: Small, variable diameter, with neural, hormonal, and local control of resistance via smooth muscle. The regulation of resistance can divert flow to specific tissues, or raise arterial pressure. Resistance is controlled through changing the diameter of the vessel.
+
+Local control by tissues (myogenic and metabolic) act as "fail safes," ensuring constant flow with changes in blood pressure. Myogenic autoregulation is especially common in tissues that have a low level of metabolism at all times, like the mesenteries that hold the small intestine in place, to avoid getting killed by the ANS. Metabolic control comes from metabolites that relax smooth muscle and increase flow. "Active Hyperemia" comes from active tissue needing more blood. "Reactive Hyperemia" comes from blockages, where metabolites build up and need to be washed away.
+
+Both parts of the ANS innervate aterioles. The most important part is &alpha; adrenergic fibres, which derive from the SNS, which cause vasoconstriction.
+
+Primary control is neuronal and hormonal.
 
 #### Capillaries
 
@@ -398,7 +404,7 @@ ANS
 :   Autonomic Nervous System
 
 PNS
-:   Parasympathetic Nevous System
+:   Parasympathetic Nervous System
 
 SNS
 :   Sympathetic Nervous System
