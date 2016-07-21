@@ -12,6 +12,10 @@ h1, h2 {
 	text-justify: none;
 }
 
+h5 {
+	color: #999999
+}
+
 blockquote {
 	border-left: solid .5em #808080;
 	padding-left: .5em;
@@ -43,4 +47,8 @@ dt {
 	text-indent: -1em;
 	text-align: left;
 	text-justify: none;
+}
+
+pre {
+	background-color: #EEEEEE
 }
