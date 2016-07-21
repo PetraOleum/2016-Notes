@@ -386,13 +386,17 @@ Arterioles are resistance vessels: Small, variable diameter, with neural, hormon
 
 Local control by tissues (myogenic and metabolic) act as "fail safes," ensuring constant flow with changes in blood pressure. Myogenic autoregulation is especially common in tissues that have a low level of metabolism at all times, like the mesenteries that hold the small intestine in place, to avoid getting killed by the ANS. Metabolic control comes from metabolites that relax smooth muscle and increase flow. "Active Hyperemia" comes from active tissue needing more blood. "Reactive Hyperemia" comes from blockages, where metabolites build up and need to be washed away.
 
-Both parts of the ANS innervate aterioles. The most important part is &alpha; adrenergic fibres, which derive from the SNS, which cause vasoconstriction.
+Both parts of the ANS innervate aterioles. The most important part is &alpha; adrenergic fibres, which derive from the SNS, which cause vasoconstriction when stimulated and dilation when not. Only the brain and heart are not innervated by the SNS in this way, as they cannot afford to be shut down. There are also some &beta;2 SNS adrenergic fibres, which promote vasodiation and not constriction, particularly in skeletal muscle. Also dilating are some Ach-releasing SNS fibres, which seem to have a role in anticipating exercise.
 
-Primary control is neuronal and hormonal.
+PSNS control also exists, but is minor.
+
+Adrenalin causes vasoconstriction, though in lower doses in skeletal muscle and liver it causes vasodilation.
 
 #### Capillaries
 
-Capillaries are exchange vessels:
+Capillaries are exchange vessels: Small diameter, single endothelial cell thick, and having pores (or "fenestrations"). The pores allow protein movement across endothelium. Liver capillaries are the most leaky, also spleen and pituitary; intestine and kidney have medium leakiness; muscle, skin, heart, lung, brain least leaky.
+
+Capillary flow is controlled via pre-capillary sphincters, which are locally controlled as have no smooth muscle. Because of the large cross-sectional area there is low resistance in capillaries, even though they are thin. The low flow velocity allows time for exchange to occur.
 
 #### Veins
 
