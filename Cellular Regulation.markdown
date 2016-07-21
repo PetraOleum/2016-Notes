@@ -311,23 +311,21 @@ Phospholpase effects:
 
 DAG and IP3 are important signalling molecules
 
-#### IP3 and Ca2+ relases
+#### IP3 and calcium relases
 
-IP3 is small and water soluble, so can diffuse from plasma membrane and find calcium stores(?). IP3-gated Ca2+ release channels in the ER open in response to IP3 binding. The channels are regulated by positive feedback from Ca<sup>2+</sup> binding&mdash;Ca<sup>2+</sup> binding to the channels causes Ca<sup>2+</sup> release ( **Calcium induced calcium release** ).
+IP3 is small and water soluble, so can diffuse from plasma membrane and find calcium stores(?). IP3-gated Ca<sup>2+</sup> release channels in the ER open in response to IP3 binding. The channels are regulated by positive feedback from Ca<sup>2+</sup> binding&mdash;Ca<sup>2+</sup> binding to the channels causes Ca<sup>2+</sup> release ( **Calcium induced calcium release** ).
 
-IP3 is rapidly dephosphorylated by specific phosphatases, while Ca2+ entering the cytosol is rapidly pumped out of the cell and into ER and calciosomes. Some IP3 is also phosphorylated into IP4, which is also a signalling molecule in it's own right (stimulating pumping back into storage). The calcium relases thus stimulates it's own termination, forming a cycle.
+IP3 is rapidly dephosphorylated by specific phosphatases, while Ca<sup>2+</sup> entering the cytosol is rapidly pumped out of the cell and into ER and calciosomes. Some IP3 is also phosphorylated into IP4, which is also a signalling molecule in it's own right (stimulating pumping back into storage). The calcium relases thus stimulates it's own termination, forming a cycle.
 
 #### Calcium induced calcium release
 
-Ca2+ entering the cytoplasm comes from two sources: the extracellular environment and parts of the ER that are associated with the plasma membrane. The ER is a closed system, storing only a limited amount of calcium ions. These stores would deplete very quickly, but their release stimulates the ingress of calcium from outside the cell. Calcium release is therefore a two-step process.
+Ca<sup>2+</sup> entering the cytoplasm comes from two sources: the extracellular environment and parts of the ER that are associated with the plasma membrane. The ER is a closed system, storing only a limited amount of calcium ions. These stores would deplete very quickly, but their release stimulates the ingress of calcium from outside the cell. Calcium release is therefore a two-step process.
 
-First, IP3 binds to receptors on ER and opens Ca2+ channels. Released Ca2+ binds to ER IP3-receptor complex, inducing a conformational change as ER Ca2+ empties **Fin missed**... Plasma membrane channels allow extracellular Ca2+ to enter. IP4 may help keep plasma membrane Ca<sup>2+</sup> channels open.
+First, IP3 binds to receptors on ER and opens Ca<sup>2+</sup> channels. Released Ca<sup>2+</sup> binds to ER IP3-receptor complex, inducing a conformational change as ER Ca<sup>2+</sup> empties. This conformational change opens adjacent Ca<sup>2+</sup> channels _on the plasma membrane_. Plasma membrane channels allow extracellular Ca<sup>2+</sup> to enter. IP4 may help keep plasma membrane Ca<sup>2+</sup> channels open.
 
-#### Regulation of cellular Ca2+
+#### Regulation of cellular calcium
 
-Free Ca2+ is kept very low and is tightly regulated (10-7 M), while the concentration of Ca2+ is extracellular fluiid and ER is high (10-3 M). **Darren is really going too fast today**. Antiport has low affinity for Ca2+ and operates after cytosolic Ca2+ rises. Failing to maintain calcium homeostasis causes Ca2+ leakage from mitochondria, which triggers apoptosis.
-
-**Draw a Diagram**
+Free Ca<sup>2+</sup> is kept very low and is tightly regulated (10-7 M), while the concentration of Ca<sup>2+</sup> is extracellular fluiid and ER is high (10-3 M). Ca<sup>2+</sup> pumps keep calcium concentration low, including Ca<sup>2+</sup>-ATPase in the plastma membrane. Muscle and nerve cells also have Na<sup>+</sup>/Ca<sup>2+</sup> antiport which exchanges sodium and calcium ions. Antiport has low affinity for Ca<sup>2+</sup> and operates after cytosolic Ca<sup>2+</sup> rises. Failing to maintain calcium homeostasis causes Ca<sup>2+</sup> leakage from mitochondria, which triggers apoptosis.
 
 Calcium is released and stored in cycles, and both the frequency and amplitude code information. Ligands can influence amplitude _or_ frequency.
 
