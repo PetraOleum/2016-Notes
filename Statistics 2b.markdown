@@ -258,6 +258,64 @@ The Total Sum of Squares in an ANOVA balanced design is _TSS = SST + SSE_, or Su
 
 The mean 'between group' variability is MST, the Mean Squares for Treatment. <em>MST = 1/(k - 1) &times; SST</em>, because there are _k - 1_ degrees of freedom for this part. The mean 'within group' variability is MSE, the Mean Squares for Error. <em>MSE = SSE/(k&times;(n - 1)) = (1/k)&times;((s<sub>1</sub>)<sup>2</sup> + (s<sub>2</sub>)<sup>2</sup> + &hellip; + (s<sub>k</sub>)<sup>2</sup>)</em>, where _s<sub>i</sub>_ = the standard deviation of group _i_.
 
+#### Testing the hypothesis with the F statistic
+
+With the model Y<sub>ij</sub> = &mu;<sub>i</sub> + &epsilon;<sub>ij</sub> = &mu; + &alpha;<sub>i</sub> + &epsilon;<sub>ij</sub> we test the hypotheses H<sub>0</sub>: &mu;<sub>1</sub>, &hellip;, &mu;<sub>k</sub> are all equal, versus H<sub>1</sub>: &mu;<sub>1</sub>, &hellip;, &mu;<sub>k</sub> not all equal using the "averaged" sum of squares.
+
+The test statistic is F = MSE/MST = (SST/(k-1))/(SSE/(k(n - 1))).
+
+#### The F-statistic is sensitive to deviations from the null hypothesis
+
+Assuming &epsilon;<sub>ij</sub> &sim; iid N(0, &sigma;<sup>2</sup>), and the constraint &sum;&alpha;<sub>i</sub> = 0, consider the expected values of MST and MSE if H<sub>0</sub> is true (all means are equal).
+
+##### E(MST) if the null is true
+
+If H<sub>0</sub> is true, then &mu;<sub>1</sub> = &hellip; = &mu;<sub>k</sub>, which means that &sum;<sub>i&rArr;k</sub>(&mu;<sub>i</sub> - &mu;)<sup>2</sup> will be close to 0 and so E[MST|H0] = &sigma;<sup>2</sup>.
+
+##### E(MST) if the null is false
+
+If H<sub>0</sub> is false then the summation is greater than 0, and so E[MST|H<sub>1</sub>] &ge; &sigma;<sup>2</sup>.
+
+##### E(MSE)
+
+Provided variances for each group are the same, which is one of our assumptions, the expected value of MSE does not change because the MSE is found from the sum of the variances, which itself works out to be &sigma;<sup>2</sup>.
+
+That is, E[MSE|H<sub>0</sub>] = E[MSE|H<sub>1</sub>] = &sigma;<sup>2</sup>
+
+##### E(MST/MSE)
+
+The expected value for F = MST/MSE is therefore:
+
+* Under H<sub>0</sub>, around 1
+* Under H<sub>1</sub>, greater than 1
+
+The implication is that F is sensitive to deviations from H<sub>0</sub>. The question is, how much should F deviate from 1 for the null to be rejected?
+
+#### The distribution of the F statistic
+
+1. If Y1, &hellip;, Yn &sim; iid N(&mu;, &sigma;2) and we define a new random variable W as W = (&sum;j&rArr;n(Yj - Y&#x0304;)2)/&sigma;2, then W &sim; &Chi;<sub>2</sub><sub>n-1</sub>, that is a chi-squared distribution with n - 1 degrees of freedom.
+2. If we have a set of independent &Chi;<sup>2</sup> random variables W<sub>1</sub> &sim; &Chi;<sup>2</sup><sub>n<sub>1</sub></sub>, &hellip; W<sub>k</sub> &sim;<sup>2</sup><sub>n<sub>k</sub></sub> then &sum;<sub>i&rArr;k</sub>W<sub>i</sub> &sim; &Chi;<sup>2</sup><sub>&sum;ni</sub>.
+3. If we have two independent &Chi;<sup>2</sup> variables W<sub>1</sub> and W<sub>2</sub> such that W<sub>1</sub> &sim; &Chi;<sup>2</sup><sub>n<sub>1</sub></sub> and W<sub>2</sub> &sim; &Chi;<sup>2</sup><sub>n<sub>2</sub></sub>, and define X = (W<sub>1</sub>/n<sub>1</sub>)/(W<sub>2</sub>/n<sub>2</sub>), then X &sim; F<sub>n<sub>1</sub>, n<sub>1</sub></sub>.
+
+We can apply these rules to determine the probability distribution of SSE, SST, and the F-statistic itself.
+
+SSE/&sigma;&sup2; = (1/&sigma;&sup2;)&times;&sum;&sum;(Y<sub>ij</sub> - Y&#x0304;<sub>i.</sub>)&sup2; &sim; &Chi;&sup2;<sub>N-k</sub> (see original notes for derivation; uses rule 1 then rule 2 after first unravelling the first &sum;). For a balanced design, N = nk = total number of data points.
+
+SST/&sigma;&sup2; &sim; &Chi;&sup2;<sub>k - 1</sub> (see notes again).
+
+By rule 3, F = MST/MSE = (SST(k-1))/(SSE(N - k)) &sim; F<sub>k - 1, N - 1</sub>&mdash;the &sigma;&sup2;'s cancel out.
+
+The above only holds if normality, independence, and equal variance _all hold_.
+
+#### p-value in R
+
+```r
+pf(Fobserved, k, N - k)
+## [1] <The p-value>
+```
+
+
+
 ## R commands
 
 `mean(x)`
