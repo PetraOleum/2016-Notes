@@ -329,6 +329,41 @@ Free Ca<sup>2+</sup> is kept very low and is tightly regulated (10-7 M), while t
 
 Calcium is released and stored in cycles, and both the frequency and amplitude code information. Ligands can influence amplitude _or_ frequency.
 
+#### PKC
+
+PKC is a very good example of a kinase regulated by intra-molecular interactions, interacting with a psuedosubstrate domain within the protein itself. It's a small peptide, inactive in the cytoplasm when Ca2+ low and in the absense of DAG&mdash;the psudosubstrate domain occupies the substrate binding domain. A rise in Ca2+ causes increased association with the plasma membrane, while the psuedosubstrate domain binds DAG and thereby frees the kinase domain.
+
+### Calmodulin
+
+Calmodulin is an intracellular calcium level detector. It's highly conserved and ubiquitous in mammalian cells. It's small (150 amino acids), and its crystal structure is solved. It has a high affinity for calcium, and has two binding domains on each end of a "dumbell" shape. Calmodulin regulates the acitivy of a large variety of proteins including protein kinases, phosphodiesterase, Ca2+-ATPase.
+
+The Ca2+/calmodulin complex binds to target proteins with pico- to nano-molar affinity. The target proteins are highly variable in sequence by all contain a "basic[^BasicHelix] amphipathic[^amphipathic] alpha helix" (Baa). The Baa structure itself is regcognised, _not_ the precise sequence. This is simlar to tyrosine kinases.
+
+Calmodulin is "allosterically regulated" by calcium. Calmodulin has no intrinsic enzyme activity, but regulates the protein it binds to. Most important effects are mediated by Ca2+/calmodulin dependent protein kinases.
+
+[^BasicHelix]: That is "not acidic," alkaline, positively charged. E.g. arganine, histine, lysine
+
+[^amphipathic]: Both hydrophilic and hydrophobic.
+
+Between the dumbells of calmodulin is an alpha helix, but it's not a Baa helix. The helix folds the calclium/calmodulin complex around the target structure.
+
+#### CaM kinases
+
+CaM kinases phosphorylate Ser and Thr in response to increased cellular calcium.
+
+CaM kinase II is a multifunctional kinase that is abundant in all animal cells, present in large amounts in brain symapses and the brain isoform is well characterise. It is involved in catacholamine metabolism (dopamine, adrenaline, etc). It has a role in neurogenesis from intelleclual stimulation. Activation of neurons causes a Ca2+ influx through voltage-gated calcium channels. The influx activates CaM kinase II to phosphorylate and activate tyrosine hydroxylase, and by this mechanism Ca2+ influx causes both neurotransmitter secretion and synthesis.
+
+CaM kinase II is a complex of 12 subunits, of four types, however in the brain only the &alpha; subunit is expressed:
+
+* It has a catalytic domain and an inhibitory domain
+* The inhibitory domain is next to a Baa domain
+* When calmodulin binds the kinase is activated
+* It becomes fully activated once it self-phosphorylates its inhibitory domain, and dissasociates the catalytic domain from the inhibitory domain
+* In its fully activated firnm it has Ca2+-calmodulin binded, + phosphorylation
+* After Ca2+ level decreases and calmodulin disassociates, it remains 50-80% active until a phosphatase dephosphorylates the inhibitory domain
+
+
+
 ## Glossary
 
 COMET
@@ -345,5 +380,11 @@ BRDU
 
 Flow cytometry
 :   System for measuring cells individually via a machine, e.g. detecting count of fluorescing cells
+
+Baa domain
+:   "Basic amphipathic alpha helix," the target motif of Calmodulin
+
+Amphipathic
+:   Both hydrophillic and hydrophobic
 
 ## Footnotes
