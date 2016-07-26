@@ -398,11 +398,36 @@ Capillaries are exchange vessels: Small diameter, single endothelial cell thick,
 
 Capillary flow is controlled via pre-capillary sphincters, which are locally controlled as have no smooth muscle. Because of the large cross-sectional area there is low resistance in capillaries, even though they are thin. The low flow velocity allows time for exchange to occur.
 
+The fluids in blood filters out of capillaries at the arteriola end, and reabsorbed at venous end, determined via sterling forces. Processes such as vasoconstriction alter the balance, in that case to absorb more than filter out.
+
+The flow in capillaries is not constant, and flow can go backwards etc.
+
 #### Veins
 
-Veins are capacitance vessels:
+Veins are capacitance vessels: Large diametre, low resistance, thin walled (low pressure), highly distensible. Valves ensure flow back to heart.
 
-## Glossary
+* &uarr;Pvein &rArr; &uarr;VR &rArr; &uarr;EDV &rArr; &uarr;CO
+* &uarr;volume &rArr; small &uarr;Pvein (acts as a blood reservour)
+* &uarr;venoconstriction &rArr; &darr;capacitance &rArr; &darr;pooling &rArr; Pv
+
+
+### Lymphatic system
+
+To avoid loss of fluids from increasingly high pressure vascular system, the oncotic pressure increased and the lymphatic system evolved. Some fish seem to have a lymphatic system (e.g. zebrafish) but not clear if all fish.
+
+The lymphatic system has open-ended vessels and is highly permeable, but has valves and muscle pumps. It has a slow flow and drains back into circulation.
+
+The system also transports fat from GI tract to blood, protects from infection at lympth nodes, and filters returned material. Something like 4.3 L/day is returned to circulation via the lymphatic system. Blockage of lymphatic system via nematodes causes elephantisis.
+
+### Cardiovascular regulation
+
+#### Blood pressure control
+
+Arterial blood pressure is sensed via the arterial baroreceptor feedback reflex from carotid sinus and aortic arch. It is effected via SNS and PSNS to heart SA node and myocardium, SNS to arterioles and veins, and SNS to adrenal medulla gland.
+
+The regulatory centre is the CVC (cardiovascular system), which receives sensorary input and directs output via the ANS to the heart and other organs.
+
+##Glossary
 
 ANS
 :   Autonomic Nervous System

@@ -331,15 +331,15 @@ Calcium is released and stored in cycles, and both the frequency and amplitude c
 
 #### PKC
 
-PKC is a very good example of a kinase regulated by intra-molecular interactions, interacting with a psuedosubstrate domain within the protein itself. It's a small peptide, inactive in the cytoplasm when Ca2+ low and in the absense of DAG&mdash;the psudosubstrate domain occupies the substrate binding domain. A rise in Ca2+ causes increased association with the plasma membrane, while the psuedosubstrate domain binds DAG and thereby frees the kinase domain.
+PKC is a very good example of a kinase regulated by intra-molecular interactions, interacting with a psuedosubstrate domain within the protein itself. It's a small peptide, inactive in the cytoplasm when Ca<sup>2+</sup> low and in the absense of DAG&mdash;the psudosubstrate domain occupies the substrate binding domain. A rise in Ca<sup>2+</sup> causes increased association with the plasma membrane, while the psuedosubstrate domain binds DAG and thereby frees the kinase domain.
 
 ### Calmodulin
 
-Calmodulin is an intracellular calcium level detector. It's highly conserved and ubiquitous in mammalian cells. It's small (150 amino acids), and its crystal structure is solved. It has a high affinity for calcium, and has two binding domains on each end of a "dumbell" shape. Calmodulin regulates the acitivy of a large variety of proteins including protein kinases, phosphodiesterase, Ca2+-ATPase.
+Calmodulin is an intracellular calcium level detector. It's highly conserved and ubiquitous in mammalian cells. It's small (150 amino acids), and its crystal structure is solved. It has a high affinity for calcium, and has two binding domains on each end of a "dumbell" shape. Calmodulin regulates the acitivy of a large variety of proteins including protein kinases, phosphodiesterase, Ca<sup>2+</sup>-ATPase.
 
-The Ca2+/calmodulin complex binds to target proteins with pico- to nano-molar affinity. The target proteins are highly variable in sequence by all contain a "basic[^BasicHelix] amphipathic[^amphipathic] alpha helix" (Baa). The Baa structure itself is regcognised, _not_ the precise sequence. This is simlar to tyrosine kinases.
+The Ca<sup>2+</sup>/calmodulin complex binds to target proteins with pico- to nano-molar affinity. The target proteins are highly variable in sequence by all contain a "basic[^BasicHelix] amphipathic[^amphipathic] alpha helix" (Baa). The Baa structure itself is regcognised, _not_ the precise sequence. This is simlar to tyrosine kinases.
 
-Calmodulin is "allosterically regulated" by calcium. Calmodulin has no intrinsic enzyme activity, but regulates the protein it binds to. Most important effects are mediated by Ca2+/calmodulin dependent protein kinases.
+Calmodulin is "allosterically regulated" by calcium. Calmodulin has no intrinsic enzyme activity, but regulates the protein it binds to. Most important effects are mediated by Ca<sup>2+</sup>/calmodulin dependent protein kinases.
 
 [^BasicHelix]: That is "not acidic," alkaline, positively charged. E.g. arganine, histine, lysine
 
@@ -351,7 +351,7 @@ Between the dumbells of calmodulin is an alpha helix, but it's not a Baa helix. 
 
 CaM kinases phosphorylate Ser and Thr in response to increased cellular calcium.
 
-CaM kinase II is a multifunctional kinase that is abundant in all animal cells, present in large amounts in brain symapses and the brain isoform is well characterise. It is involved in catacholamine metabolism (dopamine, adrenaline, etc). It has a role in neurogenesis from intelleclual stimulation. Activation of neurons causes a Ca2+ influx through voltage-gated calcium channels. The influx activates CaM kinase II to phosphorylate and activate tyrosine hydroxylase, and by this mechanism Ca2+ influx causes both neurotransmitter secretion and synthesis.
+CaM kinase II is a multifunctional kinase that is abundant in all animal cells, present in large amounts in brain symapses and the brain isoform is well characterise. It is involved in catacholamine metabolism (dopamine, adrenaline, etc). It has a role in neurogenesis from intelleclual stimulation. Activation of neurons causes a Ca<sup>2+</sup> influx through voltage-gated calcium channels. The influx activates CaM kinase II to phosphorylate and activate tyrosine hydroxylase, and by this mechanism Ca<sup>2+</sup> influx causes both neurotransmitter secretion and synthesis.
 
 CaM kinase II is a complex of 12 subunits, of four types, however in the brain only the &alpha; subunit is expressed:
 
@@ -359,10 +359,51 @@ CaM kinase II is a complex of 12 subunits, of four types, however in the brain o
 * The inhibitory domain is next to a Baa domain
 * When calmodulin binds the kinase is activated
 * It becomes fully activated once it self-phosphorylates its inhibitory domain, and dissasociates the catalytic domain from the inhibitory domain
-* In its fully activated firnm it has Ca2+-calmodulin binded, + phosphorylation
-* After Ca2+ level decreases and calmodulin disassociates, it remains 50-80% active until a phosphatase dephosphorylates the inhibitory domain
+* In its fully activated firnm it has Ca<sup>2+</sup>-calmodulin binded, + phosphorylation
+* After Ca<sup>2+</sup> level decreases and calmodulin disassociates, it remains 50-80% active until a phosphatase dephosphorylates the inhibitory domain
 
+#### cAMP and calcium pathways
 
+Intracellular signalling pathways interact at several levels. In this case, some isoforms of adenylate cyclase and phosphodiesterase are regulated via Ca<sup>2+</sup> and calmodulin complexes. PKA can phosphorylate Ca<sup>2+</sup> gated ion channels and Ca<sup>2+</sup> pumps. The IP3 receptor is phosphorylated by PKA modulating its activity.
+
+### Receptor Tyrosine Kinase
+
+RTKs are a type of cell surface receptors.
+
+RTKs are integral membrane proteins, with a single transmembrane helix. When activated they phosphorylate and recruit proteins. Non-receptor tyrosine kinases are not transmembrane, but associated with cytoplasmic face. They are recruited to activated receptors and phorphorylate and recruit proteins. The main theme is that they create conglomerations of proteins at the membrane.
+
+The specific amino acid phosphorylated is important, and the other proteins are recruited because they recognise the phosphorylated domain. A chain of proteins develops at the membrane, e.g. RTK<sup>P</sup> &rarr; Adaptor &rarr; Ras &rarr; Raf. This can then trigger e.g. MAP kinases, but generally requires a second trigger for growth.
+
+The first RTK discovered was the EGF (epidermal growth factor) receptor. The ligands tend to be small peptides. May growth factor receptors are protein tyrosine kinases:
+
+* Epidermal growth factor (EGF)
+* Vascular endothelial growth factor (VEGF)
+* Insulin
+* Insulin like growth factor-1
+
+#### Three classes of RTK:
+
+1. The first class includes EGF, and has a tyrosine kinase domain on the cytoplasm side and two cytosine rich domains on the extracellular side. Their extracellular domains are glycosylated. They have a single transmembrane alpha helix.
+2. The second class inludes insulin and IGF-1, which is postranslationally modified peptides cut in half and then joined together, and then two of these linked together. There are two CRD and two TKD. "&alpha;2&beta;2 tetramer."
+3. The third class has an immunoglobin-like domains on the extracellular side, and one tyrosine kinase domain on the cytoplasm side. The TKD is potentially split by a kinase insert region. Immunoglobin-like domains are variable in number, but there is a single transmembrane helix and a single kinase domain. The insert region contains regulatory sequence that can be phosphorylated.
+
+#### Mechanism of activation
+
+_"Hormone induced dimerisation"_
+
+Hormone binding the extracellular domain can cause two adjacent RTKs to come together, though in the case of class II they are already together. The dimersiation of the RTKs causes autophosphorylation of the kinase domains. In class III the ligands themselves are often dimers, binding two RTKs simultaneously. RTKs are often localised to lipid rafts, meaning that the required proteins are already near each other.
+
+#### RTKs activate Ras
+
+RTK activation leads to the activation of Ras via a continous chain of adaptor proteins. Active Ras signals to the nucleus via mitogen activate protein kinase (MAPK) pathways. The first part of the MAPK pathway is Raf, "map kinase kinase kinase(?)"
+
+The adaptor proteins are a _continous chain of protein interactions_ and form _signalling networks and complexes_. The proteins involved depend on the cellular proteome&mdash;there are many different routes to Ras activation.
+
+#### EGFR signalling
+
+_An example_
+
+Autophosphorylation of dimerised EGFR recruits adapter proteins to pY (phosphotyrosine). The proteins recruited to pY in a sequence specific manner via SH2 domains. Grb2 SH2 binds peptide motifs matching the consensus `pTry-X-Asn-X`. Gbr2 then recruits a guanine nucleotide releasing protein (GNRP).
 
 ## Glossary
 

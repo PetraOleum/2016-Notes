@@ -310,7 +310,7 @@ The above only holds if normality, independence, and equal variance _all hold_.
 #### p-value in R
 
 ```r
-1 - pf(Fobserved, k, N - k)
+1 - pf(Fobserved, df1, df2)
 ## [1] <The p-value>
 ```
 
