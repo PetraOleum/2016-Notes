@@ -32,7 +32,7 @@ Important information to <s>remember</s> look at before exams.
 ![Standard RNA codon table](Codontable1.PNG "Standard RNA codon table, from Wikimedia Commons, public domain")
 _Standard RNA codon table, Wikimedia Commons, Public Domain._
 
-![Fancy RNA codon diagram](Aminoacids_table.svg "Fancy RNA codon diagram, from Wikimedia Commons, Public Domain")
+![Fancy RNA codon diagram](Aminoacids_table.png "Fancy RNA codon diagram, from Wikimedia Commons, Public Domain")
 _Fancy RNA codon diagram, Wikimedia Commons, Public Domain._
 
 ###Forward and reverse genetics

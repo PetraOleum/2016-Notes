@@ -314,7 +314,201 @@ The above only holds if normality, independence, and equal variance _all hold_.
 ## [1] <The p-value>
 ```
 
+## Permutation tests
 
+We assume that &epsilon;ij &sim; an independently and identically distributed normal distribution with a mean of 0 and a variance of &sigma;2. Sometimes these assumptions do not hold. In STAT 292 we attempted to transform the data; in STAT 293 we will try permutation tests.
+
+### Testing assumptions with residuals
+
+We can do exploratory data analysis on our data to investigate the assumptions. Our example data set looked at hermit crab populations at six coastal sites, and we want to know if there are differences.
+
+```r
+crab = read.table("../Data sets/crab.txt", header=T)
+str(crab)
+## 'data.frame':   150 obs. of  2 variables:
+##  $ site : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ count: int  0 0 22 3 17 0 0 7 11 11 ...
+```
+
+There are several ways to get a histogram of this data. The simplest is:
+
+```r
+par(mfrow=c(3,2))
+tapply(crab$count, crab$site, hist)
+```
+
+However, this has certain problems with, e.g., titles. We can pass some parameters to `hist` like so:
+
+```r
+tapply(crab$count, crab$site, hist, prob=T, nclass=12, xlab="Population count")
+```
+
+However, we still can't get good titles, and indeed unless we go `main=""` we may end up with some titles that we don't like. A slightly more complex (or more verbose) method is:
+
+```r
+par(mfrow=c(3,2))
+for (i in 1:6) {
+	hist(crab$count[crab$site == i], main=paste("Site ", i), prob=T, nclass=12, xlab="Population count")
+}
+```
+
+The output of this loop is:
+
+![Crab histogram](crabhist2.png)
+_The histogram produced by the second method_
+
+We also want a boxplot, to compare variances:
+
+```r
+boxplot(crab$count~crab$site, xlab="Site", ylab="Population count")
+```
+
+The output of this function is:
+
+![Crab boxplot](crabbox.png)
+_A boxplot of the data. Note the changes in variance and other parameters_.
+
+It's clear by eye that there are some issues here, but it's not statistical proof.
+
+We can get the means, medians, and standard deviations of each site with the following, and order by the means to show a clear trend:
+
+```r
+sampprops = data.frame(
+               mean = tapply(crab$count, crab$site, mean),
+		       sd = tapply(crab$count, crab$site, sd),
+		       med = tapply(crab$count, crab$site, median))
+print(sampprops[order(sampprops$means),])
+##   means        sd med
+## 4  9.24  17.38601   2
+## 5 10.00  19.84103   2
+## 6 12.64  23.01065   4
+## 1 33.80  50.38518  17
+## 3 50.64 107.43792   5
+## 2 68.72 125.35367  10
+```
+
+To do a proper residual analysis we will need to produce a fit with `lm`. The `names` function tells us the kind of information that the object created contains:
+
+```r
+fit1 = lm(crab$count~as.factor(crab$site))
+names(fit1)
+##  [1] "coefficients"  "residuals"     "effects"       "rank"
+##  [5] "fitted.values" "assign"        "qr"            "df.residual"
+##  [9] "contrasts"     "xlevels"       "call"          "terms"
+## [13] "model"
+```
+
+We want to create residual and Q/Q plots for this data, in this case the same image:
+
+```r
+par(mfrow=c(1, 2))
+
+plot(fit1$res~fit1$fit, xlab="Fitted value", ylab="Residuals")
+abline(h=0, col="gray")
+qqnorm(fit1$res, main="")
+qqline(fit1$res)
+```
+
+The plots produced by these functions are:
+
+![Crab Q/Q plot](crabqq.png)
+_Residuals and Q/Q plot of the data. Does not follow normality._
+
+The `abline` adds a straight line, here coloured grey and at y = 0; `qqline` adds the diagonal line to the Q/Q plot. Note: `par(mfrow=c(1, 2))` sets this property until the next time it is set again; it should therefore be set for each graph. The obvious conclusion from these graphs is that the constant variance and normality assumptions are not valid.
+
+We to do Levine's test we need the `car` library. Note that this library has version restrictions and it (or it's dependencies) requires `gfortran` and some libraries that I didn't already have to compile.
+
+```r
+# Only needed first time
+install.packages("car")
+```
+
+To preform Levine's test we use `leveneTest`. We need `crab$site` to be as a factor for this to work, which until now has not been:
+
+```r
+library(car)
+leveneTest(crab$count, as.factor(crab$site))
+## Levene's Test for Homogeneity of Variance (center = median)
+##        Df F value  Pr(>F)
+## group   5  2.9278 0.01508 *
+##       144
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+The p-value is less than 5%, so we can reject the null hypothesis that the constant variance assumption holds.
+
+### Permutation tests
+
+Permutation tests rely on the idea that if the null hypothesis is true, then data is "echangeable" between groups.
+
+
+
+
+To do permutation tests more easily we need to install a package called `lmPerm`. Unfortunately the maintainer of the package has died, and as such it has been "archived" on the grounds that he is "unresponsive." As such the initial install command is more complicated than previously:
+
+```r
+install.packages("https://cran.r-project.org/src/contrib/Archive/lmPerm/lmPerm_1.1-2.tar.gz", repos=NULL, type="source")
+```
+
+We'll be doing the test on a new data set:
+
+```r
+library(lmPerm)
+ins = read.table("../Data sets/factinsulate.txt", header=T)
+str(ins)
+## 'data.frame':   100 obs. of  3 variables
+##  $ Lot     : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ Cut     : Factor w/ 2 levels "Cross","Length": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Strength: num  0.46 0.67 0.69 0.73 0.77 0.78 0.79 0.8 0.85 0.89 ...
+```
+
+```r
+fit1 = lmp(Strength ~ as.factor(Lot)*Cut, data=ins, perm="Exact")
+## [1] "Settings:  unique SS "
+```
+
+```r
+summary(fit1)
+## Call:
+## lmp(formula = Strength ~ as.factor(Lot) * Cut, data = ins, perm = "Exact")
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max
+## -0.28300 -0.05675 -0.00750  0.05175  0.29800
+## 
+## Coefficients:
+##                      Estimate Iter Pr(Prob)
+## as.factor(Lot)1        0.0469 5000   <2e-16 ***
+## as.factor(Lot)2        0.2254 5000   <2e-16 ***
+## as.factor(Lot)3       -0.1271 4723   0.0207 *
+## as.factor(Lot)4        0.1004 5000   <2e-16 ***
+## Cut1                  -0.0213 3611   0.0271 *
+## as.factor(Lot)1:Cut1  -0.0667 4490   0.0218 *
+## as.factor(Lot)2:Cut1   0.0338 1586   0.0599 .
+## as.factor(Lot)3:Cut1  -0.0117   51   1.0000
+## as.factor(Lot)4:Cut1   0.0358 3758   0.0261 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.09965 on 90 degrees of freedom
+## Multiple R-Squared: 0.7692,     Adjusted R-squared: 0.7461
+## F-statistic: 33.32 on 9 and 90 DF,  p-value: < 2.2e-16
+```
+
+```r
+anova(fit1)
+## Analysis of Variance Table
+## 
+## Response: Strength
+##                    Df R Sum Sq R Mean Sq Iter Pr(Prob)
+## as.factor(Lot)      4  2.79117   0.69779 5000  < 2e-16 ***
+## Cut                 1  0.04537   0.04537 2061  0.04658 *
+## as.factor(Lot):Cut  4  0.14175   0.03544 5000  0.01020 *
+## Residuals          90  0.89373   0.00993
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
 
 ## R commands
 

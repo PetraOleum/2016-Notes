@@ -399,11 +399,21 @@ RTK activation leads to the activation of Ras via a continous chain of adaptor p
 
 The adaptor proteins are a _continous chain of protein interactions_ and form _signalling networks and complexes_. The proteins involved depend on the cellular proteome&mdash;there are many different routes to Ras activation.
 
+Grb and GNRP such as Sos interact via SH3 domains. GNRP activate Ras by stimulating the exchange of GDP for GTP&mdash;Ras is a monomeric G-protein. Ras signalling is terminated by spontaneous GTP hyrolysis to GDP.
+
+Ras is a monomeric GTPase similar to the &alpha; subunit of trimeric GTPases, relaying long-lasting growth signals to the nucleus via MAP kinases. The intrinsic GTPase activity is much less than trimeric G-proteins (~100 slower than activated G&alpha;)
+
 #### EGFR signalling
 
 _An example_
 
 Autophosphorylation of dimerised EGFR recruits adapter proteins to pY (phosphotyrosine). The proteins recruited to pY in a sequence specific manner via SH2 domains. Grb2 SH2 binds peptide motifs matching the consensus `pTry-X-Asn-X`. Gbr2 then recruits a guanine nucleotide releasing protein (GNRP).
+
+#### RTK signal amplification
+
+Ligand binding causes autophosphorylation, and active RTK phosphorylates kinase domain of neighbouring RTKs. The RTK remains active even after disassociation of ligand due to phosphoyraltion of internal Tyr.
+
+The signalling is terminated by dephosphorylation by phosphatases. RTK can be inactivated by phosphorylation of internal sites, e.g. by PKC, PKA, and CaM kinases, providing a link between second messenger and RTK signalling.
 
 ## Glossary
 
