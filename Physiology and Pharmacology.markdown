@@ -421,11 +421,13 @@ The system also transports fat from GI tract to blood, protects from infection a
 
 ### Cardiovascular regulation
 
-#### Blood pressure control
+#### Blood pressure control by the CVC
 
 Arterial blood pressure is sensed via the arterial baroreceptor feedback reflex from carotid sinus and aortic arch. It is effected via SNS and PSNS to heart SA node and myocardium, SNS to arterioles and veins, and SNS to adrenal medulla gland.
 
-The regulatory centre is the CVC (cardiovascular system), which receives sensorary input and directs output via the ANS to the heart and other organs.
+The regulatory centre is the CVC (cardiovascular system), which receives sensorary input and directs output via the ANS to the heart and other organs. This can be overridden by local mechanisms to prevent cell death.
+
+
 
 ##Glossary
 
