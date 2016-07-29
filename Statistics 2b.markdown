@@ -440,15 +440,147 @@ The p-value is less than 5%, so we can reject the null hypothesis that the const
 
 ### Permutation tests
 
-Permutation tests rely on the idea that if the null hypothesis is true, then data is "echangeable" between groups.
+Permutation tests rely on the idea that if the null hypothesis is true, then data is "exchangeable" between groups. We compare our test statistic (for ANOVA settings, the F statistic is still appropriate here even though our data does not follow it; this is because the F-statistic still measures deviations from the null hypothesis) to the test statistics generated from re-ordering the observed Y-values among the groups.
+
+Permutation hypotheses tend to be vague, because a permutation test is a non-parametric test and so you cannot use the parameters in the hypothesis. For example the null hypothesis in a classic ANOVA might be that &mu;<sub>1</sub> = &mu;<sub>2</sub> = &mu;<sub>3</sub>. For a permutation test we need something more like:
+
+> H<sub>0</sub>: There are no differences in crab population sizes among sites
+>
+> H<sub>1</sub>: Crab population sizes differ among sites
+
+#### Exact versus probabilistic
+
+We can deterministically examine _all_ of the ways that our observations can be re-ordered&mdash;this is the "exact" method. However, the number of ways to re-order rises with the factorial of the number of observations, i.e. _N!_. With only 10 observations this is more than 3 million, and at 12 this is nearly 500 million, which makes it impractical in most situations.
+
+We can instead look at a random subset of the ways that the observations can be arranged&mdash;1000 is often enough&mdash;and compare their test-statistics to the test statistic of the real sample.
+
+Regardless of the method, the number of re-ordered observations is called _T_. Note that each observation can only be re-allocated once in each allocation.
+
+#### Manual calculation
+
+We calculate an F-statistic for all _T_ re-orderings. The empirical distribution of <em>F<sub>1</sub>, &hellip;, F<sub>T</sub></em>, approximates the distribution of test statistics that occur if H<sub>0</sub> is true. The approximation improves as T increases.
+
+The p-value is derived as the number of samples with an F statistic greater than the observed test statistic, divided by T, which approximates Pr(F&ge;F<sub>obs</sub>|H<sub>0</sub> true). This p-value can be interpreted as you would for a normal theory ANOVA test.
+
+We can set up a permutation test for one-way ANOVA with our `crab.txt` data in R like so:
 
 
+```r
+# If we wanted to set the random seed manually to be the same each time we would use the command:
+# set.seed(1234)
+# But if we don't it works, and with a different seed each time
 
+# Fit the real observed sample
+fit1 = lm(crab$count~as.factor(crab$site))
+
+# Get the observed value for F
+Fobs = anova(fit1)$F[1]
+print(Fobs)
+## [1] 2.966874
+
+# Empty array of 1000 value to store re-ordered F values
+Fnull = rep(NA, 1000)
+
+# Loop 1000 times
+for (t in 1:1000) {
+	# `sample` takes a random sample of crab$site, which here amounts to re-ordering
+	siteReorder = sample(crab$site)
+
+	# Calculate an F statistic for this reordering and store in `Fnull`
+	Fnull[t] = (anova(lm(crab$count~as.factor(siteReorder))))$F[1]
+}
+
+# Calculate the number of F-statistics more extreme than `Fobs`
+p = sum(Fnull > Fobs)/1000
+print(p)
+## [1] 0.01
+```
+
+Note however that another running of this algorithm produced 0.012 as an output; the result will vary somewhat with each test. It also takes a few moments to execute.
+
+Because we saved the F-statistics in `Fnull` we can make a histogram of them like so:
+
+```r
+# Ensure correct settings
+par(mfrow=c(1,1))
+
+# Draw histogram
+hist(Fnull, prob=TRUE, col="gray", 
+     xlab = expression("Values of F if H"[0]*" is true"),
+     ylab = "Density", main="")
+
+# Draw line at Fobs
+abline(v=Fobs, lty=2, col="red")
+
+# Write legend
+legend("topright","Fobs",lty=2,col="red")
+```
+
+![Fval histogram](crabFvalHist.png)
+_The F-statistic density (relative frequency) histogram_
+
+It's clear from this graph that the observed F-statistic is an extreme value, and that therefore the null hypothesis is false.
+
+A note on reordering: in the above, the grouping variable is re-ordered. In one of the assignment questions the response variable can be re-ordered instead. Both are valid, but the consequencies for the `anova` model in the loop need to be considered.
+
+#### Comparison with the usual ANOVA
+
+If we do ANOVA in the usual way we get:
+
+```r
+fitn = lm(crab$count~as.factor(crab$site))
+anova(fitn)
+## Analysis of Variance Table
+## 
+## Response: crab$count
+##                       Df Sum Sq Mean Sq F value  Pr(>F)
+## as.factor(crab$site)   5  76695 15339.0  2.9669 0.01401 *
+## Residuals            144 744493  5170.1
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+Or with a log transformation:
+
+```r
+# Where 0.5 is an arbitrary small number to avoid taking log(0)
+fitl = lm(log(crab$count + 0.5)~as.factor(crab$site))
+anova(fitl)
+## Analysis of Variance Table
+## 
+## Response: log(crab$count + 0.5)
+##                       Df Sum Sq Mean Sq F value Pr(>F)
+## as.factor(crab$site)   5  44.97  8.9931  2.7498  0.021 *
+## Residuals            144 470.95  3.2705
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+In this case, regardless of the method used the conclusion is similar. However, if they conflicted then the permutation test is to be relied on, because the assumptions for ANOVA are invalid.
+
+#### Two factor ANOVA permuation tests with lmPerm
+
+If we had two factors, each with two levels, you'd need a new vector with four levels (2&times;2) and then re-order these. This could get increasingly time-consuming.
 
 To do permutation tests more easily we need to install a package called `lmPerm`. Unfortunately the maintainer of the package has died, and as such it has been "archived" on the grounds that he is "unresponsive." As such the initial install command is more complicated than previously:
 
 ```r
 install.packages("https://cran.r-project.org/src/contrib/Archive/lmPerm/lmPerm_1.1-2.tar.gz", repos=NULL, type="source")
+```
+
+For lmPerm:
+
+```r
+fit1 = lm(<data>)
+# is replaced by
+fit1 = lmp(<data>)
+# and
+aov(<data>)
+# is replaced by
+aovp(<data>)
+# But you still run
+anova(fit1)
+# on your fit object in the former case
 ```
 
 We'll be doing the test on a new data set:
@@ -463,10 +595,18 @@ str(ins)
 ##  $ Strength: num  0.46 0.67 0.69 0.73 0.77 0.78 0.79 0.8 0.85 0.89 ...
 ```
 
+This is a two-factor ANOVA, so to get the interactions included we use `Strength~Lot*Cut`, and remove the interactions with `Strength~Lot+Cut`. The command to do the model is:
+
 ```r
 fit1 = lmp(Strength ~ as.factor(Lot)*Cut, data=ins, perm="Exact")
 ## [1] "Settings:  unique SS "
 ```
+
+`Exact` does all possibilities, while `Prob` does only a sample. `Prob` continues until the standard error of the observed p-value is smaller than some constant C&times; the observed p-value. In `R`, C = 0.1; C is constrained as being between 0 and 1 not inclusive.
+
+If N > 10, `Exact` will be silently changed to `Prob`.
+
+The line "Settings: unique SS" given by `lmp` means that (by default) the sums of squares are calculated uniquely rather than sequentially; this is equivalent to type III SS in SAS.
 
 ```r
 summary(fit1)
@@ -496,6 +636,10 @@ summary(fit1)
 ## F-statistic: 33.32 on 9 and 90 DF,  p-value: < 2.2e-16
 ```
 
+The fifth "Lot" and second "Cut" level are being used as reference levels, hence why they are omitted&mdash;they are set to 0. The intercept is not shown, and is not the same as the mean of lot 5 or of cut 2, but of a combination of the two.
+
+Note: The stopping condition needs to happen for _all_ the different p-values, both &uarr; and &darr;.
+
 ```r
 anova(fit1)
 ## Analysis of Variance Table
@@ -509,6 +653,8 @@ anova(fit1)
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
+
+We don't have an F-statistic reported, just p-values for each effect and the interaction.
 
 ## R commands
 

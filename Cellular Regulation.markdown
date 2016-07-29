@@ -415,6 +415,26 @@ Ligand binding causes autophosphorylation, and active RTK phosphorylates kinase 
 
 The signalling is terminated by dephosphorylation by phosphatases. RTK can be inactivated by phosphorylation of internal sites, e.g. by PKC, PKA, and CaM kinases, providing a link between second messenger and RTK signalling.
 
+### MAP Kinase
+
+MAPK means Mitogen Activated Protein Kinases. The MAPK cascade links activation of plasma membrane receptors to phosphorylation of transcription factors. MAP kinases are ERKs, or extracellular signal regulated kinases. Ras activation is short-lived, but signals to differentiate/proliferate require longer-lasting signalling to nucleus. Ras activates a cascade to nucleus.
+
+Raf is the first kinase, "Map kinase-kinase-kinase," and is the crossroads of RTK and GPCR. Full activation of RAF requires it to be phosphorylated and interact with Ras-GTP.
+
+The next is Mek, "Map kinase-kinase," which phosphorylates both Ser/Thr and Tyr.
+
+One MAP-kinase is Erk, which needs to be dual-phosphorylated. It targets transcription factors e.g. Fos, Jun, AFT2, Elk.
+
+### Ras superfamily of GTPases
+
+Small monomeric GTPase similar to the &alpha; subunit of trimeric G-proteins. The superfamilty is divided into five main families: Ras, Rho, Ran, Rab, and Arf.
+
+#### Ras
+
+Cell proliferation. Contains Ras, Rap, Rheb, and Rad. Humans have three Ras genes (HRas, KRas, NRas), which are the most common onocogenes in human cancers. Ras inhibitors studied for treatment of cancer, but hard to just knock out as essential.
+
+Rap are small GTPase similar to Ras, but which inhibits Ras. Rheb activates mTOC1 regulating protein synthesis and cell growth in the brain.
+
 ## Glossary
 
 COMET
