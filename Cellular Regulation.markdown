@@ -435,6 +435,38 @@ Cell proliferation. Contains Ras, Rap, Rheb, and Rad. Humans have three Ras gene
 
 Rap are small GTPase similar to Ras, but which inhibits Ras. Rheb activates mTOC1 regulating protein synthesis and cell growth in the brain.
 
+**Note: Some missing notes around here; come back to this**.
+
+### Non-receptor tyrosine kinases
+
+_Read papers: WW and SH3 domains; SH2 and PTB domains_.
+
+The first discovered non-receptor TK discovered was a viral transforming protein. Oncogenic viral protein could transform animal cells into cancerous state: "v-src," versus "c-src". The viral form is constitutively active, meaning that it has prolonged activation (hence driving cell into cancerous state). The gene is mammalian, though the virus infects birds (I think?). Carrying a signal-transduction pathway gene means that the virus can cause the cell they infect to replicate allowing them to hijack the machinery.
+
+#### Src family kinases (SFKs)
+
+They are all membrane associated via amino-terminus: they are attached to lipids via myristic acid, plamitic acid&mdash;electrostatic interactions due to basic amino acids. They have a unique domain in this positive region, phosphorylated at Ser17. They are often found in lipid rafts.
+
+N-terminus &harr; Unique/+++ domain &harr; SH2 domain &harr; SH1 domain &harr; kinase linker &harr; tyrosine kinase
+
+The kinase domain has a regulatory tyrosine which needs to be phosphorylated to be active. In the active state 416 is phosphorylated; 527 is dephosphorylated.
+
+SH2 domains bind phosphotyrosines in a sequence specific manner; SH3 domains bind proline-rich sequences in a specific manner. Proteins are recruited to pTyr on activated receptors via SH2 domains. Intracellular sequencing proteins have SH2 and SH3 domains. Many different signalling proteins bind pTyr on activated receptors. Found on GAPS, adaptor proteins, PLC, Src like NRTK&mdash;all have different structures yet have domains.
+
+In vivo SH2 containing proteins bind pTyr on activated receptors and cytoplasmic pTyr phosphoproteins, but have no affinity for non-phosphorylated targets. SH2 bind optimal sequence 1000-fold higher than random phosphopeptide.
+
+Different proteins have different patterns of SH2 and SH3 domains, further, any given receptor has different phosphotyrosines. The pattern of phosphorylated tyrosines determines which protein binds.
+
+The Src SH2 domain selects the peptide `pTyr Glu Glu Ile`. SH2 binding sites are bipartite; pTyr is recognised by one region and the surrounding amino acids by the other. Src has an invariant Arg which binds pTyr via hydrogen bonds; the other binding region is more variable and recognises amino acids to the C-terminal direction of pTyr.
+
+Src contact residues:
+
+* hydrophobic
+* hydrophillic
+* small hydrophobic
+
+SH3 domains bind proline rich sequences. Proline peptides must adopt left-hand PPII type hilix; each turn has three amino acids. The sequence is less important than the fold that the sequence creates. The SH3 hydrophobic pocket has conserved aromatic amino acids.
+
 ## Glossary
 
 COMET
