@@ -427,6 +427,27 @@ Arterial blood pressure is sensed via the arterial baroreceptor feedback reflex 
 
 The regulatory centre is the CVC (cardiovascular system), which receives sensorary input and directs output via the ANS to the heart and other organs. This can be overridden by local mechanisms to prevent cell death.
 
+**Missing stuff**
+
+### The lungs
+
+#### Functions
+
+Gas exchange, but also:
+
+* Filters clots and bubbles from the circulation
+* Metabolises compounds
+* Blood reservoir
+* Excretes water and volatile acids
+
+
+#### Pulmonary anatomy
+
+The alveoli are the functional unit of the cell. Conducting region of lungs have no avleoli (dead space).
+
+#### Airflow mechanics
+
+
 
 
 ##Glossary
