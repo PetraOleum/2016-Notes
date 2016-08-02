@@ -443,9 +443,15 @@ Gas exchange, but also:
 
 #### Pulmonary anatomy
 
-The alveoli are the functional unit of the cell. Conducting region of lungs have no avleoli (dead space).
+The alveoli are the functional unit of the cell. Conducting region of lungs have no avleoli (dead space). The trachea is supported by cartelage rings.
+
+Trachea &rarr; bronchii &rarr; bronchioles &rarr; alveolar ducts.
+
+Alveoli are little bubbles of tissue, supported by surficant. The bubbles mean huge surface area. There is several thousand times more surface area of the lungs than if they were spheres of the same size. The amount of oxygen taken up is limited by the amount of blood pumped, not the rate of diffusion, because the walls are so thin.
 
 #### Airflow mechanics
+
+Inspiration (breathing in) is caused by the contraction of the diaphram beneath the lungs. Expiration is primarily just the relaxtion, however the ribcage can be forced downwards to force air outwards.
 
 
 

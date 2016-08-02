@@ -447,7 +447,7 @@ The first discovered non-receptor TK discovered was a viral transforming protein
 
 They are all membrane associated via amino-terminus: they are attached to lipids via myristic acid, plamitic acid&mdash;electrostatic interactions due to basic amino acids. They have a unique domain in this positive region, phosphorylated at Ser17. They are often found in lipid rafts.
 
-N-terminus &harr; Unique/+++ domain &harr; SH2 domain &harr; SH1 domain &harr; kinase linker &harr; tyrosine kinase
+N-terminus &harr; Unique/+++ domain &harr; SH3 domain &harr; SH2 domain &harr; kinase linker &harr; tyrosine kinase (SH1)
 
 The kinase domain has a regulatory tyrosine which needs to be phosphorylated to be active. In the active state 416 is phosphorylated; 527 is dephosphorylated.
 
@@ -467,6 +467,38 @@ Src contact residues:
 
 SH3 domains bind proline rich sequences. Proline peptides must adopt left-hand PPII type hilix; each turn has three amino acids. The sequence is less important than the fold that the sequence creates. The SH3 hydrophobic pocket has conserved aromatic amino acids.
 
+### PI-3-Kinase signalling
+
+PI-3-Kinase has diverse cellular functions, and is involved in P12K/Akt/mTOR pathway and insulin signalling pathway. Signals survival, proliferation, differentiation, protein synthesis, motility, and intracellular trafficking. Activated by RTKs, 7-TMRs, cytokine receptors, integrin receptors.
+
+PI 3-kinase promotes PIP3 formation (a lipid), not to be confused with IP3 (which is water-soluble). There are three major classes:
+
+Class 1 is activated by G protein coupled receptors and RTKs. 
+
+Heterodimeric containing a regulatory (containing SH2 and SH3 domains) subuinit and catalytic subunit. Contains pleckstrin homology domain involved in lipid binding, as is located at membrane (helps keep it there).
+
+PI&rarr;PI(4)P&rarr;PI(4,5)P<sub>2</sub>&rarr;IP<sub>3</sub>, but before that last step can instead by catalysed by PI3K to sugars phosphorylated at different sites: PI(3)P; PI(3,4)P<sub>2</sub>, PI(3,4,5)P<sub>3</sub>. Last of those can be dephosphorylated by PTEN back to second-to-last (noted oncogene).
+
+Activation of a RTK by binding of a pro-survival ligand induces pY formation. PI3K is recruited via its SH2 domain. PI3K catalyses the conversion of PIP2 to PIP3. Proteins with phosphoatidylinositol binding domains are recruited to plasma membrane. Akt and PDK1 bind PIP3 and PIP2 via PH domains upon PI3K activation. Creates signal conduction cascade.
+
+#### PTEN
+
+PTEN is an important negative regulator of PI3K/Akt signalling. Is a phosphatase of phosphoinositide substrates, and also has weak _protein_ phosphatase activity e.g. on IRS1 and Dishevelled. Crucial role as tumour suppressor.
+
+#### Akt
+
+_Survival and growth signal_
+
+Upon translocation of Akt and PDK1 to plasma membrane PDK1 activates Akt. Akt is phosphorylated on Thr208 leading to parital activation. Phos of Ser473 by mTORC2 complex causes full activation. Akt dissociates from the membrane to phosphorylate target proteins (but can leave when not phosphorylated a second time).
+
+#### PI3K/Akt/mTOR pathway
+
+Important for regulating cell cycle. mTOR is serine/theonine protein kinase. It exists in two functionally distinct complexes: mTORC1 and mTORC2. One is rapomycin senstive, the other is "insensitive" i.e. less senstive.
+
+mTORC1 contains the protein Raptor and others. It functions as a nutreint/energy sensor that regulates protein synthesis. Promotes ribosome synthesis, inhibits protein degradation and stimulates protein synthesis. Downstream effects on protein synthesis are reguated by active Akt acting on TSC1/TSC2 protein complex. TSC2 is a GTPase activating protein (GAP); phosphorylating it inhibits its activity. TSC2 interacts with the monomeric G-protein Rheb (from the Ras family) inactivation. Rheb-GTP activates mTORC1. (Akt is activated by mTORC2).
+
+Phosphorylation of TSC1/TSC2 complex causes it to fall apart, losing its GAP activity, though phosphorylating _other_ parts of it can stimulate GTPase activity.
+
 ## Glossary
 
 COMET
@@ -481,6 +513,9 @@ Vital stain
 BRDU
 :   Nucleotide analogue, stains green
 
+Akt
+:   Also known as Protein Kinase B
+
 Flow cytometry
 :   System for measuring cells individually via a machine, e.g. detecting count of fluorescing cells
 
@@ -489,5 +524,14 @@ Baa domain
 
 Amphipathic
 :   Both hydrophillic and hydrophobic
+
+pY
+:   <strong>P</strong>hospho-t<strong>y</strong>rosine
+
+GPCR
+:   G-protein something(?) receptor
+
+PKC
+:   Protein kinase 3
 
 ## Footnotes
