@@ -656,6 +656,233 @@ anova(fit1)
 
 We don't have an F-statistic reported, just p-values for each effect and the interaction.
 
+## Randomised Block Designs
+
+Randomised block design is an extension of paired difference tests. Paired difference is used whenever you have two measurements in the same subject, e.g. before and after or one in each arm. The extension comes from having more than two measurements.
+
+Alternate names for randomised block designs include "within subject desgins."
+
+For a randomised block design, there are two sources of variance: treatments and blocks; blocks are things that you are less interested in but need to control. You cannot have interactions in this kind of design.
+
+The fixed effect formula, for the kth data point with the ith treatment and in the jth block is: <em>y<sub>ijk</sub> = &mu; + &alpha;<sub>i</sub> + &beta;<sub>j</sub> + &epsilon;<sub>ijk</sub></em>.
+
+The constraints are &sum;&alpha;<sub>i</sub> = 0 and &sum;&beta;<sub>j</sub> = 0; the assumption is that &epsilon;<sub>ijk</sub> &sim; iid N(0, &sigma;<sup>2</sup>)
+
+Each subject is exposed to all treatments in a random order. This allows us to account for nuscience variation due to subject-to-subject differences.
+
+When doing `lm`/`anova` in `R`, the default is sequential sum of squares, in contrast to `lmPerm` which uses unique sum of squares; the upshot is that the blocking variable should be used first in the former case while in the latter it doesn't matter. The interaction term is omitted, so it should be entered as `block+treatment` and not `block*treatment`.
+
+Randomised block design avoids inflation of SSE and MSE with block-to-block variation. This makes it a more powerful design to used fro analysis compared to one-way ANOVA if differences do exist between blocks.
+
+### Example
+
+The effect of different treatments on clotting time of plasma; with subjects as blocking variable.
+
+```r
+# Load data
+plasma = read.table("../Data sets/plasma.txt")
+
+fit1 = lm(Clottime ~ as.factor(Subject) + as.factor(Treatment), data=plasma)
+```
+
+Residual graphs:
+
+```r
+par(mfrow=c(1,2))
+plot(fit1$res ~ fit1$fitted, xlab="Fitted values", ylab="Residuals")
+abline(h=0, lty=2, col="grey")
+qqnorm(fit1$res, main="Q/Q plot", ylab="Residuals", xlab="Quantiles of Standard Normal")
+qqline(fit1$res)
+
+```
+
+![Clot diagnostics](ClotDiagnostics.png)
+
+Our anova looks like this:
+
+```r
+anova(fit1)
+## Analysis of Variance Table
+## 
+## Response: Clottime
+##                      Df Sum Sq Mean Sq F value    Pr(>F)
+## as.factor(Subject)    7 78.989 11.2841  17.204 2.197e-07 ***
+## as.factor(Treatment)  3 13.016  4.3388   6.615   0.00255 **
+## Residuals            21 13.774  0.6559
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+Ignoring the blocking variable we would get:
+
+```r
+anova(lm(Clottime ~ as.factor(Treatment), data=plasma))
+## Analysis of Variance Table
+## 
+## Response: Clottime
+##                      Df Sum Sq Mean Sq F value Pr(>F)
+## as.factor(Treatment)  3 13.016  4.3388  1.3096 0.2909
+## Residuals            28 92.762  3.3129
+```
+
+The MSE is much bigger because it includes the variation from the blocking variable, making the F-value smaller; it was explicity excluded in the original version by the use of the blocking variable.
+
+We can get parameter estimates with `summary`:
+
+```r
+summary(fit1)
+## Call:
+## lm(formula = Clottime ~ as.factor(Subject) + as.factor(Treatment),
+##     data = plasma)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -1.1562 -0.3625 -0.0500  0.3688  1.6562
+## 
+## Coefficients:
+##                       Estimate Std. Error t value Pr(>|t|)
+## (Intercept)             9.2562     0.4748  19.494 6.26e-15 ***
+## as.factor(Subject)2     3.8750     0.5727   6.767 1.08e-06 ***
+## as.factor(Subject)3    -0.0250     0.5727  -0.044 0.965591
+## as.factor(Subject)4     0.1750     0.5727   0.306 0.762927
+## as.factor(Subject)5    -1.5500     0.5727  -2.707 0.013214 *
+## as.factor(Subject)6    -0.1500     0.5727  -0.262 0.795925
+## as.factor(Subject)7    -0.5750     0.5727  -1.004 0.326772
+## as.factor(Subject)8    -1.4000     0.5727  -2.445 0.023404 *
+## as.factor(Treatment)2   0.4125     0.4049   1.019 0.319948
+## as.factor(Treatment)3   0.6375     0.4049   1.574 0.130359
+## as.factor(Treatment)4   1.7250     0.4049   4.260 0.000349 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.8099 on 21 degrees of freedom
+## Multiple R-squared:  0.8698,    Adjusted R-squared:  0.8078
+## F-statistic: 14.03 on 10 and 21 DF,  p-value: 3.576e-07
+```
+
+It may be more realistic to view the blocks (here, subjects) as a random sample from all possible blocks and then use a _mixed effects_ model.
+
+### Mixed effects
+
+The mixed effects model here is: <em>Y<sub>ijk</sub> = &mu; + &alpha;<sub>i</sub> + B<sub>j</sub> + &epsilon;<sub>ijk</sub></em>. &sum;&alpha;<sub>i</sub> = 0, and B<sub>j</sub> &sim; N(0, &sigma;<sup>2</sup><sub>B</sub>)
+
+While &sigma;<sup>2</sub>B may be of interest here (showing how much of the variation is explained by our blocks) the actual effects of the blocks are not&mdash;they merely control for that part of the variation.
+
+The mixed effects/randomised block design looks like in `R`:
+
+```r
+# Load nlme package
+library(nlme)
+# Create random effects model
+fit2 = lme(Clottime ~ as.factor(Treatment), random=~1|Subject, data=plasma)
+```
+
+`lme` is the function; `nlme` is the package. The `random=~1|Subject` says that `Subject` is to be treated as a random effect, not a fixed effect.
+
+Residuals graphs for this model:
+
+```r
+par(mfrow=c(1,2))
+plot(fit2$res ~ fit2$fitted, xlab="Fitted values", ylab="Residuals", main="Residuals plot")
+abline(h=0, lty=2, col="grey")
+qqnorm(fit2$res, main="Q/Q plot", ylab="Residuals", xlab="Quantiles of Standard Normal")
+qqline(fit2$res)
+```
+
+![Clot diagnostics for mixed effects](ClotRandomDiagnostics.png)
+
+The ANOVA itself can be done as usual:
+
+```r
+# Do ANOVA
+anova(fit2)
+##                      numDF denDF   F-value p-value
+## (Intercept)              1    21 283.23032  <.0001
+## as.factor(Treatment)     3    21   6.61503  0.0025
+```
+
+The F-statistic, p-value, and degrees of freedom for `Treatment` match what we had in our fixed effects model.
+
+Estimates of treatment effects and variances can be obtained with `summary`:
+
+```r
+# Get treatment effects etc
+summary(fit2)
+## Linear mixed-effects model fit by REML
+##  Data: plasma
+##        AIC      BIC    logLik
+##   107.8852 115.8784 -47.94259
+## 
+## Random effects:
+##  Formula: ~1 | Subject
+##         (Intercept)  Residual
+## StdDev:    1.630047 0.8098721
+## 
+## Fixed effects: Clottime ~ as.factor(Treatment)
+##                        Value Std.Error DF   t-value p-value
+## (Intercept)           9.3000 0.6435202 21 14.451760  0.0000
+## as.factor(Treatment)2 0.4125 0.4049361 21  1.018679  0.3199
+## as.factor(Treatment)3 0.6375 0.4049361 21  1.574323  0.1304
+## as.factor(Treatment)4 1.7250 0.4049361 21  4.259932  0.0003
+##  Correlation:
+##                       (Intr) a.(T)2 a.(T)3
+## as.factor(Treatment)2 -0.315
+## as.factor(Treatment)3 -0.315  0.500
+## as.factor(Treatment)4 -0.315  0.500  0.500
+## 
+## Standardized Within-Group Residuals:
+##        Min         Q1        Med         Q3        Max
+## -1.4326288 -0.3678196 -0.0855123  0.4226743  2.3200487
+## 
+## Number of Observations: 32
+## Number of Groups: 8
+```
+
+We can see from this that &sigma;&#x0302; = 0.8098721, while &sigma;&#x0302;<sub>B</sub> = 1.630047. Note that these are estimates, and are for the standard deviation _not_ the variance (&sigma;<sup>2</sup>).
+
+
+```r
+# Working out the proportion of the 
+# variation due to subject differences
+# after accounting for treatment effects
+sigmab = 1.630047
+sigma = 0.8098721
+
+print(sigmab^2/(sigma^2 + sigmab^2))
+## [1] 0.8020213
+```
+
+The percentage of variation explained by subject variation is therfore 80%.
+
+### Permutation testing and RBD
+
+For RBDs we cannot apply the basic principle of "exchangability" of observations among subjects, since randomisation is done within the subjects; therefore ermutations must be done within each subject. We use `lmPerm`'s `avop` and the `Error` specification to achieve this:
+
+
+```r
+library(lmPerm)
+fit3 = aovp(Clottime ~ Treatment + Error(Subject/Treatment), data=plasma)
+## [1] "Settings:  unique SS : numeric variables centered"
+summary(fit3)
+## Error: Subject
+## Component 1 :
+##           Df R Sum Sq R Mean Sq
+## Residuals  1   27.767    27.767
+## 
+## 
+## Error: Subject:Treatment
+## Component 1 :
+##           Df R Sum Sq R Mean Sq Pr(Exact)
+## Treatment  1    8.262     8.262         1
+## 
+## 
+## Error: Within
+## Component 1 :
+##           Df R Sum Sq R Mean Sq Iter Pr(Prob)
+## Treatment  1    3.541    3.5409  168    0.375
+## Residuals 28   66.209    2.3646
+```
+
 ## R commands
 
 `mean(x)`
