@@ -453,10 +453,52 @@ Alveoli are little bubbles of tissue, supported by surficant. The bubbles mean h
 
 Inspiration (breathing in) is caused by the contraction of the diaphram beneath the lungs. Expiration is primarily just the relaxtion, however the ribcage can be forced downwards to force air outwards.
 
+## Pharmacology
 
+Curare is a poison used for hunting in the Amazon&mdash;why can you still eat the meat?
 
+Sample brought back to Britian in 1804 by Charles Waterton. In 1811 it was shown that, if lungs pumped with bellows, rabbits could survive to recover.
 
-##Glossary
+### Receptors
+
+#### Type I
+
+* Four or five membrane-spanning helical subunits
+* Both N and C terminuses are in the extracellular fluid
+* Includes Ion channels
+    * Can be blocked by toxins/local anaesthetics
+    * Can be phosphorylated
+* Includes 
+    * Nicotinic acetylcholine receptor
+    * GABA<sub>A</sub> receptor
+    * NMDA receptor
+
+#### Type II
+
+* The **G-protein coupled Receptors**
+* Seven helical transmembrane regions
+* N-terminal extracellular, c-terminal intracellular
+* GABAB
+* Can connect to ion channels
+* Muscarinic acetylcholine receptor
+* cAMP
+* inositol phosphates
+* Opiod receptor
+
+#### Type III
+
+* The **Receptor Tyrosine Kinases**
+* insulin
+* growth-factor
+* Single trans-membrane helix
+* Steroids, thyriod hormones
+
+#### Type IV
+
+* Found in cell nucleus
+* The **Transcription factors**
+
+## Glossary
 
 ANS
 :   Autonomic Nervous System
@@ -541,5 +583,26 @@ Ach
 
 Frank-Sterling law of the Heart
 :   The force of contraction (SV) is directly proportional to the stretch of the cardiac muscle (EDV). Always on the test.
+
+Xenobiotic
+:   A chemical that is not endogenous to an organism.
+
+Endogenous
+:   Made within.
+
+Drug
+:   A chemical taken that is intended to modulate the current physiological status quo.
+
+Ligand
+:   A compound that binds to another molecule, such as a receptor protein.
+
+Bioavailability
+:   The amount or proportion of drug that becomes available to the body following its administration.
+
+Pharmacokinetics
+:   What the body does to a drug
+
+Pharmacodynamics
+:   What a drug does to the body
 
 ## Footnotes

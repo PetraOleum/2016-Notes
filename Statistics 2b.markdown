@@ -681,8 +681,10 @@ The effect of different treatments on clotting time of plasma; with subjects as 
 ```r
 # Load data
 plasma = read.table("../Data sets/plasma.txt")
+plasma$Subject = as.factor(plasma$Subject)
+plasma$Treatment = as.factor(plasma$Treatment)
 
-fit1 = lm(Clottime ~ as.factor(Subject) + as.factor(Treatment), data=plasma)
+fit1 = lm(Clottime ~ Subject + Treatment, data=plasma)
 ```
 
 Residual graphs:
@@ -705,10 +707,10 @@ anova(fit1)
 ## Analysis of Variance Table
 ## 
 ## Response: Clottime
-##                      Df Sum Sq Mean Sq F value    Pr(>F)
-## as.factor(Subject)    7 78.989 11.2841  17.204 2.197e-07 ***
-## as.factor(Treatment)  3 13.016  4.3388   6.615   0.00255 **
-## Residuals            21 13.774  0.6559
+##           Df Sum Sq Mean Sq F value    Pr(>F)
+## Subject    7 78.989 11.2841  17.204 2.197e-07 ***
+## Treatment  3 13.016  4.3388   6.615   0.00255 **
+## Residuals 21 13.774  0.6559
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
@@ -720,9 +722,9 @@ anova(lm(Clottime ~ as.factor(Treatment), data=plasma))
 ## Analysis of Variance Table
 ## 
 ## Response: Clottime
-##                      Df Sum Sq Mean Sq F value Pr(>F)
-## as.factor(Treatment)  3 13.016  4.3388  1.3096 0.2909
-## Residuals            28 92.762  3.3129
+##           Df Sum Sq Mean Sq F value Pr(>F)
+## Treatment  3 13.016  4.3388  1.3096 0.2909
+## Residuals 28 92.762  3.3129
 ```
 
 The MSE is much bigger because it includes the variation from the blocking variable, making the F-value smaller; it was explicity excluded in the original version by the use of the blocking variable.
@@ -732,26 +734,25 @@ We can get parameter estimates with `summary`:
 ```r
 summary(fit1)
 ## Call:
-## lm(formula = Clottime ~ as.factor(Subject) + as.factor(Treatment),
-##     data = plasma)
+## lm(formula = Clottime ~ Subject + Treatment, data = plasma)
 ## 
 ## Residuals:
 ##     Min      1Q  Median      3Q     Max
 ## -1.1562 -0.3625 -0.0500  0.3688  1.6562
 ## 
 ## Coefficients:
-##                       Estimate Std. Error t value Pr(>|t|)
-## (Intercept)             9.2562     0.4748  19.494 6.26e-15 ***
-## as.factor(Subject)2     3.8750     0.5727   6.767 1.08e-06 ***
-## as.factor(Subject)3    -0.0250     0.5727  -0.044 0.965591
-## as.factor(Subject)4     0.1750     0.5727   0.306 0.762927
-## as.factor(Subject)5    -1.5500     0.5727  -2.707 0.013214 *
-## as.factor(Subject)6    -0.1500     0.5727  -0.262 0.795925
-## as.factor(Subject)7    -0.5750     0.5727  -1.004 0.326772
-## as.factor(Subject)8    -1.4000     0.5727  -2.445 0.023404 *
-## as.factor(Treatment)2   0.4125     0.4049   1.019 0.319948
-## as.factor(Treatment)3   0.6375     0.4049   1.574 0.130359
-## as.factor(Treatment)4   1.7250     0.4049   4.260 0.000349 ***
+##             Estimate Std. Error t value Pr(>|t|)
+## (Intercept)   9.2562     0.4748  19.494 6.26e-15 ***
+## Subject2      3.8750     0.5727   6.767 1.08e-06 ***
+## Subject3     -0.0250     0.5727  -0.044 0.965591
+## Subject4      0.1750     0.5727   0.306 0.762927
+## Subject5     -1.5500     0.5727  -2.707 0.013214 *
+## Subject6     -0.1500     0.5727  -0.262 0.795925
+## Subject7     -0.5750     0.5727  -1.004 0.326772
+## Subject8     -1.4000     0.5727  -2.445 0.023404 *
+## Treatment2    0.4125     0.4049   1.019 0.319948
+## Treatment3    0.6375     0.4049   1.574 0.130359
+## Treatment4    1.7250     0.4049   4.260 0.000349 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -774,7 +775,7 @@ The mixed effects/randomised block design looks like in `R`:
 # Load nlme package
 library(nlme)
 # Create random effects model
-fit2 = lme(Clottime ~ as.factor(Treatment), random=~1|Subject, data=plasma)
+fit2 = lme(Clottime ~ Treatment, random=~1|Subject, data=plasma)
 ```
 
 `lme` is the function; `nlme` is the package. The `random=~1|Subject` says that `Subject` is to be treated as a random effect, not a fixed effect.
@@ -818,17 +819,17 @@ summary(fit2)
 ##         (Intercept)  Residual
 ## StdDev:    1.630047 0.8098721
 ## 
-## Fixed effects: Clottime ~ as.factor(Treatment)
-##                        Value Std.Error DF   t-value p-value
-## (Intercept)           9.3000 0.6435202 21 14.451760  0.0000
-## as.factor(Treatment)2 0.4125 0.4049361 21  1.018679  0.3199
-## as.factor(Treatment)3 0.6375 0.4049361 21  1.574323  0.1304
-## as.factor(Treatment)4 1.7250 0.4049361 21  4.259932  0.0003
+## Fixed effects: Clottime ~ Treatment
+##              Value Std.Error DF   t-value p-value
+## (Intercept) 9.3000 0.6435202 21 14.451760  0.0000
+## Treatment2  0.4125 0.4049361 21  1.018679  0.3199
+## Treatment3  0.6375 0.4049361 21  1.574323  0.1304
+## Treatment4  1.7250 0.4049361 21  4.259932  0.0003
 ##  Correlation:
-##                       (Intr) a.(T)2 a.(T)3
-## as.factor(Treatment)2 -0.315
-## as.factor(Treatment)3 -0.315  0.500
-## as.factor(Treatment)4 -0.315  0.500  0.500
+##            (Intr) Trtmn2 Trtmn3
+## Treatment2 -0.315
+## Treatment3 -0.315  0.500
+## Treatment4 -0.315  0.500  0.500
 ## 
 ## Standardized Within-Group Residuals:
 ##        Min         Q1        Med         Q3        Max
@@ -867,20 +868,149 @@ summary(fit3)
 ## Error: Subject
 ## Component 1 :
 ##           Df R Sum Sq R Mean Sq
-## Residuals  1   27.767    27.767
+## Residuals  7   78.989    11.284
 ## 
 ## 
 ## Error: Subject:Treatment
 ## Component 1 :
-##           Df R Sum Sq R Mean Sq Pr(Exact)
-## Treatment  1    8.262     8.262         1
-## 
-## 
-## Error: Within
-## Component 1 :
 ##           Df R Sum Sq R Mean Sq Iter Pr(Prob)
-## Treatment  1    3.541    3.5409  168    0.375
-## Residuals 28   66.209    2.3646
+## Treatment  3   13.016    4.3388 5000   0.0634 .
+## Residuals 21   13.774    0.6559
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+### Factorial designs in blocks
+
+Can do factorial designs with blocks; need interaction between factors but not with blocks, i.e. `blocks+factor1*factor2`.
+
+For example:
+
+```r
+grain = read.table("grain.txt", header=T)
+str(grain)
+## 'data.frame':   20 obs. of  4 variables:
+##  $ Block     : int  1 1 1 1 2 2 2 2 3 3 ...
+##  $ Irrigation: int  1 1 2 2 1 1 2 2 1 1 ...
+##  $ Fertiliser: int  1 2 1 2 1 2 1 2 1 2 ...
+##  $ Yield     : int  11 14 12 18 15 17 15 19 17 19 ...
+```
+
+Remember to adjust to factors:
+
+```r
+grain$Irrigation = as.factor(grain$Irrigation)
+grain$Fertiliser = as.factor(grain$Fertiliser)
+grain$Block = as.factor(grain$Block)
+str(grain)
+## 'data.frame':   20 obs. of  4 variables:
+##  $ Block     : Factor w/ 5 levels "1","2","3","4",..: 1 1 1 1 2 2 2 2 3 3 ...
+##  $ Irrigation: Factor w/ 2 levels "1","2": 1 1 2 2 1 1 2 2 1 1 ...
+##  $ Fertiliser: Factor w/ 2 levels "1","2": 1 2 1 2 1 2 1 2 1 2 ...
+##  $ Yield     : int  11 14 12 18 15 17 15 19 17 19 ...
+```
+
+Fit: `Block + Irrigation * Fertiliser`.
+
+```r
+fit1 = lm(Yield ~ Block + Irrigation*Fertiliser, 
+    data=grain)
+summary(fit1)
+## Call:
+## lm(formula = Yield ~ Block + Irrigation * Fertiliser, data = grain)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -1.0500 -0.5125 -0.0750  0.5500  1.0000
+## 
+## Coefficients:
+##                         Estimate Std. Error t value Pr(>|t|)
+## (Intercept)              11.3000     0.5260  21.483 6.04e-11 ***
+## Block2                    2.7500     0.5881   4.676 0.000536 ***
+## Block3                    5.5000     0.5881   9.353 7.35e-07 ***
+## Block4                    1.2500     0.5881   2.126 0.054986 .
+## Block5                    5.0000     0.5881   8.502 2.00e-06 ***
+## Irrigation2               1.2000     0.5260   2.281 0.041572 *
+## Fertiliser2               2.6000     0.5260   4.943 0.000340 ***
+## Irrigation2:Fertiliser2   2.2000     0.7439   2.958 0.011975 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.8317 on 12 degrees of freedom
+## Multiple R-squared:  0.9582,    Adjusted R-squared:  0.9338
+## F-statistic: 39.29 on 7 and 12 DF,  p-value: 2.429e-07
+```
+
+View ANOVA table&mdash;no interaction between `Block` and other factors.
+
+```r
+anova(fit1)
+## Analysis of Variance Table
+## 
+## Response: Yield
+##                       Df Sum Sq Mean Sq F value    Pr(>F)
+## Block                  4  89.30  22.325  32.277 2.455e-06 ***
+## Irrigation             1  26.45  26.450  38.241 4.699e-05 ***
+## Fertiliser             1  68.45  68.450  98.964 3.789e-07 ***
+## Irrigation:Fertiliser  1   6.05   6.050   8.747   0.01198 *
+## Residuals             12   8.30   0.692
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+Simple interaction plot:
+
+```r
+par(mfrow=c(1,1))
+interaction.plot(grain$Irrigation, grain$Fertiliser, 
+    grain$Yield, xlab="Irrigation", 
+    ylab="Mean Yield")
+```
+
+![Grain Interactions Plot](GrainInteractions.png)
+_Interaction plot. Could do with a bit of a cleanup._
+
+Permutation test for this follows in the obvious way:
+
+```r
+fit2 = lmp(Yield ~ Block + Irrigation*Fertiliser, data=grain)
+## [1] "Settings:  unique SS "
+summary(fit2)
+## Call:
+## lmp(formula = Yield ~ Block + Irrigation * Fertiliser, data = grain)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -1.0500 -0.5125 -0.0750  0.5500  1.0000
+## 
+## Coefficients:
+##                         Estimate Iter Pr(Prob)
+## Block1                     -2.90 5000   <2e-16 ***
+## Block2                     -0.15 1102   0.0835 .
+## Block3                      2.60 5000   0.0004 ***
+## Block4                     -1.65 5000   <2e-16 ***
+## Irrigation1                -1.15 5000   <2e-16 ***
+## Fertiliser1                -1.85 5000   <2e-16 ***
+## Irrigation1:Fertiliser1     0.55 5000   0.0118 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.8317 on 12 degrees of freedom
+## Multiple R-Squared: 0.9582,     Adjusted R-squared: 0.9338
+## F-statistic: 39.29 on 7 and 12 DF,  p-value: 2.429e-07
+
+anova(fit2)
+## Analysis of Variance Table
+## 
+## Response: Yield
+##                       Df R Sum Sq R Mean Sq Iter Pr(Prob)
+## Block                  4    89.30    22.325 5000   <2e-16 ***
+## Irrigation             1    26.45    26.450 5000   <2e-16 ***
+## Fertiliser             1    68.45    68.450 5000   <2e-16 ***
+## Irrigation:Fertiliser  1     6.05     6.050 5000   0.0118 *
+## Residuals             12     8.30     0.692
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
 ## R commands

@@ -499,6 +499,120 @@ mTORC1 contains the protein Raptor and others. It functions as a nutreint/energy
 
 Phosphorylation of TSC1/TSC2 complex causes it to fall apart, losing its GAP activity, though phosphorylating _other_ parts of it can stimulate GTPase activity.
 
+### Scaffholding and Anchoring
+
+Many signalling enzyme are widely distributed and often have a broad substrate selectivity; targeting of kinases and phosphatase close to their substrates is crucial to ensure tight regulation.
+
+Localisation allows restriction of second messengers to downstream enzyme and optimal access to activators and substrates. When you get e.g. calcium release or cAMP you get only a localised area.
+
+There are two main mechanisms:
+
+1. Recruit active signalling molecules into multiprotein signalling networks
+2. Activation of dormant enzymes already positioned close to their substrates
+
+#### RTKs and cytoplasmic proteins
+
+The protein that gets recruited depends on which tyrosine as phosphorylated and the specificity of the SH2 and SH3 domains. Having both SH2 and SH3 domains means that a network can be established around the RTK. The sequence around the pTyr on the receptor is important in determining which SH2-containing targets can bind. One receptor can activate many different pathways depending on the pTyr.
+
+Conversion of Tyr to Phe (a conservative, aromatic-to-aromatic change, with little structural change) on the Met receptor results in a null mutant&mdash;even though kinase domain is functional. Mutation of Asn at +2 to pTyr uncouples receptor from Grb2 altering cell phenotype.
+
+#### Other binding domains
+
+* PTB: pTyr-binding domains recognise residues that for a &beta; turn preceding pTyr: NPXpY. Specificity is from hydrophobic residues - 5-8 from pY.
+* PDZ domains
+* WW domains
+
+#### Ser/Thr phosphate signalling networks
+
+* Protein modules control the assembly of Ser- Thr kinase signalling networks
+* PKA is activated by cAMP
+* Gradients and compartmentilized pools of cAMP are formed by the action of adenylate cyclases and phosphodiesterases
+* A-kinase anchoring proteins (AKAPs) hold the PKA holoenzyme at precise intracellular sites
+    * Type RI subunits tend to be cytoplasmic while RII are mainly associated with cellular structures and organelles due to AKAP action
+    * RII bind AKAPs with nanomolar affinities while RI with micromolar
+    * AKAPs have two binding domains
+        * An amphipathic a-helix that binds the RII dimer
+        * A targeting region that tethers PKA-AKAP to specific subcellular structures
+    * AKAP function has been studied by "anchoring inhibiting peptides"
+    * AKAPs will bind multiple signalling enzymes as well as PKA eg AKAP79 tethers PKA,PKC & PP-2B (calcineurin) to post-synaptic densities in neurons
+    * Anchoring by AKAPs may allow integration of signals from distinct second messengers (Ca<sup>2+</sup>, cAMP, DAG) to control specific phosphorylation events
+
+#### PKC localisation
+
+* Many different isoforms of PKC which are differentially localised
+* Protein-protein interactions facilitate differential localisation
+* Important protein include:
+    * AKAPs A-kinase anchoring proteins
+    * SBPs substrate binding proteins
+    * RACKs receptors for activated C-kinase
+    * PICKs proteins that interact with C-kinase
+    * SBPs These bind active PKC in the presence of phosphytidylserine. They are phosphorylated and slowly release PKC
+    * RACKs These are not substrates and usually bind away from the active site.  PKC is thought to remain active when bound to RACKs
+    * PICKs Not much is known except they bind active C-kinase and some (PICK-1) has a PDZ domain
+
+#### Scaffholding and MAP kinase cascades
+
+* Scaffolding of MAP kinases was first described in yeast and more recently a mammalian parallels have been proposed
+* The adapter protein MP1 binds MEK1 and ERK1 (only 2 of the 3 kinases)
+* Other mammalian scaffolding proteins (JIP- 1) binds all 3 of the MAP kinases in the JNK pathway (MKK7, MLK1 and JNK)
+
+### Wnt/&Beta;-catenin signalling
+
+Regulates proliferation, fate specification, and differentiation in numerous developmental stages and adult tissue homeostasis.
+
+#### The Wnt family
+
+Wnt are secreted glycoproteins, which don't travel very far due to poor sulobility. They are Cys-rich proteins of 350-400 amino acids. The first identified was murine Wnt3a which contains a N-terminal signal peptide for secretion and is efficeintly secreted compared to other Wnts.
+
+Wnt proteins can function as morphogens; they are speculated to function in both short and long range signalling, but lipidation limits their diffusion through the aqueous extracellular space&mdash;possible multimer formation may bury hydrophobic lipid modification facilitating long range signalling.
+
+#### The Wnt receptors
+
+Two receptor families critical for Wnt signalling:
+
+* Frizzled (Fz) are seven-pass transmembrane receptors (type of G-protein)
+* LDL receptor-related proteins 5 and 6 (LRP5 and LRP6).
+
+Mammals have 10 Fz genes that vary in their ability to activate &Beta;-catenin. LRP6 function more in embryogenesis, while LRP5 is critical for adult bone homeostasis.
+
+#### The canonical pathway
+
+The canonical pathway is &Beta;-catenin dependent, as it uses that protein for signalling. &Beta;-catenin being phosphorylated marks it for destruction, and in the resting state it forms a complex with a variety of proteins which coordinate its phosphorylation and thus destruction preventing it building up in concentration.
+
+Axin is a scaffholding protein that has seperate domains that interact with glycogen synthase kinase 3 (GSK3), casein kinase 1 (CK1) and &Beta;-catenin itself. Axin also contains a regulator of G-protein signalling (RGS) domain that interacts with APC gene product.
+
+Axin coordinates the phosphorylation of &Beta;-catenin, which creates binding states for E3 ubiquitin ligase on the &Beta;-catenin.
+
+When Wnt binds to LRP5/6 and Frizzled (at the same time) it brings them together and they bind intracellularly to the Axin complex. Wnt binding promotes phosphorylatio of sites on LRP5/6, which allows the binding. Axin binds Frizzled via Disheveled (Dvl/Dsh).
+
+Dishevelled is a cytoplasmic scaffholding protein whose interaction with Fz is essential for Wnt-induced phosphorylation of LRP6. It also interacts with Axin and is important for Axin recruitment for the membrane.
+
+Recruiting Axin to the LRP6/Frizzled complex leads to inhibition of the Axin-mediated phosphorylation as it takes the kinases with it, promating &Beta;-catenin stabilisation and accumulation. &Beta;-catenin then translocates to the nucleus, but how this happens is not well known (something todo with JNK).
+
+The TCF/LEF family of transcription factors is the main partner for &Beta;-catenin in gene regulation. TCF represses gene expression by promoting histone deacetylation and chromatin compaction through Groucho (TLE1 in human). &Beta;-catenin displaces TLE1 relieving repression of gene expression, and the new complex recruits other co-activators for gene activation.
+
+**Draw picture**: need to understand it.
+
+#### Wnt antagonists
+
+Wnt is inhibited by Dickkopf family of secreted proteins, e.g. Dkk1 which is an LRP5/6 antagonist.
+
+#### Wnt agonists
+
+The R-spondin (Rspo) are a family secreted Wnt/&Beta;-catenin signalling agonists
+
+#### Other functions of &Beta;-catenin
+
+&Beta;-catenin also interacts with the cadherins, which is essential for estabilishing a link to the actin cytoskeltin. Phosphorylation on specific residues enhances interaction with E-cadherin. E-cadherin phosphoryation can also enhance the interaction, but on other residues can inhibit it.
+
+#### The non-canonical pathways
+
+These are &Beta;-catenin "independent," though not nessisarily entirely. Includes Wnt/Calcium and Wnt/JNK. Wnt/JNK is involved in setting up cell polarisation e.g. in gastrulation, epithelial cells. Wnt/Calcium is linked with heart development.
+
+In Wnt/Calcium activated Fz interacts directly with Dvl to activate PDZ domain&mdash;no Axin. Dvl directly interacts with trimeric G-proteins; stimulation of both leads to PLC activation. IP3 induced Ca2+ release activates CaM kinase II and calcineurin via Ca2+/Calmodulin.
+
+In Wnt/JNK, Fz and Dvl activate small GTPases e.g. Rho and Ras which cause downstream activation of kinase such as JNK or Rho kinase.
+
 ## Glossary
 
 COMET
@@ -529,7 +643,7 @@ pY
 :   <strong>P</strong>hospho-t<strong>y</strong>rosine
 
 GPCR
-:   G-protein something(?) receptor
+:   G-protein coupled receptor
 
 PKC
 :   Protein kinase 3
