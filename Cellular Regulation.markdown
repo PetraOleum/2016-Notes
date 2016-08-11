@@ -613,6 +613,29 @@ In Wnt/Calcium activated Fz interacts directly with Dvl to activate PDZ domain&m
 
 In Wnt/JNK, Fz and Dvl activate small GTPases e.g. Rho and Ras which cause downstream activation of kinase such as JNK or Rho kinase.
 
+### Transcriptional activators
+
+_How protein phosphorylation regulates transcription_
+
+Transcription factors contain both DNA binding sites and activation sites for protein-protein interactions. There are both general ("basal") and specific transcription factors. Jun-fos dimers are specific. Transcription factors are reqiured for RNA pol II to initiate RNA synthesis; they bind in a specific order. The basal machinery phosphorylates RNA polymerase to get it to start; specific factors interact with the basal factors.
+
+The action of PKC, phorbol esters, RTKs, MAPK pathways all aim to alter gene transcription; this happens via phosphorylation of transcription factors or "related proteins."
+
+Conserved DNA binding motifs include:
+
+* Helix-turn-helix
+* Zinc finger
+* Leucine zipper
+    * dimers, hetero and homo
+    * Fos-Jun is not the same as Jun-Fos
+
+Fos, Jun, and ATF are parts of the AP-1 family; Fos and Jun dimerase; Jun makes a homodimer; Jun and ATF dimerise and ATF homodimerise. Fos, Jun, and ATF are all made up of subtypes, e.g. c-Fos.
+
+Stimulation of the MAP kinase pathways causes activation of ERK and JNK leading to the rapid synthesis of the AP-1 components c-jun and c-fos
+
+Which residues are phosphorylated is critical for controlling which targets AP-1 complexes will transcriptionally activate
+
+
 ## Glossary
 
 COMET
