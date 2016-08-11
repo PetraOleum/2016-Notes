@@ -1013,6 +1013,28 @@ anova(fit2)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
+## Nested designs
+
+Sometimes categorial variables (factors) are not crossed but nested. Levels of one factor are nested _within_ some levels of another factor, rather than having each level of factor A occuring with each level of factor B.
+
+You can have fully nested and factorial nested designs when you have more than two factors; fully nested is where all factors are nested, factorial nested occurs when some factors are crossed and some are nested.
+
+For example, you might investigate site differences on toxin in leaves, selecting multiple leaves from multiple trees (factor B) at multiple sites (factor A). However, each tree is obviously only at one site; there is no tree 1 at site 2. This could be seen as an _incomplete factorial design_. We can test for differing sites, but the only way to test among different trees is _within_ each site, as trees are nested within sites. You would probably analyse this with site as a fixed factor and tree as a random factor nested within site.
+
+Sometimes the nested factor is fixed, but usually it is taken as random.
+
+Another example: if you compare effectivenesses of drugs, but wish to control the effect of different companies are better or worse at making specific drugs, however not every company makes every type of drug; therefore the "source" factor will need to be nested within the drug factor because it is different companies for each drug.
+
+### Mixed effects model
+
+The mixed effects nested design model with a single random effect is written as: 
+
+Y<sub>ijk</sub> = &mu; + &alpha;<sub>i</sub> + B<sub>j(i)</sub> + &epsilon;<sub>k(ij)</sub>; where &sum;&alpha;<sub>i</sub> = 0, B<sub>j(i)</sub>&sim;iid. N(0, &sigma;<sup>2</sup><sub>B</sub>), &epsilon;<sub>k(ij)</sub>&sim;iid. N(0, &sigma;<sup>2</sup>).
+
+Notation: j(i) is read as "j within i," k(ij) is "k within ij." This only works for balanced designs, however; unbalanced designs can be done but it's more complicated mathematically.
+
+B<sub>j(i)</sub> is thus an adjustmant of the mean of drug i to allow from source j. We cannot estimate a main effect for Factor B because of the nesting.
+
 ## R commands
 
 `mean(x)`
