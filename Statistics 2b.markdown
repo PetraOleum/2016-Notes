@@ -1035,6 +1035,95 @@ Notation: j(i) is read as "j within i," k(ij) is "k within ij." This only works 
 
 B<sub>j(i)</sub> is thus an adjustmant of the mean of drug i to allow from source j. We cannot estimate a main effect for Factor B because of the nesting.
 
+### ANOVA and F-test for nested designs
+
+The model can be rearranged to Yijk - &mu; = &alpha;i + Bj(i) + &epsilon;ijk. These can be replaced by their sample estimates to give:
+
+Y<sub>ijk</sub> - Y&#x0304;<sub>...</sub> = (Y&#x0304;<sub>i..</sub> - Y&#x0304;<sub>...</sub>) + (Y&#x0304;<sub>ij.</sub> - Y&#x0304;<sub>i..</sub>) + (Y<sub>ijk</sub> - Y&#x0304;<sub>ij.</sub>)
+
+If we squared both sides of the equation, and then sum over all observations, the cross-product terms sum to zero. The result is a series of &sum;'s, which are equivalent to TSS = SS<sub>A</sub> + SS<sub>B(A)</sub> + SSE, where SSA is factor A sum of squares and SSB(A) is factor B nested within factor A sum of squares.
+
+The degrees of freedom are different here:
+
+| Source | df |
+|:------ |---:|
+| A      | a - 1 |
+| B      | a(b - 1) |
+| C      | ab(n - 1) |
+| Total  | abn - 1 |
+
+a is the number of levels in factor A; b is the number of levels of B _within each level of A_; n is the number of observations at the same level of both A and B; abn is the total number of observations at all levels.
+
+### Nested designs in R
+
+```r
+# Load data
+drugs = read.csv("drugs.csv", header=T)
+str(drugs)
+## 'data.frame':   30 obs. of  3 variables:
+##  $ drug  : Factor w/ 3 levels "X","Y","Z": 1 1 1 1 1 1 1 1 1 1 ...
+##  $ source: Factor w/ 6 levels "SA","SB","SC",..: 1 1 1 1 1 2 2 2 2 2 ...
+##  $ chol  : int  21 33 18 14 27 15 18 34 23 26 ...
+drugs[c(1:6,25:30),]
+##    drug source chol
+## 1     X     SA   21
+## 2     X     SA   33
+## 3     X     SA   18
+## 4     X     SA   14
+## 5     X     SA   27
+## 6     X     SB   15
+## 25    Z     SE   31
+## 26    Z     SF    7
+## 27    Z     SF    1
+## 28    Z     SF    4
+## 29    Z     SF   16
+## 30    Z     SF   10
+```
+
+Importantly, the nesting is _explicit_, i.e. SA and SB only appear under X, SE under Z etc. If this wasn't the case, `R` would assume that they were to be crossed as in a factorial design, but it is capable of noticing a nested design if it is spoon-fed it.
+
+Analysis is done using `lme` in the `nlme` package, in the same manner as for randomised block design, but `R` will take it as to be a nested design and not give you the `source` line of the ANOVA:
+
+```r
+# Analysis
+library(nlme)
+fit1 = lme(chol ~ drug, random=~1|source, data=drugs)
+anova(fit1)
+##             numDF denDF  F-value p-value
+## (Intercept)     1    24 47.83008  <.0001
+## drug            2     3  1.48014  0.3571
+
+summary(fit1)
+## Linear mixed-effects model fit by REML
+##  Data: drugs
+##        AIC      BIC   logLik
+##   198.7772 205.2564 -94.3886
+## 
+## Random effects:
+##  Formula: ~1 | source
+##         (Intercept) Residual
+## StdDev:     5.27952 6.473021
+## 
+## Fixed effects: chol ~ drug
+##             Value Std.Error DF   t-value p-value
+## (Intercept)  22.9  4.257542 24  5.378690  0.0000
+## drugY        -9.7  6.021074  3 -1.611008  0.2056
+## drugZ        -8.0  6.021074  3 -1.328667  0.2760
+##  Correlation:
+##       (Intr) drugY
+## drugY -0.707
+## drugZ -0.707  0.500
+## 
+## Standardized Within-Group Residuals:
+##        Min         Q1        Med         Q3        Max
+## -1.3393044 -0.6766791 -0.1496749  0.6574641  1.6791766
+## 
+## Number of Observations: 30
+## Number of Groups: 6
+```
+
+&sigma;<sub>B</sub> is estimated as 5.27952; &sigma; is estimated at 6.473021.
+
 ## R commands
 
 `mean(x)`
