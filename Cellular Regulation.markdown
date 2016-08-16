@@ -635,6 +635,92 @@ Stimulation of the MAP kinase pathways causes activation of ERK and JNK leading 
 
 Which residues are phosphorylated is critical for controlling which targets AP-1 complexes will transcriptionally activate
 
+### Tumourogenesis
+
+Tumour cells have a very high mutation rate. They have epigenetic alterations and genetic instability. There are dysfunctions in cell cycle checkpoints and repair enzymes, and have independence from mitogenic signals. They have a loss of contact inhibition and survive in foreign tissues&mdash;metastatis.
+
+Tumour cells have an increased rate of cell division, loss of normal growth control, loss of ability to differentiate (often dedifferentiate, though the bulk of a tumour is differentiated), loss of contact inhibition, increase capability for invasion of neighbouring tissue.
+
+1. Normal cell: Controlled proliferation; controlled apoptosis
+2. Initial mutation in repair/cell cycle checkpoint genes; Alternately: epigenetic changes
+3. Genetic instability; failure of cell cycle checkpoints; clonal expansion
+4. Growth advantage; failure of apoptosis; clonal expansion!
+5. Immortalisation; metastasis; invasion; angiogenesis
+
+#### Genetic changes
+
+* Loss of whole chromosomes
+* Multiplication of chromosome sets
+* Chromosome translocations
+* Amplification of DNA sequences
+* Changes in chromosome structure often seen in leukemias and lymphomas
+* Extensive structural changes in later phases of aggressive solid tumours
+
+#### Epigenetic changes
+
+* Altered DNA methylation: global _reduction_ in CpG methylation
+* Increased methylation of promoters for tumour suppressor genes
+* Altered histone modification
+* Altered miRNA expression: often a much more primitive (embryonic) phenotype
+
+#### Mutations in oncogenes
+
+The pathways activated most often are those that control cell proliferation: over activation of proliferating promoting components while impairing or loss of dampening/braking circuits.
+
+Cells escape from quiescence state due to an increase in mitogentic signalling and or lowering of the threshold from the quiescent to dividing state. Mutations in progenitor cells or de-differentiation to progenitor phenotype are important from the transition to tumour.
+
+Oncogenes are historically genes involved in retroviral tumourogenesis (viruses want their cells to replicate to hijack that machinery; viruses often carry mutated versions of cellular protooncogenes). They result in transforming or immortalising phenotype.
+
+Tumour suppressor genes have a negative effect on tumour formation; must be inactivated.
+
+Oncogene mutations tend to be gain-of-function and dominant; tumour suppressors are recessive and loss-of-function. Epigenetic changes contribute to oncogene activation. Some oncogenes are tissue-specific suggesting specific cellular context in which epigenetic state is permissive to induce tumourigenesis.
+
+Oncogene fusion proteins arise from some chromosomal translocations; often the fusion of a transcription factor with a protein kinase. An increase in gene expression or stability leads to cellular concentration and enhanced mitogen signalling. Increased cellular amount of oncogene can be caused by:
+
+* Promotor mutation
+* Epigenetic changes
+* mRNA stabilisation
+* Gene amplification
+* Reduced Ub-dependent proteolysis
+
+Tumour suppressors can have reduced expression due to:
+
+* Altered transcriptional activation
+* Changes in promoter structure
+* Epigenetic silencing
+
+Tumour suppressors can also be silenced due to structural changes, causin:
+
+* Altered subcellular distribution
+* Altered enzymatic activity
+* Changes in phosphorylation/postranslational modification
+
+#### Genome stability and Tumour formation
+
+DNA repair and damage checkpoints are important in tumour formation. Tumours have a mutator phenotype due to ineffective DNA repair. Tumour suppressors are often involved in cell cycle checkpoints and DNA repair.
+
+Tumour suppressor hMSH2 is involved in mismatch repair (hereditary non-polyposis cancer&mdash;HNPPC).
+ BRCA1 is a tumour suppressor involved in DNA recombination, DNA damage checkpoints, transcriptional regulation. Many proteins interact with BRCA1&mdash;it has both scaffolding and enzymatic activities.
+
+ * DNA recombination: BRCA1 binds Rad51, which catalyses strand exchanged during recombination
+ * DNA damage checkpoint: BRCA1 scaffolds kinase ATM and ATR. DNA damage causes these kinases to phosphorylate BRCA1
+ * Transcriptional regulation: BRCA1 interacts with histone acetylases during chromatin remodelling
+ * Ub-mediated proteolysis: BRCA1 binds UB ligase BARD1. Missense mutation in BRCA1 lead to loss of BARD1 activity
+ * BRAC2 interacts with Rad51 and function at double strand breaks
+
+#### Hallmarks of cancer
+
+* Self-suffiency in growth signals (autocrine signalling: secrete own growth factors)
+    * Cancer cells can acquire the ability to synthesise growth factors generating postive feedback loop
+    * Truncated receptors remain constituatively active e.g. truncate EGFR lacking most of cytoplasmic domain
+    * Intracellular signalling networks are often mutated e.g. Sos-Ras, MAP kinase, PI3K pathway
+* Insensitivity to antigrowth signals
+* Evasion of apoptosis
+    * Cancer cells acquire resistance to apoptosis via a number of mechanisms
+    * 50% of cancers have mutation in p53 tumour suppressor
+    * Mutation of components in PI3K pathway
+* Limitless replication
+    * Telmerase upregulation causes escape from Hayflick limit
 
 ## Glossary
 
