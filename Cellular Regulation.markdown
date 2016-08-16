@@ -722,6 +722,41 @@ Tumour suppressor hMSH2 is involved in mismatch repair (hereditary non-polyposis
 * Limitless replication
     * Telmerase upregulation causes escape from Hayflick limit
 
+jeremy.owen@vuw.ac.nz
+
+#### MAPK and Cancer
+
+PI3K and ERK signalling is important for:
+
+* Anoikis (apoptosis upon detachement)
+* Cell adhesion
+* Cell cycle regulation
+
+Neoplastic cells are characterised by anchorage-independent cell cycle progression&mdash;cells usually die when they detach.
+
+The cell has a certain basal level of signalling to survive, and too _much_ activation causes the cell to determine that something is up and die/arrest growth. Activation time is important. RAF regulates the response: strong sustained signalling causes cell cycle arrerst. Sustained MEK activation also causes cell cycle arrest. Phosphorylation of early gene products induced by MAPK are important&mdash;FOS, MYC, and Jun.
+
+FOS is a sensor of the duration of ERK activation. Trainsient ERK activation causes FOS activity to decline before new FOS accumulates. Sustained ERK activation causes phosphorylation and stabilisation of FOS. Phospho-FOS facilitates entry into the cell cycle.
+
+Erk signalling can cause both cell cycle progression and arrest, but most tumours show sustained RAF-MEK-ERK signalling&mdash;why don't tumours undergo apoptosis? A paradox. Answer: members of the RAF family have anti-apoptotic activity, both kinase-dependent and kinase independant. RAF activates NF-&kappa;B, a pro-survival transcription factor, in a protein-protein interaction (non-kinase). RAF anti-apoptotic action is not blocked by MEK inhibitors.
+
+Lots of cellular processes require ERK activation, and there is a potential high toxicity if MAPK targeted&mdash;but cancer is fatal. This is why you tend to get a lot of unpleasent side effects. The key targets are RAS, RAF, and MEK.
+
+Farnesyl transferase inhibitors:
+
+* RAS is anchored to a membrane by an isoprenoid tail
+* Tail attached via prenylation by farnesyl transferase
+* Inhibitors could target tumours in which RAS is constituitively active
+* FTIs are antiproliferative, pro-apoptotic, anti-angiogenic
+
+But:
+
+* A high concentration were required to inhibit oncogenic K-Ras compared with wildtype and oncogenic H-Ras
+* K-Ras is the most common activated form of Ras
+* K-Ras escapes FTI inactivation
+
+RAF inhibitors target ARAF, BRAF, and RAF1. Oncogenic BRAF mutants are potential targets for RTK signalling. The V599Q mutation in kinase activation loop of BRAF leads to consitutive activation. RNAi targetting of BRAF confirms the role of BRAF in regulating proliferation and protection of apoptosis, so should be good target to resensitise to apoptosis by knocking down. BRAF mutation present in most melanomas, common in other cancers. BAY 43 is very effective in xenograft models against colon, pancreatic, and ovarian tumours.
+
 ## Glossary
 
 COMET
