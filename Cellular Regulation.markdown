@@ -15,7 +15,7 @@ Key dates:
 * Mid-trimester break: 22 August - 2 September
 * In-term test 1: 5<sup>th</sup> September (10%)
 * Labs: Mondays on weeks of 19 Sept - 10 Oct (10am to 5pm, 30%)
-* In-term test 2: 7<sup>th</sup> October[^DoubleTest] (10%)
+* In-term test 2: 7<sup>th</sup> October[^DoubleTest] (10%, weeks 6 &mdash; 11)
 * Final exam: TBD (50%)
 
 [^DoubleTest]: Note that this is the same day as, and probably directly after, the second BIOL 243 test.
@@ -755,7 +755,93 @@ But:
 * K-Ras is the most common activated form of Ras
 * K-Ras escapes FTI inactivation
 
-RAF inhibitors target ARAF, BRAF, and RAF1. Oncogenic BRAF mutants are potential targets for RTK signalling. The V599Q mutation in kinase activation loop of BRAF leads to consitutive activation. RNAi targetting of BRAF confirms the role of BRAF in regulating proliferation and protection of apoptosis, so should be good target to resensitise to apoptosis by knocking down. BRAF mutation present in most melanomas, common in other cancers. BAY 43 is very effective in xenograft models against colon, pancreatic, and ovarian tumours.
+RAF inhibitors target ARAF, BRAF, and RAF1. Oncogenic BRAF mutants are potential targets for RTK signalling. The V599Q mutation in kinase activation loop of BRAF leads to consitutive activation. RNAi targetting of BRAF confirms the role of BRAF in regulating proliferation and protection of apoptosis, so should be good target to resensitise to apoptosis by knocking down. BRAF mutation present in most melanomas, common in other cancers. BAY 43 is very effective in xenograft models against colon, pancreatic, and ovarian tumours. BAY 43 is however not specific for RAF&mdash;multikinase inhibitor, potential side-effects. Oncogenic mutations have only been identified in BRAF, which might be because BRAF has two phosphorylation sites for full activation (the other two have four each). RNAi knockdown of BRAF in melanoma cell lines blocks ERK activity. The crystal structure of BAY 43 and BRAF is solved. BAY 43 binds the kinase activation loop, which is conserved in many tyrosine kinases and is an oncogenic hot-spot.
+
+MEK1 and MEK2 are ubiquitiously expressed in mammals, and both isoforms are targetted by ERK1 and ERK2. A number of MEK inhibitors are of limited clinical use, but have research uses. Drugs CI-1040 and PD0325901 have been tested in vivo. PD was useful in xenograph models where it inhibited tumour growth, and inhibits ERK activity at clinical doses.
+
+Other potential targets include RSK. Positive allosteric agonists of phosphatases are unexplored avenues.
+
+## Protein targeting and vesicular trafficking
+
+### Compartmentalisation of cells
+
+All eukaryotic cells have the basic set of membrane bound organelles (except those that don't, but we're not going there).
+
+Lipid bilayers divide the organelles, also including cholesterol and glycolipid components specific to the membrane, and are 5nm thick. They provide a specific environment for cellular function. Membrane proteins are in a "sea of lipids," which together make the structure of the bilayer. Membrane proteins are divided into integral and peripheral, and are rich in transporters and receptors. The lipid and protein composition of a membrane is organelle specific, and to a lesser effect cell type specific.
+
+Membranes function to partition the cell, imports and export specific molecules, and are impermeable to most hydrophobic(?) molecules. Membranes can change substantially in composition in response to signalling.
+
+Organelles are not static&mdash;their position is dictated by the cytoskelton, and they can move along filaments.
+
+#### The organelles
+
+* Nucleus
+    * Contains DNA, transcription
+    * About 6% of cell volume
+* Endoplasmic reticulum
+    * Proteins are made on surface
+    * Some free ribosomes
+    * ER + Golgi about 15%
+* Golgi apparatus
+    * Sorting and modifying proteins
+* Lysosome
+    * Break down
+    * 1%
+* Endosome
+    * Take in from outside
+    * 1%
+* Mitochondrion
+    * Energy production
+    * 22%
+* Peroxisome
+    * 1%
+* Cytosol
+    * Aqueous solution that pervades the cell
+    * 54% of cell volume
+
+#### Evolution of organelles
+
+It is hypothesised that the topology of the nucleus and ER is governed by evolutionary origins. The invagination of the plasma membrane creates organelles that are topologically equivalent to the cytosol and communicate via pores. Ribosomes would first be bound to the outer membrane, but migrate into the invagination before it detaches from the outside entirely.
+
+It is hypothesised that mitochondria evolved from a bacterium engulfed by a large eukaryotic cell. Edosymbiosis of mitochondria and plastids create double membrane organelles which contain their own genome. The environment inside a mitochondrion can be very different from its surroundings.
+
+Other organelles arising from budding, pinching, and which fuse with the plasma membrane have an interior equivalent to the exterior of the cell.
+
+#### Budding and fusion
+
+Transport vesicles bud from the donor compartment, and fuse with the target compartment. The soluble components are enveloped in the transport vesicle, and are transported from lumen to lumen. The membrane is also transferred with the proteins retaining their orientation&mdash;the same domains are always facing the cytosol.
+
+### Families of intracellular compartments
+
+The nuclues and the cytosol go together, and communicate through nuclear pore complexes&mdash;topologically continous though functionally distinct. The organelles in the secretory pathway go together, communicating by budding&mdash;they are topologically equivalent. Mitochondria and plastids go together, being topologically distinct from the other two and each other.
+
+### Synthesis of proteins
+
+### Modification of proteins by glycosylation
+
+_"Glycan tagged"_
+
+### Ways proteins can be sorted
+
+_Post translation or co-translocation_
+
+### Mechanisms by which proteins leave cytosol
+
+#### ...to enter the nucleus
+
+#### ...to enter the mitochrondrion
+
+#### ...to enter the ER, Golgi, lysosome, secretory vesicles
+
+### The role of signal sequences
+
+### The fate of protein of failing sorting signal
+
+
+
+## Regulation of cell cycle and apoptosis
+
+## Proteomics
 
 ## Glossary
 

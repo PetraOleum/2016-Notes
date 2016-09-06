@@ -453,6 +453,8 @@ Alveoli are little bubbles of tissue, supported by surficant. The bubbles mean h
 
 Inspiration (breathing in) is caused by the contraction of the diaphram beneath the lungs. Expiration is primarily just the relaxtion, however the ribcage can be forced downwards to force air outwards.
 
+### GI tract
+
 ## Pharmacology
 
 Curare is a poison used for hunting in the Amazon&mdash;why can you still eat the meat?
