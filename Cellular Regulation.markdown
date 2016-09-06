@@ -817,6 +817,8 @@ The nuclues and the cytosol go together, and communicate through nuclear pore co
 
 ### Synthesis of proteins
 
+Proteins are synthesised by translation of mRNA in the cytosol, either on free ribosomes or on membrane bound ribosomes of the rough ER. Whether the ribosome exists in a free or membrane-bound form depends on whether the protein being synthesised contains an ER targetting sequence which directs the ribosome to bind to the ER membrane. Some polypeptides begin to fold during synthesis and the folding process is complete at termination of translation (generally free ribosomes) while others, generally those that are membrane bound, are co-translationally transported into the ER for processing.
+
 ### Modification of proteins by glycosylation
 
 _"Glycan tagged"_
@@ -825,15 +827,41 @@ _"Glycan tagged"_
 
 _Post translation or co-translocation_
 
+Ribosomes synthesise proteins in the cytosol and in the endoplasmic reticulum.
+
 ### Mechanisms by which proteins leave cytosol
 
 #### ...to enter the nucleus
 
+The nuclear envelope is made of two concentric membranes. The outer membrane is contiguous with the ER, while the inner membrane contains proteins that act as binding sites for chromatin and nuclear lamina. It is penetrated by nuclear pores, for selective import and export (bidirectional).
+
+The nuclear pore complex (NPC) has a mass of 125 million Daltons, and is made up of about 30 different proteins ("nucleoporins") arranged in an octagonal cylindrical structure. NPCs are dissassembled and reassembled during mitosis.
+
+Nucleoporins often contain repeats of different types of short sequences containing Phe-Gly (FG) which are thought to make sequential contact with receptor/cargo, allowing it to hop down the pore. Some nucleoporins are transmembrane proteins that are thought to anchor NPCs in the envelope. Others are dynamic, rapidly associating and dissasociating from NPCs.
+
+The Nuclear Localisation Signal (NLS) is usually one or more clusesters of lysine (K) and Arginine (R) rich short amino acid sequences. The two major types are the SV40 type (PPKKKRKV) which in many cases also contains a proline residue, and the bipartite type (KRPAATKKAGQAKKKK) made of two clusters separated by a spacer of 10 residues. There are many other sequences that exist also.
+
+Nuclear import receptors are cytoplasmic proteins that bind to the NLS of cargo and Ran-GTP, and are members of a large family of proteins call karyopherins, which include importins and exportins. They sometimes require an adaptor to bind the target protein to the receptor. Different proteins may have different receptors that take them into the cell.
+
+Nuclear import receptors contain repeated &alpha;-helices that stack on top of each other to form a spring-like structure. They cotnain multiple "heat" motifs within the helices which associated with the FxFG repeats of the NPC to form weak and transient bonds. The spring like structure can adopt multiple conformations in response to binding of Ran-GTP and cargo proteins.
+
+The nuclear import receptor binds the cargo and takes it in to the nucleus. After disassociating from the cargo it binds to Ran-GTP, and brings that out. The Ran-GTP hydrolyses to Ran-GDP, and dissociates. The cycle repeats.
+
+Nuclear exports requires a Nuclear Export Signal (short streatches of AAs rich in Leucine (L)). Exportins bind Ran-GTP and the cargo in the nucleus, and disassociates from both once it leaves. It returns alone.
+
+The Ran-GTPas controls the direction of nuclear transport. It is a small GTPase that is common to all eukaryotes. "Ras-related nuclear protein"; a member of the Ras family. Ran-GAP (activating protein) is a regulatory protein that binds and promotes Ran GTPase activity of the hydolysis of GTP. The guanine exchange factor Ran-GEF activates Ran GTPase by stimulating the release of GTP to allow binding of GTP. The assymetric distribution of Ran-GAP and Ran-GEF controls the activity of Ran in a way that allows Ran to mediate active transport through the nuclear pore complex. Ran-GEF binds to the chromatin in the nucleus and causes Ran-GTP to predominate in the nucleus. Ran-GAP is free in the cytosol, promoting Ran-GDP in the cytosol.
+
 #### ...to enter the mitochrondrion
+
+#### ...to enter the peroxisome
 
 #### ...to enter the ER, Golgi, lysosome, secretory vesicles
 
+Proteins in the ER system are synthesised on the rough ER membrane, and are transported into the ER "co-translocationally". Proteins can be retained in the ER or transported to the Golgi and from there to a network of other organelles and the cell membrane.
+
 ### The role of signal sequences
+
+Signal sequences can be single or multiple, and can be located at either end of the protein or at any point within the sequence. Signal sequences can be up to 60 AA long, while signal patches are 3-dimensional arrangement of multiple internal amino acid sequences on the protein's surface. Sorting signal recognise complementary sorting receptors which dock the transported proteins ("cargo"), and unload cargo&mdash;they operate catalytically, so can be reused.
 
 ### The fate of protein of failing sorting signal
 
