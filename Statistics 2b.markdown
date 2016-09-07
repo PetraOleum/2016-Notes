@@ -1124,6 +1124,137 @@ summary(fit1)
 
 &sigma;<sub>B</sub> is estimated as 5.27952; &sigma; is estimated at 6.473021.
 
+### Checking assumptions
+
+As before we create a plot of fitted vs residuals to check the constant variance assumption, and a qq-plot of the residuals.
+
+The diagonal lines in the residuals plot are due to rounding; it also happens a lot with poisson distributions.
+
+## Multiple Linear Regression
+
+This is an extension to linear regression to include more than one explanatory variable. For example, estimating weight gain of children using various levels of dietary supplement, exercise, and behaviour modification; or predicting the test mark of a STAT 293 student using number of hours spent studying, number of lectures attended, and STAT 292 grade. In the latter case not all of the categories are continous&mdash;the mark in STAT 292 is A-, B etc.
+
+### Simple linear regression review
+
+Looking for a linear relationship between two random variables: the response variable Y and an explanatory variable X. The questions we want to answer are:
+
+* Can the relationship betweem tje variables be represented by a straight line? Check using a scatterplot.
+* If so, how much change do you see in the response variable when you increase the explanatory variable by one unit?
+
+The regression line is y = &Beta;&#x0302;<sub>0</sub> + &Beta;&#x0302;<sub>1</sub>x.
+
+The regression model is Yi = &Beta;0 + &Beta;1xi + &epsilon;i. &Beta;0 and &Beta;1 are fixed (constant) and unknown parameters. xi's are fixed, known constants (explanetory variable) which are measured without error. Yi is the response variable at X = xi.
+
+E(Yi) = &Beta;0 + &Beta;1x1. Var(Yi) = &sigma;2
+
+### Multiple regression
+
+The data consists of n obersvation on a response variable Y, and p explanatory or predictor variables X1, X2, &hellip;, Xp. There can be missing observations of the x's are allowed, though we wont do that.
+
+Note that it's a linear model because the &Beta;'s are linear, not because the xi's are&mdash;&hellip; + &Beta;1xi2 + &hellip; is perfectly fine. Note also that there are p + 1 parameters, due to the existance of the intercept &Beta;0.
+
+The parameter &Beta;j, j = 1, &hellip;, p represents the expected change in the response variable Y per unit change in Xj, when all of the other explanatory variables Xk (k&ne;j) are _held constant_. This will usually mean that the regression coefficients from a simple regression on a single parameter (total) will be different from the coefficient for that parameter as part of a multiple regression (partial).
+
+### Estimating tree volume
+
+```r
+# Load and examine data
+trees = read.csv("treevol.csv", header=T)
+str(trees)
+## 'data.frame':   20 obs. of  5 variables:
+##  $ obs: int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ dbh: num  10.2 13.7 15.4 14.4 15 ...
+##  $ ht : num  89 90.1 95.1 98 99 ...
+##  $ d16: num  9.3 12.1 13.3 13.4 14.2 12.8 14 13.5 14 13.8 ...
+##  $ vol: num  25.9 45.9 56.2 58.6 63.4 ...
+
+# Individual linear models
+mod1 = lm(vol ~ dbh, data=trees)
+summary(mod1)
+## Call:
+## lm(formula = vol ~ dbh, data = trees)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max
+## -11.9639  -3.8271  -0.4432   4.7975   9.9845
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -45.5663    11.7745  -3.870  0.00112 **
+## dbh           6.9161     0.7531   9.184 3.26e-08 ***
+## ---
+## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## 
+## Residual standard error: 6.049 on 18 degrees of freedom
+## Multiple R-squared:  0.8241,    Adjusted R-squared:  0.8143
+## F-statistic: 84.34 on 1 and 18 DF,  p-value: 3.257e-08
+
+mod2 = lm(vol ~ ht, data=trees)
+summary(mod2)
+## Call:
+## lm(formula = vol ~ ht, data = trees)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -24.503  -7.105  -2.769   5.961  24.348
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -104.7902    52.2861  -2.004  0.06034 .
+## ht             1.7441     0.5466   3.191  0.00506 **
+## ---
+## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## 
+## Residual standard error: 11.53 on 18 degrees of freedom
+## Multiple R-squared:  0.3613,    Adjusted R-squared:  0.3258
+## F-statistic: 10.18 on 1 and 18 DF,  p-value: 0.005062
+
+mod3 = lm(vol ~ d16, data=trees)
+summary(mod3)
+## Call:
+## lm(formula = vol ~ d16, data = trees)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -6.3019 -3.9308 -0.7454  2.6049  8.2962
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -53.4330     8.6841  -6.153 8.25e-06 ***
+## d16           8.2879     0.6203  13.360 8.80e-11 ***
+## ---
+## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## 
+## Residual standard error: 4.365 on 18 degrees of freedom
+## Multiple R-squared:  0.9084,    Adjusted R-squared:  0.9033
+## F-statistic: 178.5 on 1 and 18 DF,  p-value: 8.797e-11
+
+# Multiple regression
+mod4 = lm(vol ~ dbh + ht + d16, data=trees)
+summary(mod4)
+## Call:
+## lm(formula = vol ~ dbh + ht + d16, data = trees)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max
+## -5.2548 -1.6765 -0.1277  1.5232  4.9990
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)
+## (Intercept) -108.5758    14.1422  -7.677 9.42e-07 ***
+## dbh            1.6258     1.0259   1.585 0.132611
+## ht             0.6938     0.1631   4.254 0.000606 ***
+## d16            5.6714     1.2023   4.717 0.000232 ***
+## ---
+## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## 
+## Residual standard error: 3.095 on 16 degrees of freedom
+## Multiple R-squared:  0.9591,    Adjusted R-squared:  0.9514
+## F-statistic: 124.9 on 3 and 16 DF,  p-value: 2.587e-11
+```
+
+It at first appears that `dbh` and `d16` are the best predictors, but doing all three together actually have `ht` and `d16`.
+
 ## R commands
 
 `mean(x)`
