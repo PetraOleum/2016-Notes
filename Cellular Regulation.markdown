@@ -839,7 +839,7 @@ The nuclear pore complex (NPC) has a mass of 125 million Daltons, and is made up
 
 Nucleoporins often contain repeats of different types of short sequences containing Phe-Gly (FG) which are thought to make sequential contact with receptor/cargo, allowing it to hop down the pore. Some nucleoporins are transmembrane proteins that are thought to anchor NPCs in the envelope. Others are dynamic, rapidly associating and dissasociating from NPCs.
 
-The Nuclear Localisation Signal (NLS) is usually one or more clusesters of lysine (K) and Arginine (R) rich short amino acid sequences. The two major types are the SV40 type (PPKKKRKV) which in many cases also contains a proline residue, and the bipartite type (KRPAATKKAGQAKKKK) made of two clusters separated by a spacer of 10 residues. There are many other sequences that exist also.
+The Nuclear Localisation Signal (NLS) is usually one or more clusters of lysine (K) and Arginine (R) rich short amino acid sequences. The two major types are the SV40 type (PPKKKRKV) which in many cases also contains a proline residue, and the bipartite type (KRPAATKKAGQAKKKK) made of two clusters separated by a spacer of 10 residues. There are many other sequences that exist also.
 
 Nuclear import receptors are cytoplasmic proteins that bind to the NLS of cargo and Ran-GTP, and are members of a large family of proteins call karyopherins, which include importins and exportins. They sometimes require an adaptor to bind the target protein to the receptor. Different proteins may have different receptors that take them into the cell.
 
@@ -851,7 +851,25 @@ Nuclear exports requires a Nuclear Export Signal (short streatches of AAs rich i
 
 The Ran-GTPas controls the direction of nuclear transport. It is a small GTPase that is common to all eukaryotes. "Ras-related nuclear protein"; a member of the Ras family. Ran-GAP (activating protein) is a regulatory protein that binds and promotes Ran GTPase activity of the hydolysis of GTP. The guanine exchange factor Ran-GEF activates Ran GTPase by stimulating the release of GTP to allow binding of GTP. The assymetric distribution of Ran-GAP and Ran-GEF controls the activity of Ran in a way that allows Ran to mediate active transport through the nuclear pore complex. Ran-GEF binds to the chromatin in the nucleus and causes Ran-GTP to predominate in the nucleus. Ran-GAP is free in the cytosol, promoting Ran-GDP in the cytosol.
 
-#### ...to enter the mitochrondrion
+#### ...to enter the mitochrondrion and plasmids
+
+Both contain their own ribosomes and DNA for creation of proteins, however the majority of their proteins are encoded on nuclear DNA and are synthesised on cytoplasmic ribosomes as _precursor proteins_. Translocation in the mitochondrial matrix is governed by signal sequences (the n-terminus sequence cleaved after import, or "presequence", and an internal sequence that is not cleavable) and translocator proteins.
+
+The TOM and SAM complexes function across outer membrane. The TIM cokplexes (TIM23 and TIM22) function accross inner membrane. The OXA complex mediates insertion of inner membrane proteins synthesised within mitochondria and helps to insert some of the proteins initially transported into the matrix (export). These complexes contain components that act as receptors and others that act as transporters.
+
+_TOM stands for Translocase of the Outer Membrane_
+
+TOM20 recognises the presequence at the N-terminus; TOM70 recognises internal targeting signals without presequence.  TOM40 is a &Beta; barrel protein which acts as a translocation channel. Other proteins are also involved in the complex
+
+1. The unfolded polypeptide chain is bound by cytostolic chaperone Hsp70
+2. Precursor proteins bind to receptors of TOM
+3. Hsp70 removed and unfolded polypeptide transferred to translocation channel
+
+This process occurs at contact sites joining inner and outer membrane. TOM then passes the peptide to TIM, to cross the inner membrane. After entering the mitochondrion the mitochondrion's own Hsp70 binds to help pull it through. The interaction with Hsp70's at both ends require ATP, in order to power the transport. The H<sup>+</sup> proton gradient across the inner membrane also helps power the process.
+
+Protein transport into inner membrane and intermembrane space requires two signal sequences. The second signal is usually a hydrophobic sequence immediately after the first signal sequence, acting as a "stop transfer sequence" preventing further transport accross IM. The cleavage of the first signal unmasks the second signal used to translocate proteins from matrix into and across IM using OXA; proteins encoded in the mitrochondria inserting into the IM use OXA. Soluble proteins are delivered into the intermembrane space using the same pathways and are cleaved by a second signal petidase with the active site in the inter membrane space which removes the second hydrophobic signal. Proteins with internal signal sequences are bound by chaperones in the intermembrane space, which drive the proteins to TIM22 for insertion of multi-pass inner membrane proteins.
+
+The insertion of porins (&Beta; barrel proteins that are freely permeable to inorganic ions and metabolites) into the outer membrane requires them to be first transported into the inter-membrane space by TOM as TOM cannot insert them itself using &alpha; helical anchoring. They then transiently bind specialised chaperones that guide the unfolded polypeptide chain to SAM, and SAM then inserts them into the outer membrane.
 
 #### ...to enter the peroxisome
 
@@ -905,5 +923,11 @@ GPCR
 
 PKC
 :   Protein kinase 3
+
+IM
+:   Inner Membrane (e.g. of mitochondrion)
+
+OM
+:   Outer Membrane (e.g. of mitochondrion)
 
 ## Footnotes
