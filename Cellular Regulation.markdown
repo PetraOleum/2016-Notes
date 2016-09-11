@@ -873,9 +873,30 @@ The insertion of porins (&Beta; barrel proteins that are freely permeable to ino
 
 #### ...to enter the peroxisome
 
+The peroxisome is a single membrane-bound organelle. It contains oxidative enzymes, most abundant in liver. It is responsible for the &Beta; oxidation of very long fatty acids. It is responsible for the formation of plasmalogens (an abundant class of phospholipids in myelin); and it uses O<sub>2</sub> to oxidise various substrates, forming H<sub>2</sub>O<sub>2</sub> (removing H from specific organic compounds). Because hydrogen peroxide is toxic, it contains catalases that decompose H<sub>2</sub>O<sub>2</sub> to oxidise other substances, particularly in liver and kidney detoxification.
+
+Peroxisomes bud from the ER, but grow and mature by taking up taking up specific peroxisomal proteins and lipids from the cytosol. They also reproduce by budding. Peroxysomes contain specific proteins in the membrane that catalyse the import of peroxisommal proteins.
+
+Peroxisomal proteins contain an import signal of three amino acids&mdash;Ser-Lys-Leu (SKL)&mdash;at the C-terminus. Some have the signal at the N-terminus. Importing proteins involves more than 23 distinct proteins called peroxins. The import mechanism is distinct and not fully characterised. It is known that it is driven by ATP hydrolysis and that the proteins (including oligomers) _do not have to unfold_ during entry.
+
 #### ...to enter the ER, Golgi, lysosome, secretory vesicles
 
 Proteins in the ER system are synthesised on the rough ER membrane, and are transported into the ER "co-translocationally". Proteins can be retained in the ER or transported to the Golgi and from there to a network of other organelles and the cell membrane.
+
+The ER is an extensive series of interconnected stacks of flattened sacks continuous with the nuclear membrane, where proteins and lipids are made. The rough ER is studded with ribosomes and the site of protein synthesis. The smooth ER is the site of lipid synthesis, detoxification, steroid synthesis, and Ca<sup>2+</sup> storage.
+
+The ER is the most extensive membrane system of the cell, taking around 50% of the total membrane surface in animal cells. The quantity of SER and RER depends on cell type, and can be measured via centrifugation (the rough ER sinks below the smooth ER).
+
+Proteins destined for the ER membrane and other organelles in the secretory pathway are co-translocationally imported into ER. Transmembrane proteins are embedded into the ER, while soluble proteins are transported into the lumen of the ER. The vesticular transport mechanism take the proteins into the lumen to and then through the Golgi apparatus for further sorting. During transport they are modified and labelled for specific destinations.
+
+Requirements:
+
+1. Signal sequence (pre-sequence): hydrophobic &alpha;-helix in nascent protein
+2. Signal recognition paritcle (SRP): cytoplasmic complex of protein and RNA, which binds the signal sequence
+3. SRP receptor: an integral ER membrane protein
+4. Translocator: an aqueous channel that passes through ER membrane (Sec61 complex)
+
+The SRP binds to the newly translated signal sequnece with one domain, and pauses translation with another (if more than 70 amino acids are polymerised and ER still absent). The two domains are separated by a hinge. SRP them binds its receptor in ER, docks ribosome to channel, and dissasociates. The hydrophobic leader sequence is fed through the membrane, perhaps as a loop. The insertion is powered by GTP hydrolysis.
 
 ### The role of signal sequences
 
