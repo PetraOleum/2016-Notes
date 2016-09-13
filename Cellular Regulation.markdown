@@ -879,7 +879,7 @@ Peroxisomes bud from the ER, but grow and mature by taking up taking up specific
 
 Peroxisomal proteins contain an import signal of three amino acids&mdash;Ser-Lys-Leu (SKL)&mdash;at the C-terminus. Some have the signal at the N-terminus. Importing proteins involves more than 23 distinct proteins called peroxins. The import mechanism is distinct and not fully characterised. It is known that it is driven by ATP hydrolysis and that the proteins (including oligomers) _do not have to unfold_ during entry.
 
-#### ...to enter the ER, Golgi, lysosome, secretory vesicles
+#### ...to enter the ER
 
 Proteins in the ER system are synthesised on the rough ER membrane, and are transported into the ER "co-translocationally". Proteins can be retained in the ER or transported to the Golgi and from there to a network of other organelles and the cell membrane.
 
@@ -898,9 +898,79 @@ Requirements:
 
 The SRP binds to the newly translated signal sequnece with one domain, and pauses translation with another (if more than 70 amino acids are polymerised and ER still absent). The two domains are separated by a hinge. SRP them binds its receptor in ER, docks ribosome to channel, and dissasociates. The hydrophobic leader sequence is fed through the membrane, perhaps as a loop. The insertion is powered by GTP hydrolysis.
 
+The eukaryotic SRP receptor is a heterodimer, with the &alpha; subunit only sitting on the top of the membrane. The prokaryotic SRP receptor comprises only the monomeric &alpha; homologue. The translocator (Sec61, which is highly conserved) is made up of two halves surrounding a channel, "plugged" by an alpha helix. The signal peptide forces this open and displaces the plug, so that the chain can grow down the channel.
+
+The signal sequence is cleaved off the complete protein chain and diffuses into the membrane, where it is degraded by proteases.
+
+With single pass transmembrane proteins, a second signal sequence in the middle of the protein is required, acting as a "stop" translocation sequence&mdash;this sequence ends up as the portion of the protein actually passing through the membrane. Alternately only the second (internal) sequence may exist, which serves as a start sequence; this second version allows the N-terminus to be (some of the time, not all of the time&mdash;depends on charge) in the cytosol and not in the ER lumen.
+
+Double-pass proteins have internal start _and_ stop sequences, with the part between them ending up in the ER lumen. Multipass proteins contain multiple signal sequences, alternating between start and stop.
+
+The BiP (Binding Protein) is a constituitively expressed resident protein of the ER of all eukaryotes, and belongs to the highly conserved Hsp70 family. It is invovled in polypeptide translocation, protein folding, and presumably protein degradation. It has an ATP binding site, which helps power folding.
+
+If a protein isn't folded properly in the ER it is chaperoned to an ER protein translocator which exports it back to the cytosol where it is degraded in a proteasome.
+
 ### The role of signal sequences
 
-Signal sequences can be single or multiple, and can be located at either end of the protein or at any point within the sequence. Signal sequences can be up to 60 AA long, while signal patches are 3-dimensional arrangement of multiple internal amino acid sequences on the protein's surface. Sorting signal recognise complementary sorting receptors which dock the transported proteins ("cargo"), and unload cargo&mdash;they operate catalytically, so can be reused.
+Signal sequences can be single or multiple, and can be located at either end of the protein or at any point within the sequence. Signal sequences can be up to 60 AA long, while signal patches are 3-dimensional arrangement of multiple internal amino acid sequences on the protein's surface. Sorting signal recognise complementary sorting receptors which dock the transported proteins ("cargo"), and unload cargo&mdash;the receptors operate catalytically, so can be reused.
+
+### Transport mechanisms
+
+* Gated transport between topologically equivalent spaces (nucleus and cytosol)
+* Transmembrane transport between topologically distinct spaces (cytosol to mitochondria, ER, plastids, peroxisomes)
+* Vessicular transport between topologically equivalent spaces (ER&harr;Golgi etc)
+
+### Beyond the ER
+
+Proteins in the ER are trasported to the Golgi, from which they can go to various other organelles including the plasma membrane, and can also reverse back to the golgi. The pathways are divided into:
+
+* Secretory (exocytosis)
+* Endoxytic (endocytosis)
+* Retrieval
+
+Proteins are transported by the budding and fusion of vesicles, which need to only take with them the proteins and lipids appropriate to its destination. Vesicle budding is driven by the assembly of a protein coat on specialised regions of their membranes (_coated vesicles_). There are three types of protein coats
+
+* Clathrin
+* COPI
+* COPII
+
+The coats also have two functions:
+
+* Shaping the membrane into a vesicle
+* Help to capture the appropriate proteins
+
+The coat is lost after budding is complete.
+
+#### Clathrin coat
+
+Clathrin coated vesicles can be of various sizes. Clathirn triskelions are made of three heavey (H) chains of 192 KDA with 27 kDa "light" (L) chains bound. the H chain contains subdomains, include a seven-bladed &Beta;-propeller structure with multiple binding sites for interaction with other proteins. The L chain binds primarily to the proxima leg with some interaction with the trimerisation domain. H chains provide structure, L chains regulate formation and dissasociation.
+
+Clathrin interacts with other proteins in the budding sites. An adaptor protein (four types have been identified) binds the clathrin to the cargo receptor in the membrane, which binds the cargo within the lumen of the budding vesicle. Cargo proteins carry specific transport signals that bind to specific cargo receptors.
+
+Dynamin, a small GTP-binding protein, polymerises and forms a spiral rign around the neck. GTP is hydrolysed, the ring constricts, and pinches off at the neck. The Clathrin Coated Vesicles (CCV) is released, and Hsp 70 rapidly binds and dissasembles the coat with the assistance of a protein called auxlinin.
+
+#### Important proteins
+
+* Dynamins (formation of vesicles and budding off)
+    * GTPase
+    * contains phosphoinositide domain that tether the protein to the membrane
+    * right-handed helix
+    * extends and tightens through GTP hydrolysis
+    * recruits other proteins to help destabilise lipid bilayers
+    * Temperature sensitive mutation in drosphilia produces vesicles coated with clathrin and bound to dynamins but which are unable to bud
+* Sar1/Arf GTPases, and GTP-GDP exhance factors GEFs (regulate the assembly/dissasembly of the coat)
+    * Monomeric GTPases
+    * Sar1 binds COPII
+    * Arf protein binds COPI and clathrin
+    * Active GTP protein has amphiphathic helix that embeds in membrane, while inactive soluble GDP protein has helix embedded within the protein.
+* Rabs (Guide vesicles to specific membrane systems)
+* v-SNARES and t-SNARES (fusion proteins which assist interaction of vesicles and target membranes)
+
+#### Docking
+
+_Tethering&rarr;Docking&rarr;Fusion_
+
+An active vesicle Rab-GTP interacts with a specific Rab effector. Rab guides the t-SNARE complex on the target to bind/tangle with the v-SNARE on the vesicle. SNARES specify compartment identity, control specificity, and catalyse the membrane fusion. The complex created has one helix from transmembrane protein on each membrane, and two helixes from one prehiferal membrane protein.
 
 ### The fate of protein of failing sorting signal
 
