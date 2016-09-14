@@ -500,6 +500,64 @@ Sample brought back to Britian in 1804 by Charles Waterton. In 1811 it was shown
 * Found in cell nucleus
 * The **Transcription factors**
 
+## Endocrinology
+
+The endocrine system is a colleciton of glands and organs, which regulates them to meet the growth and reproductive needs of the organism, and respond to fluctuations within the internal organism e.g. stress. Endocrine is more long-acting than the nervous system. The endocrine system acts using hormones in the bloodstream.
+
+One glad can secrete many hormones, more rarely one hormone can be secreted by many glands.
+
+Autocrine signalling is a cell affecting itself via its own secreted hormones. Paracrine signalling is a cell signalling other nearby cells through the interstitial fluid. The endocrine system travels through the blood.
+
+### Nervous system vs endocrine system
+
+| Nervous system | Endocrine |
+|:---------------|:----------|
+| Neurotransmitters released in response to nerve impulses | Hormones delivered by the blood to tissues throughout the body |
+| Muscle, glands, other neurones | Virtually all body cells |
+| Muscular contraction or glandular secretion | Changes in metabolic activities |
+| Typically acts within miliseconds | Seconds to hours or days |
+| Generally briefer duration | Generally longer |
+
+### Endocrine vs Exocrine
+
+The endocrine system is ductless, secreting into the intercellular space (local action) and from there to the bloodstream. The exocrine system extretes fluids through ducts to cavities and body surfaces
+
+### Major endocrine glands
+
+* Pineal
+    * Seasonality; not going to talk about
+* Hypothalamus
+* Pituitary gland
+* Thyroid
+* Parathyroid
+* Adrenal
+* Pancreas
+* Ovaries
+* Testes
+* Placenta
+
+### Other organs that excrete hormones
+
+* Kidney
+    * Remin
+    * 1,25-Dihydroxycholecalfierol
+    * Erthropoithin
+* Heart
+    * Atrial natriuretic peptide
+* Stomach
+    * Gastrin
+* Small intestine
+    * Secretin
+    * Cholecrystokinin
+* Adipocytes
+    * Leptin
+
+### Hormones
+
+> A hormone is a signalling molecule produced by glands in multicellular organisms that is transported by the circulatory system to target distant organs to regulate physiology and behaviour
+
+No nucleotide or polysaccharide hormones are known; all known hormones are proteins/polypeptides, steroids, and amine hormones (derivatives of tyrosine).
+
 ## Glossary
 
 ANS
