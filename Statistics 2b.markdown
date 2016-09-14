@@ -19,6 +19,7 @@ Key dates:
 A note on unicode:
 
 * Y-bar = Y&amp;#x0304; = Y&#x0304;
+* Y-tilde = Y&amp;#x303; = Y&#x303;
 * &mu;-hat = &amp;mu;&amp;#x0302; = &mu;&#x0302;
 
 ## Summation algebra review
@@ -1254,6 +1255,12 @@ summary(mod4)
 ```
 
 It at first appears that `dbh` and `d16` are the best predictors, but doing all three together actually have `ht` and `d16`.
+
+### The design matrix
+
+This matrix is made from the coefficients of all the &beta;'s. In the case of categorical variables, one level is selected as the reference level (the first alphabetically in `R`; the "intercept) and the remaining levels are binary "dummy variables" equal to 1 if that level is the one for that observation, else 0. &beta;<sub>1</sub>, the intercept, always has a coefficient of 1, so there is always a column of 1's as the first row. The matrix equals **X**, so the model equation can be written more succintly as:
+
+_Y&#x303; = **X**&beta;&#x303; + &epsilon;&#x303;_
 
 ## R commands
 
